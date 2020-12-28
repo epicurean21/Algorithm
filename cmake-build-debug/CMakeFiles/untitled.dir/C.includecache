@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2_7.c
+unistd.h
+-
+fcntl.h
+-
+stdio.h
+-
+stdlib.h
+-
+
