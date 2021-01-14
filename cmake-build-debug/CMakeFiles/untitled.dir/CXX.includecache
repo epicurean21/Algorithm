@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/3425_2.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/9202.cpp
 iostream
 -
-algorithm
--
-stack
+cstring
 -
 vector
+-
+string
 -
 
