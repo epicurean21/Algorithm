@@ -140,13 +140,10 @@ int main() {
                 map[i][j] = a;
             }
         }
-        for (int y = 0; y < 4; y++) {
-            for (int x = 0; x < 4; x++) {
-                if (tr.root->hasChild(map[y][x])) {
+        for (int y = 0; y < 4; y++)
+            for (int x = 0; x < 4; x++)
+                if (tr.root->hasChild(map[y][x]))
                     dfs(y, x, 1, tr.root->getChild(map[y][x]));
-                }
-            }
-        }
         tr.root->clear();
         cout << sum << " " << answer << " " << Count << "\n";
     }
