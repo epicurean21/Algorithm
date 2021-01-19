@@ -143,32 +143,32 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-3955.o: 3955.cpp.o
+Dijkstra.o: Dijkstra.cpp.o
 
-.PHONY : 3955.o
+.PHONY : Dijkstra.o
 
 # target to build an object file
-3955.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/3955.cpp.o
-.PHONY : 3955.cpp.o
+Dijkstra.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Dijkstra.cpp.o
+.PHONY : Dijkstra.cpp.o
 
-3955.i: 3955.cpp.i
+Dijkstra.i: Dijkstra.cpp.i
 
-.PHONY : 3955.i
+.PHONY : Dijkstra.i
 
 # target to preprocess a source file
-3955.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/3955.cpp.i
-.PHONY : 3955.cpp.i
+Dijkstra.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Dijkstra.cpp.i
+.PHONY : Dijkstra.cpp.i
 
-3955.s: 3955.cpp.s
+Dijkstra.s: Dijkstra.cpp.s
 
-.PHONY : 3955.s
+.PHONY : Dijkstra.s
 
 # target to generate assembly for a file
-3955.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/3955.cpp.s
-.PHONY : 3955.cpp.s
+Dijkstra.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Dijkstra.cpp.s
+.PHONY : Dijkstra.cpp.s
 
 # Help Target
 help:
@@ -179,9 +179,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... 3955.o"
-	@echo "... 3955.i"
-	@echo "... 3955.s"
+	@echo "... Dijkstra.o"
+	@echo "... Dijkstra.i"
+	@echo "... Dijkstra.s"
 .PHONY : help
 
 

@@ -1,12 +1,27 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
-#define MAX 200001
-int H, N, sz;
-vector<int> size(MAX);
+#define INF 9999999999
+int H, N, u, d, ans = INF, cnt = 1;
+
 vector<int> up;
 vector<int> down;
+
+void find() {
+    for (int i = 1; i <= H; i++) {
+        int tmp = down.size() - (lower_bound(down.begin(), down.end(), i) - down.begin());
+        tmp += up.size() - (upper_bound(up.begin(), up.end(), H - i) - up.begin());
+
+        if (tmp == ans)
+            cnt++;
+        else if (ans > tmp) {
+            ans = tmp;
+            cnt = 1;
+        }
+    }
+}
 
 int main() {
     ios::sync_with_stdio(false);
@@ -15,14 +30,14 @@ int main() {
 
     cin >> N >> H;
     for (int i = 0; i < N / 2; i++) {
-        cin >> sz;
-        down.push_back(sz);
+        cin >> u >> d;
+        up.push_back(u);
+        down.push_back(d);
     }
-    for (int i = N / 2; i < N; i++) {
-        cin >> sz;
-        up.push_back(sz);
-    }
+    sort(up.begin(), up.end());
+    sort(down.begin(), down.end());
 
-
+    find();
+    cout << ans << " " << cnt << "\n";
     return 0;
 }
