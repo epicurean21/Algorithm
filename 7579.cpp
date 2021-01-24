@@ -10,6 +10,10 @@ int min(int a, int b) {
     return a > b ? b : a;
 }
 
+// [i][j] : i번째 앱까지 고려했을 때(= 대상으로 했을 때) cost j로 확보할 수 있는 최대 메모리
+// i번째 앱을 사용하지 않은 경우
+// 또는 j번째 앱을 사용한 경우
+// 이 둘중 큰 값
 void DP() {
     for (int i = 1; i <= N; i++) {
         for (int j = 0; j <= 10000; j++) {
@@ -40,3 +44,4 @@ int main() {
 
     return 0;
 }
+
