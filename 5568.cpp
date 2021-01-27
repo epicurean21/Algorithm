@@ -2,36 +2,34 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <map>
 
 using namespace std;
-#define MAX 999999
 int N, K, cnt;
-vector<string> map;
-vector<int> chk;
-void dfs(int idx, int count) {
-    if(count == K) {
-        cnt++;
-        return;
-    }
-
-    if(idx > N)
-        return;
-    for(int i = idx; i < N; i++) {
-        dfs(i + 1, count + 1);
-    }
-}
+vector<int> num;
+map<string, bool> chk;
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
     cin >> N >> K;
+    num.resize(N);
     for (int i = 0; i < N; i++) {
-        string a;
-        cin >> a;
-        map.push_back(a);
+        cin >> num[i];
     }
-    dfs(1, 0);
+    sort(num.begin(), num.end());
+    do {
+        string tmp = "";
+        for (int i = 0; i < K; i++)
+            tmp += to_string(num[i]);
+
+        if (chk.count(tmp))
+            continue;
+
+        chk[tmp] = true;
+        cnt++;
+    } while (next_permutation(num.begin(), num.end()));
     cout << cnt << "\n";
     return 0;
 }
