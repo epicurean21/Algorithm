@@ -204,7 +204,7 @@ void toLeft() { // 4
 }
 
 void dfs(int cnt) {
-    if (cnt == 10) {
+    if (cnt == 5) {
         ans = max(findMax(), ans);
         return;
     }

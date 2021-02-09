@@ -35,7 +35,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
@@ -393,18 +393,61 @@
           <line>246</line>
           <option name="timeStamp" value="174" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/13460.cpp</url>
+          <line>195</line>
+          <option name="timeStamp" value="179" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/13460.cpp</url>
+          <line>278</line>
+          <option name="timeStamp" value="181" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/14501.cpp</url>
+          <line>16</line>
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/1113.cpp</url>
+          <line>16</line>
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SWEA11315.cpp</url>
+          <line>69</line>
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SWEA11389.cpp</url>
+          <line>27</line>
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/1854.cpp</url>
+          <line>48</line>
+          <option name="timeStamp" value="199" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SWEA10966.cpp</url>
+          <line>25</line>
+          <option name="timeStamp" value="203" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SWEA3752-2.cpp</url>
+          <line>21</line>
+          <option name="timeStamp" value="204" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="st" language="ObjectiveC" />
-        <watch expression="a" language="ObjectiveC" />
-        <watch expression="b" language="ObjectiveC" />
-        <watch expression="st.top()" language="ObjectiveC" />
-        <watch expression="q" language="ObjectiveC" />
-        <watch expression="tmp" language="ObjectiveC" />
-        <watch expression="map[j][i]" language="ObjectiveC" />
-        <watch expression="map" language="ObjectiveC" />
+        <watch expression="max" language="ObjectiveC" />
+        <watch expression="i" language="ObjectiveC" />
+        <watch expression="scores[i]" language="ObjectiveC" />
+        <watch expression="k" language="ObjectiveC" />
+        <watch expression="possibleScores[k]" language="ObjectiveC" />
+        <watch expression="k+scores[i]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
