@@ -6,15 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/SWEA3752-2.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/15641.cpp
 iostream
 -
-algorithm
+cstdlib
 -
-iostream
--
-vector
--
-algorithm
+ctime
 -
 

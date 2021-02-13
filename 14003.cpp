@@ -25,7 +25,7 @@ int main() {
             ans.push_back({iter, A[i]});
             iter++;
         } else {
-            int idx = lower_bound(lis.begin(), lis.end(), A[i]) - lis.begin();
+            int idx = upper_bound(lis.begin(), lis.end(), A[i]) - lis.begin();
             lis[idx] = A[i];
             ans.push_back({idx, A[i]});
         }
