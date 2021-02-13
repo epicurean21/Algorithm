@@ -468,13 +468,22 @@
           <line>13</line>
           <option name="timeStamp" value="215" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/2467.cpp</url>
+          <line>26</line>
+          <option name="timeStamp" value="216" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="tmp" language="ObjectiveC" />
-        <watch expression="i" language="ObjectiveC" />
-        <watch expression="N" language="ObjectiveC" />
+        <watch expression="l" language="ObjectiveC" />
+        <watch expression="r" language="ObjectiveC" />
+        <watch expression="tmp " language="ObjectiveC" />
+        <watch expression="one" language="ObjectiveC" />
+        <watch expression="ans" language="ObjectiveC" />
+        <watch expression="yong[l]" language="ObjectiveC" />
+        <watch expression="yong[r]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
