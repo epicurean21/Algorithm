@@ -38,9 +38,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
@@ -473,17 +473,33 @@
           <line>26</line>
           <option name="timeStamp" value="216" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/10026.cpp</url>
+          <line>24</line>
+          <option name="timeStamp" value="217" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/17396.cpp</url>
+          <line>17</line>
+          <option name="timeStamp" value="219" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/17136.cpp</url>
+          <line>25</line>
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="l" language="ObjectiveC" />
-        <watch expression="r" language="ObjectiveC" />
-        <watch expression="tmp " language="ObjectiveC" />
-        <watch expression="one" language="ObjectiveC" />
+        <watch expression="step" language="ObjectiveC" />
+        <watch expression="a" language="ObjectiveC" />
+        <watch expression="b" language="ObjectiveC" />
         <watch expression="ans" language="ObjectiveC" />
-        <watch expression="yong[l]" language="ObjectiveC" />
-        <watch expression="yong[r]" language="ObjectiveC" />
+        <watch expression="pa" language="ObjectiveC" />
+        <watch expression="pb" language="ObjectiveC" />
+        <watch expression="sz[pa]" language="ObjectiveC" />
+        <watch expression="sz[pb]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
