@@ -38,6 +38,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -493,17 +498,30 @@
           <line>32</line>
           <option name="timeStamp" value="225" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/3665.cpp</url>
+          <line>57</line>
+          <option name="timeStamp" value="226" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/3665.cpp</url>
+          <line>55</line>
+          <option name="timeStamp" value="227" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/11055.cpp</url>
+          <line>13</line>
+          <option name="timeStamp" value="228" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="str" language="ObjectiveC" />
-        <watch expression="str[0] - 'A'" language="ObjectiveC" />
-        <watch expression="map" language="ObjectiveC" />
-        <watch expression="indeg" language="ObjectiveC" />
-        <watch expression="str[j] - 'A'" language="ObjectiveC" />
-        <watch expression="str[2] - '0'" language="ObjectiveC" />
-        <watch expression="indeg[str[j] - 'A']" language="ObjectiveC" />
+        <watch expression="sol" language="ObjectiveC" />
+        <watch expression="sol[iter - 1]" language="ObjectiveC" />
+        <watch expression="A[i]" language="ObjectiveC" />
+        <watch expression="iter" language="ObjectiveC" />
+        <watch expression="idx" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
