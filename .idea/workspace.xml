@@ -394,16 +394,6 @@
           <option name="timeStamp" value="174" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/13460.cpp</url>
-          <line>195</line>
-          <option name="timeStamp" value="179" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/13460.cpp</url>
-          <line>278</line>
-          <option name="timeStamp" value="181" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/14501.cpp</url>
           <line>16</line>
           <option name="timeStamp" value="182" />
@@ -513,15 +503,42 @@
           <line>13</line>
           <option name="timeStamp" value="228" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/13460.cpp</url>
+          <line>209</line>
+          <option name="timeStamp" value="230" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SWEA2819.cpp</url>
+          <line>16</line>
+          <option name="timeStamp" value="231" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SWEA1249.cpp</url>
+          <line>12</line>
+          <option name="timeStamp" value="232" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SWEA4112.cpp</url>
+          <line>10</line>
+          <option name="timeStamp" value="235" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SWEA4112.cpp</url>
+          <line>14</line>
+          <option name="timeStamp" value="236" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="sol" language="ObjectiveC" />
-        <watch expression="sol[iter - 1]" language="ObjectiveC" />
-        <watch expression="A[i]" language="ObjectiveC" />
-        <watch expression="iter" language="ObjectiveC" />
-        <watch expression="idx" language="ObjectiveC" />
+        <watch expression="ans" language="ObjectiveC" />
+        <watch expression="pq" language="ObjectiveC" />
+        <watch expression="length" language="ObjectiveC" />
+        <watch expression="from" language="ObjectiveC" />
+        <watch expression="there" language="ObjectiveC" />
+        <watch expression="find(from)" language="ObjectiveC" />
+        <watch expression="find(there)" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
