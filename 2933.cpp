@@ -1,29 +1,30 @@
 #include <iostream>
 #include <string>
 #include <queue>
+#include <cstring>
 
 using namespace std;
 #define MAX 102
 int Y, X, N, shoot[MAX], h;
-char map[MAX][MAX];
+char map[MAX][MAX], ans[MAX][MAX];
 bool been[MAX][MAX];
 int dx[] = {0, 1, 0, -1}, dy[] = {1, 0, -1, 0};
-priority_queue<pair<int, int>> pq; // min-heap
+priority_queue<pair<int, int>> pq; // max-heap
 
-void dfs(int x, int y, bool move) {
-    been[y][x] == true;
-    if (y > 1 && move) {
-        if (map[y - 1][x] == '.') {
-            map[y][x] == '.';
-            map[y - 1][x] == 'x';
-        }
+void dfs(int x, int y, bool move, int height) {
+    been[y][x] = true;
+    if (y < Y && move) {
+        ans[y][x] = '.';
+        ans[y + height][x] = 'x';
     }
     for (int i = 0; i < 4; i++) {
         int nx = x + dx[i];
         int ny = y + dy[i];
         if (nx < 1 || nx > X || ny < 1 || ny > Y) continue;
         if (been[ny][nx]) continue;
-        dfs(ny, nx, move);
+        if (map[ny][nx] == '.') continue;
+        been[ny][nx] = true;
+        dfs(nx, ny, move, height);
     }
 }
 
@@ -64,29 +65,21 @@ int main() {
                 }
         }
     }
-
-
-    for (int i = 1; i <= Y; i++) {
-        for (int j = 1; j <= X; j++) {
-            cout << map[i][j];
-        }
-        cout << '\n';
-    }
-
+    memcpy(ans, map, sizeof(map));
     while (!pq.empty()) {
         int x = pq.top().second;
         int y = pq.top().first;
         pq.pop();
         if (map[y][x] == '.') continue;
         if (been[y][x]) continue;
-        if (y > 1)
-            dfs(y, x, true);
+        if (y < Y)
+            dfs(x, y, true, Y - y);
         else
-            dfs(y, x, false);
+            dfs(x, y, false, 0);
     }
     for (int i = 1; i <= Y; i++) {
         for (int j = 1; j <= X; j++) {
-            cout << map[i][j];
+            cout << ans[i][j];
         }
         cout << '\n';
     }
