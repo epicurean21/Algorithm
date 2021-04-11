@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <vector>
 #include <cstring>
@@ -113,5 +114,78 @@ int main() {
         cout << "-1\n";
     else
         cout << ans << "\n";
+    return 0;
+}
+*/
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include<cmath>
+#include<cstring>
+
+using namespace std;
+#define MAX 11
+#define INF 2001
+int N, population[MAX], ans = INF, x, y;
+int places[MAX];
+bool been[MAX];
+int score[2];
+vector<vector<int>> map(MAX);
+
+void dfs(int cur, int team) {
+    been[cur] = true;
+    score[team] += population[cur];
+    for (int i = 0; i < map[cur].size(); i++) {
+        int nxt = map[cur][i];
+        if (team != places[nxt - 1])
+            continue;
+        if (been[nxt])
+            continue;
+        dfs(nxt, team);
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    cin >> N;
+    for (int i = 1; i <= N; i++) {
+        cin >> population[i];
+    }
+    for (int i = 1; i <= N; i++) {
+        cin >> x;
+        for (int j = 0; j < x; j++) {
+            cin >> y;
+            map[i].push_back(y);
+        }
+    }
+
+    for (int i = 1; i <= N / 2; i++) {
+        memset(places, 0, sizeof(places));
+        for (int j = 0; j < i; j++) {
+            places[j] = 1;
+        }
+        reverse(places, places + N);
+        do {
+            int cnt = 0;
+            score[0] = score[1] = 0;
+            memset(been, false, sizeof(been));
+            for (int i = 1; i <= N; i++) {
+                if (been[i])
+                    continue;
+                dfs(i, places[i-1]);
+                cnt++;
+            }
+            if (cnt != 2)
+                continue;
+            ans = min(ans, abs(score[0] - score[1]));
+        } while (next_permutation(places, places + N));
+    }
+    if (ans == INF)
+        cout << "-1\n";
+    else
+        cout << ans << '\n';
     return 0;
 }
