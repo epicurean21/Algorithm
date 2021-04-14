@@ -6,20 +6,10 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/17471.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/15683.cpp
 iostream
 -
 vector
--
-cstring
--
-iostream
--
-algorithm
--
-vector
--
-cmath
 -
 cstring
 -
