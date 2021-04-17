@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <string>
 #include <vector>
@@ -15,7 +16,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    /*for (int i = 0; i < operations.size(); i++) {
+    */
+/*for (int i = 0; i < operations.size(); i++) {
         char oper = operations[i][0];
         string number = "";
         int push_number = 0;
@@ -73,7 +75,8 @@ int main() {
     } else {
         answer.push_back(max_pq.top());
         answer.push_back(min_pq.top());
-    }*/
+    }*//*
+
     vector<int> answer;
     vector<int> numbers;
     int max_idx = 0;
@@ -84,10 +87,10 @@ int main() {
         int push_number = 0;
         if (oper == 'D') { // 삭제
             if (operations[i][2] == '1') { // 최댓값 삭제
-                if(numbers.size() - max_idx == 0) continue;
+                if (numbers.size() - max_idx == 0) continue;
                 max_idx++;
             } else if (operations[i][2] == '-') { // 최솟값 삭제
-                if(numbers.size() == 0) continue;
+                if (numbers.size() == 0) continue;
                 numbers.pop_back();
             }
         } else {
@@ -121,11 +124,10 @@ int main() {
         }
     }
     sort(numbers.begin() + max_idx, numbers.end(), greater<int>());
-    if(numbers.size() - max_idx == 0)
-    {
+    if (numbers.size() - max_idx == 0) {
         answer.push_back(0);
         answer.push_back(0);
-    }else {
+    } else {
         answer.push_back(numbers[max_idx]);
         answer.push_back(numbers[numbers.size() - 1]);
     }
@@ -134,4 +136,49 @@ int main() {
     }
 
     return 0;
+}*/
+
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+#define MAX 201
+bool been[MAX];
+vector<vector<pair<int, int>>> computer;
+
+void dfs(int cur) {
+    been[cur] = true;
+    for (int i = 0; i < computer[cur].size(); i++) {
+        int next = computer[cur][i].second;
+        int val = computer[cur][i].first;
+
+        if (been[next]) continue;
+        if (val != 1) continue;
+        been[next] = true;
+        dfs(next);
+    }
+}
+
+int main() {
+    int n = 3;
+    vector<vector<int>> computers = {{1, 1, 0},
+                                     {1, 1, 0},
+                                     {0, 0, 1}};
+    computer.resize(n);
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < computers[i].size(); j++) {
+            computer[i].push_back({computers[i][j], j});
+        }
+    }
+
+    int answer = 0;
+    for (int i = 0; i < n; i++) {
+        if (been[i]) continue;
+        dfs(i);
+        answer++;
+    }
+
+    cout << answer << '\n';
 }
