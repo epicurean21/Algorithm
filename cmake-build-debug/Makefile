@@ -142,32 +142,32 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-17142.o: 17142.cpp.o
+stringCompare.o: stringCompare.cpp.o
 
-.PHONY : 17142.o
+.PHONY : stringCompare.o
 
 # target to build an object file
-17142.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/17142.cpp.o
-.PHONY : 17142.cpp.o
+stringCompare.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/stringCompare.cpp.o
+.PHONY : stringCompare.cpp.o
 
-17142.i: 17142.cpp.i
+stringCompare.i: stringCompare.cpp.i
 
-.PHONY : 17142.i
+.PHONY : stringCompare.i
 
 # target to preprocess a source file
-17142.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/17142.cpp.i
-.PHONY : 17142.cpp.i
+stringCompare.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/stringCompare.cpp.i
+.PHONY : stringCompare.cpp.i
 
-17142.s: 17142.cpp.s
+stringCompare.s: stringCompare.cpp.s
 
-.PHONY : 17142.s
+.PHONY : stringCompare.s
 
 # target to generate assembly for a file
-17142.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/17142.cpp.s
-.PHONY : 17142.cpp.s
+stringCompare.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/stringCompare.cpp.s
+.PHONY : stringCompare.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... 17142.o"
-	@echo "... 17142.i"
-	@echo "... 17142.s"
+	@echo "... stringCompare.o"
+	@echo "... stringCompare.i"
+	@echo "... stringCompare.s"
 .PHONY : help
 
 

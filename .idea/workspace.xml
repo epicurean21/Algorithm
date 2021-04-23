@@ -14,13 +14,18 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/04/17">
-      <change afterPath="$PROJECT_DIR$/17142.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/04/18">
+      <change afterPath="$PROJECT_DIR$/1132.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stringCompare.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strtok.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/substr.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programmers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/17142.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Programmers.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Programmers.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" afterDir="false" />
@@ -104,7 +109,8 @@
     <MESSAGE value="21/04/09" />
     <MESSAGE value="21/04/15" />
     <MESSAGE value="21/04/17" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/04/17" />
+    <MESSAGE value="21/04/18" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/04/18" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -626,12 +632,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Programmers.cpp</url>
-          <line>79</line>
-          <option name="timeStamp" value="273" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Programmers.cpp</url>
-          <line>169</line>
+          <line>33</line>
           <option name="timeStamp" value="274" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -664,19 +665,27 @@
           <line>31</line>
           <option name="timeStamp" value="285" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Programmers.cpp</url>
+          <line>9</line>
+          <option name="timeStamp" value="286" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/1132.cpp</url>
+          <line>63</line>
+          <option name="timeStamp" value="289" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/strtok.cpp</url>
+          <line>15</line>
+          <option name="timeStamp" value="290" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="perm" language="ObjectiveC" />
-        <watch expression="cx" language="ObjectiveC" />
-        <watch expression="cy" language="ObjectiveC" />
-        <watch expression="cnt" language="ObjectiveC" />
-        <watch expression="timeMap[cy][cx]" language="ObjectiveC" />
-        <watch expression="nx" language="ObjectiveC" />
-        <watch expression="ny" language="ObjectiveC" />
-        <watch expression="timeMap[ny][nx]" language="ObjectiveC" />
-        <watch expression="timeMap" language="ObjectiveC" />
+        <watch expression="words" language="ObjectiveC" />
+        <watch expression="ptr" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled.dir/17142.cpp.o"
+  "CMakeFiles/untitled.dir/stringCompare.cpp.o"
   "untitled"
   "untitled.pdb"
 )

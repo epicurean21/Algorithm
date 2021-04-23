@@ -6,15 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/17142.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/stringCompare.cpp
 iostream
 -
-queue
--
-algorithm
--
-vector
--
-cstring
+string
 -
 
