@@ -76,27 +76,27 @@ include CMakeFiles/untitled.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/untitled.dir/flags.make
 
-CMakeFiles/untitled.dir/stringCompare.cpp.o: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/stringCompare.cpp.o: ../stringCompare.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/stringCompare.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/stringCompare.cpp.o -c /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/stringCompare.cpp
+CMakeFiles/untitled.dir/sortCompare.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/sortCompare.cpp.o: ../sortCompare.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/sortCompare.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/sortCompare.cpp.o -c /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/sortCompare.cpp
 
-CMakeFiles/untitled.dir/stringCompare.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/stringCompare.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/stringCompare.cpp > CMakeFiles/untitled.dir/stringCompare.cpp.i
+CMakeFiles/untitled.dir/sortCompare.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/sortCompare.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/sortCompare.cpp > CMakeFiles/untitled.dir/sortCompare.cpp.i
 
-CMakeFiles/untitled.dir/stringCompare.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/stringCompare.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/stringCompare.cpp -o CMakeFiles/untitled.dir/stringCompare.cpp.s
+CMakeFiles/untitled.dir/sortCompare.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/sortCompare.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/sortCompare.cpp -o CMakeFiles/untitled.dir/sortCompare.cpp.s
 
 # Object files for target untitled
 untitled_OBJECTS = \
-"CMakeFiles/untitled.dir/stringCompare.cpp.o"
+"CMakeFiles/untitled.dir/sortCompare.cpp.o"
 
 # External object files for target untitled
 untitled_EXTERNAL_OBJECTS =
 
-untitled: CMakeFiles/untitled.dir/stringCompare.cpp.o
+untitled: CMakeFiles/untitled.dir/sortCompare.cpp.o
 untitled: CMakeFiles/untitled.dir/build.make
 untitled: CMakeFiles/untitled.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable untitled"

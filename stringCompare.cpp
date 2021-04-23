@@ -1,8 +1,38 @@
 // 프로그래머스 문자열 압축
 #include <iostream>
 #include <string>
-
+#include <algorithm>
+#include <vector>
 using namespace std;
+
+
+int max(int a, int b){
+    return a > b? a : b;
+}
+vector<int> citations = {3, 0, 6, 1, 5};
+int solution2() {
+    int answer = 0;
+    int min_count = citations[*min_element(citations.begin(), citations.end())];
+    int max_count = citations[*max_element(citations.begin(), citations.end())];
+    for(int i = min_count; i = max_count; i++) {
+        int cnt_over = 0;
+        int cnt_under = 0;
+        for(int j = 0; j < citations.size(); j++) {
+            if(citations[j] == i) {
+                cnt_over++;
+                cnt_under++;
+            }else if(citations[j] > i) {
+                cnt_under++;
+            }else{
+                cnt_over++;
+            }
+        }
+        if(cnt_over == i && cnt_under == i)
+            answer = max(answer, i);
+    }
+
+    return answer;
+}
 
 int solution(string s) {
     int answer = s.length();
@@ -55,7 +85,7 @@ int main() {
 
     string str = "abcds";
     string str2 = "abcds";
-    cout << (str == str2) ? true : false << '\n';
 
+    cout << solution2() << "\n";
     return 0;
 }
