@@ -6,13 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/sortCompare.cpp
-string
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2056.cpp
+iostream
 -
 vector
--
-algorithm
--
-iostream
 -
 

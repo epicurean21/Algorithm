@@ -142,32 +142,32 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-sortCompare.o: sortCompare.cpp.o
+2056.o: 2056.cpp.o
 
-.PHONY : sortCompare.o
+.PHONY : 2056.o
 
 # target to build an object file
-sortCompare.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/sortCompare.cpp.o
-.PHONY : sortCompare.cpp.o
+2056.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2056.cpp.o
+.PHONY : 2056.cpp.o
 
-sortCompare.i: sortCompare.cpp.i
+2056.i: 2056.cpp.i
 
-.PHONY : sortCompare.i
+.PHONY : 2056.i
 
 # target to preprocess a source file
-sortCompare.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/sortCompare.cpp.i
-.PHONY : sortCompare.cpp.i
+2056.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2056.cpp.i
+.PHONY : 2056.cpp.i
 
-sortCompare.s: sortCompare.cpp.s
+2056.s: 2056.cpp.s
 
-.PHONY : sortCompare.s
+.PHONY : 2056.s
 
 # target to generate assembly for a file
-sortCompare.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/sortCompare.cpp.s
-.PHONY : sortCompare.cpp.s
+2056.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2056.cpp.s
+.PHONY : 2056.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... sortCompare.o"
-	@echo "... sortCompare.i"
-	@echo "... sortCompare.s"
+	@echo "... 2056.o"
+	@echo "... 2056.i"
+	@echo "... 2056.s"
 .PHONY : help
 
 
