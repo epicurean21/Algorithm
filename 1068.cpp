@@ -1,4 +1,3 @@
-/*
 #include <iostream>
 #include <vector>
 #include <cstring>
@@ -37,7 +36,7 @@ int main() {
         vector<int>::iterator it = tree[i].begin();
         for (int j = 0; j < tree[i].size(); j++) {
             if (tree[i][j] == E) {
-                it = tree[i].erase(it);
+                tree[i].erase(it);
                 break;
             }
             it++;
@@ -49,8 +48,8 @@ int main() {
             cnt++;
     cout << cnt << '\n';
     return 0;
-}*/
-
+}
+/*
 #include <iostream>
 #include <vector>
 
@@ -183,4 +182,4 @@ int main() {
         cout << cnt << endl;
     }
     return 0;
-}
+}*/
