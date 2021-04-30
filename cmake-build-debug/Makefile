@@ -142,32 +142,32 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-21608.o: 21608.cpp.o
+sortCmp.o: sortCmp.cpp.o
 
-.PHONY : 21608.o
+.PHONY : sortCmp.o
 
 # target to build an object file
-21608.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/21608.cpp.o
-.PHONY : 21608.cpp.o
+sortCmp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/sortCmp.cpp.o
+.PHONY : sortCmp.cpp.o
 
-21608.i: 21608.cpp.i
+sortCmp.i: sortCmp.cpp.i
 
-.PHONY : 21608.i
+.PHONY : sortCmp.i
 
 # target to preprocess a source file
-21608.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/21608.cpp.i
-.PHONY : 21608.cpp.i
+sortCmp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/sortCmp.cpp.i
+.PHONY : sortCmp.cpp.i
 
-21608.s: 21608.cpp.s
+sortCmp.s: sortCmp.cpp.s
 
-.PHONY : 21608.s
+.PHONY : sortCmp.s
 
 # target to generate assembly for a file
-21608.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/21608.cpp.s
-.PHONY : 21608.cpp.s
+sortCmp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/sortCmp.cpp.s
+.PHONY : sortCmp.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... 21608.o"
-	@echo "... 21608.i"
-	@echo "... 21608.s"
+	@echo "... sortCmp.o"
+	@echo "... sortCmp.i"
+	@echo "... sortCmp.s"
 .PHONY : help
 
 
