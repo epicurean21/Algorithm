@@ -6,15 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/sortCmp.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/18258.cpp
 iostream
 -
-vector
+cstring
 -
-algorithm
--
-iostream
--
-queue
+string
 -
 

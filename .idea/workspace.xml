@@ -14,12 +14,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/04/29">
-      <change afterPath="$PROJECT_DIR$/10159.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sortCmp.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/04/30">
+      <change afterPath="$PROJECT_DIR$/18258.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProgrammersLv2TargetNum.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dijkstra.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Dijkstra.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
@@ -27,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/sortCmp.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
@@ -111,7 +111,8 @@
     <MESSAGE value="21/04/27" />
     <MESSAGE value="21/04/28" />
     <MESSAGE value="21/04/29" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/04/29" />
+    <MESSAGE value="21/04/30" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/04/30" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -736,20 +737,19 @@
           <line>33</line>
           <option name="timeStamp" value="312" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ProgrammersLv2TargetNum.cpp</url>
+          <line>9</line>
+          <option name="timeStamp" value="313" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="cur" language="ObjectiveC" />
-        <watch expression="fav_cnt" language="ObjectiveC" />
-        <watch expression="empty_cnt" language="ObjectiveC" />
-        <watch expression="x" language="ObjectiveC" />
-        <watch expression="y" language="ObjectiveC" />
-        <watch expression="tmp" language="ObjectiveC" />
-        <watch expression="map" language="ObjectiveC" />
-        <watch expression="map[j][i]" language="ObjectiveC" />
-        <watch expression="j" language="ObjectiveC" />
-        <watch expression="i" language="ObjectiveC" />
+        <watch expression="idx" language="ObjectiveC" />
+        <watch expression="sum" language="ObjectiveC" />
+        <watch expression="symbols" language="ObjectiveC" />
+        <watch expression="next" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
