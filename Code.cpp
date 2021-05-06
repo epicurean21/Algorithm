@@ -1,38 +1,60 @@
-#include <iostream>
+#include <string>
 #include <vector>
+#include <map>
+#include <iostream>
 
 using namespace std;
-#define MAX 1001
-int N, M, u, v;
-vector<vector<int>> graph;
-bool been[MAX];
+int idx, cnt;
+map<string, int> m, cntGems;
+vector<string> gems = {"DIA", "RUBY", "RUBY", "DIA", "EMERALD", "DIA", "SAPPHIRE", "DIA", "SAPPHIRE", "RUBY",
+                       "EMERALD"};
 
-void dfs(int v) {
-    been[v] = true;
-    for(int i = 0; i < graph[v].size(); i++)
-        if(!been[graph[v][i]])
-            dfs(graph[v][i]);
-}
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-
-    cin >> N >> M;
-    graph.resize(N + 1);
-    for(int i = 0; i < M; i++) {
-        cin>> u >> v;
-        graph[u].push_back(v);
-        graph[v].push_back(u);
-    }
-
-    int cnt = 0;
-    for(int i = 1; i <= N; i++) {
-        if(!been[i]) {
-            dfs(i);
+vector<int> solution() {
+    vector<int> answer;
+    for (int i = 0; i < gems.size(); i++) {
+        if (!m.count(gems[i])) {
+            m[gems[i]] = idx++;
             cnt++;
         }
     }
-    cout << cnt << "\n";
+
+    int l = 0, r = 0, curCnt = 1, len = 100001, a = 0, b = 0;
+    cntGems[gems[0]] = 1;
+    while (l <= r) {
+        if (curCnt < cnt) {
+            if (!cntGems[gems[r + 1]]) { // 다음꺼가 없던거
+                cntGems[gems[r + 1]] = 1;
+                curCnt++;
+            } else {
+                cntGems[gems[r + 1]]++;
+            }
+            r++;
+        } else if (curCnt == cnt) { // 찾는거 다 있음
+            if (len > (r - l)) {
+                a = l;
+                b = r;
+                len = r - l;
+            }
+
+            if (cntGems[gems[l]] == 1) curCnt--;
+            cntGems[gems[l]]--;
+            l++;
+        } else
+            break;
+
+        if (r == gems.size()) break;
+    }
+
+    answer.emplace_back(a + 1);
+    answer.emplace_back(b + 1);
+    return answer;
+}
+
+int main() {
+    vector<int> ans = solution();
+    for (int i = 0; i < ans.size(); i++) {
+        cout << ans[i] << " ";
+    }
+    cout << '\n';
     return 0;
 }

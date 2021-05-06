@@ -142,32 +142,32 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-SWEA1217.o: SWEA1217.cpp.o
+Code.o: Code.cpp.o
 
-.PHONY : SWEA1217.o
+.PHONY : Code.o
 
 # target to build an object file
-SWEA1217.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/SWEA1217.cpp.o
-.PHONY : SWEA1217.cpp.o
+Code.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Code.cpp.o
+.PHONY : Code.cpp.o
 
-SWEA1217.i: SWEA1217.cpp.i
+Code.i: Code.cpp.i
 
-.PHONY : SWEA1217.i
+.PHONY : Code.i
 
 # target to preprocess a source file
-SWEA1217.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/SWEA1217.cpp.i
-.PHONY : SWEA1217.cpp.i
+Code.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Code.cpp.i
+.PHONY : Code.cpp.i
 
-SWEA1217.s: SWEA1217.cpp.s
+Code.s: Code.cpp.s
 
-.PHONY : SWEA1217.s
+.PHONY : Code.s
 
 # target to generate assembly for a file
-SWEA1217.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/SWEA1217.cpp.s
-.PHONY : SWEA1217.cpp.s
+Code.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Code.cpp.s
+.PHONY : Code.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... SWEA1217.o"
-	@echo "... SWEA1217.i"
-	@echo "... SWEA1217.s"
+	@echo "... Code.o"
+	@echo "... Code.i"
+	@echo "... Code.s"
 .PHONY : help
 
 
