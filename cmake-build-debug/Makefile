@@ -142,32 +142,32 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-2021LT2.o: 2021LT2.cpp.o
+Code.o: Code.cpp.o
 
-.PHONY : 2021LT2.o
+.PHONY : Code.o
 
 # target to build an object file
-2021LT2.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021LT2.cpp.o
-.PHONY : 2021LT2.cpp.o
+Code.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Code.cpp.o
+.PHONY : Code.cpp.o
 
-2021LT2.i: 2021LT2.cpp.i
+Code.i: Code.cpp.i
 
-.PHONY : 2021LT2.i
+.PHONY : Code.i
 
 # target to preprocess a source file
-2021LT2.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021LT2.cpp.i
-.PHONY : 2021LT2.cpp.i
+Code.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Code.cpp.i
+.PHONY : Code.cpp.i
 
-2021LT2.s: 2021LT2.cpp.s
+Code.s: Code.cpp.s
 
-.PHONY : 2021LT2.s
+.PHONY : Code.s
 
 # target to generate assembly for a file
-2021LT2.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021LT2.cpp.s
-.PHONY : 2021LT2.cpp.s
+Code.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Code.cpp.s
+.PHONY : Code.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... 2021LT2.o"
-	@echo "... 2021LT2.i"
-	@echo "... 2021LT2.s"
+	@echo "... Code.o"
+	@echo "... Code.i"
+	@echo "... Code.s"
 .PHONY : help
 
 
