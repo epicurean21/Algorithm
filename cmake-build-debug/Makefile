@@ -142,32 +142,32 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-Code.o: Code.cpp.o
+RedBlackTreeAlgorithm.o: RedBlackTreeAlgorithm.cpp.o
 
-.PHONY : Code.o
+.PHONY : RedBlackTreeAlgorithm.o
 
 # target to build an object file
-Code.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Code.cpp.o
-.PHONY : Code.cpp.o
+RedBlackTreeAlgorithm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/RedBlackTreeAlgorithm.cpp.o
+.PHONY : RedBlackTreeAlgorithm.cpp.o
 
-Code.i: Code.cpp.i
+RedBlackTreeAlgorithm.i: RedBlackTreeAlgorithm.cpp.i
 
-.PHONY : Code.i
+.PHONY : RedBlackTreeAlgorithm.i
 
 # target to preprocess a source file
-Code.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Code.cpp.i
-.PHONY : Code.cpp.i
+RedBlackTreeAlgorithm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/RedBlackTreeAlgorithm.cpp.i
+.PHONY : RedBlackTreeAlgorithm.cpp.i
 
-Code.s: Code.cpp.s
+RedBlackTreeAlgorithm.s: RedBlackTreeAlgorithm.cpp.s
 
-.PHONY : Code.s
+.PHONY : RedBlackTreeAlgorithm.s
 
 # target to generate assembly for a file
-Code.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/Code.cpp.s
-.PHONY : Code.cpp.s
+RedBlackTreeAlgorithm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/RedBlackTreeAlgorithm.cpp.s
+.PHONY : RedBlackTreeAlgorithm.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... Code.o"
-	@echo "... Code.i"
-	@echo "... Code.s"
+	@echo "... RedBlackTreeAlgorithm.o"
+	@echo "... RedBlackTreeAlgorithm.i"
+	@echo "... RedBlackTreeAlgorithm.s"
 .PHONY : help
 
 

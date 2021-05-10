@@ -213,7 +213,7 @@ int main() {
  * C 현재 삭제, 아래꺼 선택
  * Z 최근삭제 복구, 위치는 그대로
  */
-#include <iostream>
+/*#include <iostream>
 #include <string>
 #include <vector>
 #include <stack>
@@ -304,7 +304,7 @@ int main() {
     vector<string> cmd = {"D 2", "C", "U 3", "C", "D 4", "C", "U 2", "Z", "Z", "U 1", "C"};
     int n = 8, k = 2;
     cout << solution(n, k, cmd) << '\n';
-}
+}*/
 
 /* 2번
 #include <string>
@@ -526,3 +526,204 @@ int main() {
     }
 }
 */
+/*
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+
+using namespace std;
+
+vector<int> solution(string code, string day, vector<string> data) {
+    vector<int> answer;
+    int Code = stoi(code), Day = stoi(day);
+    vector<pair<int, int>> ans;
+    for (int i = 0; i < data.size(); i++) {
+        int idx = 0, price = 0, _code = 0, time = 0;
+        for (int j = 0; j < data[i].length(); j++) {
+            if (data[i][j] >= '0' && data[i][j] <= '9') { // 숫자
+                string tmp = "";
+                if (idx == 0) { // price
+                    while (data[i][j] != ' ') {
+                        tmp += data[i][j];
+                        j++;
+                    }
+                    price = stoi(tmp);
+                    idx++;
+                } else if (idx == 1) { // code
+                    while (data[i][j] != ' ') {
+                        tmp += data[i][j];
+                        j++;
+                    }
+                    _code = stoi(tmp);
+                    idx++;
+                } else if (idx == 2) {
+                    for (int k = 0; k < 10; k++)
+                        tmp += data[i][j + k];
+
+                    time = stoi(tmp);
+                    break;
+                }
+            }
+        }
+        cout << "price: " << price << ", code: " << _code << ", time: " << time << '\n';
+        cout << "Code: " << Code << ", time: " << Day << '\n';
+        if (_code == Code && Day == (time / 100))
+            ans.push_back({time, price});
+    }
+    sort(ans.begin(), ans.end());
+    for (int i = 0; i < ans.size(); i++) {
+        answer.push_back(ans[i].second);
+    }
+    return answer;
+}
+
+int main() {
+    vector<string> data = {"price=80 code=987654 time=2019062113", "price=90 code=012345 time=2019062014",
+                           "price=120 code=987654 time=2019062010", "price=110 code=012345 time=2019062009",
+                           "price=95 code=012345 time=2019062111"};
+    vector<int> ans = solution("012345", "20190620", data);
+    for (int i = 0; i < ans.size(); i++)
+        cout << ans[i] << " ";
+}*/
+/*
+
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <iostream>
+
+using namespace std;
+
+vector<pair<pair<int, int>, int>> input, tmp; // time, rating, index;
+bool isSorted() {
+    bool flag = true;
+    for (int i = 0; i < tmp.size() - 1; i++) {
+        if (tmp[i].first.first == tmp[i + 1].first.first)
+            return false;
+    }
+    return true;
+}
+
+vector<int> solution(vector<int> t, vector<int> r) {
+    vector<int> answer;
+    for (int i = 0; i < t.size(); i++) {
+        input.push_back({{t[i], r[i]}, i});
+        tmp.push_back({{t[i], r[i]}, i});
+    }
+    sort(input.begin(), input.end());
+    sort(tmp.begin(), tmp.end());
+
+    while (!isSorted()) {
+        for (int i = 0; i < input.size() - 1; i++) {
+            int cur = input[i].first.first;
+            int next = input[i + 1].first.first;
+            if (cur == next)
+                tmp[i + 1].first.first = tmp[i].first.first + 1;
+        }
+
+        sort(tmp.begin(), tmp.end());
+        input = tmp;
+    }
+    for(int i = 0; i < tmp.size(); i++)
+        answer.push_back(tmp[i].second);
+    return answer;
+}
+
+int main() {
+    vector<int> t = {0, 1, 3, 0};
+    vector<int> r = {0, 1, 2, 3};
+    vector<int> ans = solution(t, r);
+    for (int i = 0; i < ans.size(); i++)
+        cout << ans[i] << " ";
+}
+*/
+
+#include <string>
+#include <vector>
+#include <queue>
+#include <cstring>
+#include <iostream>
+
+using namespace std;
+
+int cnt, dx[] = {1, 0, -1, 0}, dy[] = {0, 1, 0, -1};
+bool chk[52][52];
+
+void init(int n) {
+    for (int i = 0; i <= n; i++)
+        for (int j = 0; j <= n; j++)
+            chk[i][j] = false;
+}
+
+bool max(int a, int b) {
+    return a > b ? a : b;
+}
+
+vector<vector<int>> map;
+
+int bfs(int x, int y, int p, int r, int n) {
+    int cnt = 0;
+    queue<pair<pair<int, int>, int>> q; // x, y, 뻗어나간 길이
+    q.push({{x, y}, 0});
+    while (!q.empty()) {
+        int cx = q.front().first.first;
+        int cy = q.front().first.second;
+        int cd = q.front().second;
+        q.pop();
+        chk[cy][cx] = true;
+
+        if (cd < r - 1) {
+            map[cy][cx] -= p;
+            if (map[cy][cx] <= 0)
+                cnt++;
+        } else {
+            map[cy][cx] -= (int) (p / 2);
+            if (map[cy][cx] <= 0)
+                cnt++;
+            continue;
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+            int nx = cx + dx[i];
+            int ny = cy + dy[i];
+            int nd = cd + 1;
+
+            if (nx < 0 || nx >= n || ny < 0 || ny >= n) continue;
+            if (chk[ny][nx]) continue;
+            chk[ny][nx] = true;
+            q.push({{nx, ny}, nd});
+        }
+    }
+    return cnt;
+}
+
+int solution(vector<vector<int>> maps, int p, int r) {
+    int answer = 0;
+    map = maps;
+    // r --> bfs로 뻗어나가는길이
+    for (int i = 0; i < maps.size(); i++) {
+        for (int j = 0; j < maps.size(); j++) {
+            vector<vector<int>> tmp = maps;
+            init(maps.size());
+            answer = max(bfs(j, i, p, r / 2, maps.size()), answer);
+            maps = tmp;
+        }
+    }
+    return answer;
+}
+
+
+int main() {
+    vector<vector<int>> maps = {{1,  28, 41, 22, 25, 79, 4},
+                                {39, 20, 10, 17, 19, 18, 8},
+                                {21, 4,  13, 12, 9,  29, 19},
+                                {58, 1,  20, 5,  8,  16, 9},
+                                {5,  6,  15, 2,  39, 8,  29},
+                                {39, 7,  17, 5,  4,  49, 5},
+                                {74, 46, 8,  11, 25, 2,  11}};
+    vector<int> r = {0, 1, 2, 3};
+    int ans = solution(maps, 16, 6);
+    cout << ans << '\n';
+}
