@@ -142,32 +142,32 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-RedBlackTreeAlgorithm.o: RedBlackTreeAlgorithm.cpp.o
+RedBlackTree_Implementation.o: RedBlackTree_Implementation.cpp.o
 
-.PHONY : RedBlackTreeAlgorithm.o
+.PHONY : RedBlackTree_Implementation.o
 
 # target to build an object file
-RedBlackTreeAlgorithm.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/RedBlackTreeAlgorithm.cpp.o
-.PHONY : RedBlackTreeAlgorithm.cpp.o
+RedBlackTree_Implementation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/RedBlackTree_Implementation.cpp.o
+.PHONY : RedBlackTree_Implementation.cpp.o
 
-RedBlackTreeAlgorithm.i: RedBlackTreeAlgorithm.cpp.i
+RedBlackTree_Implementation.i: RedBlackTree_Implementation.cpp.i
 
-.PHONY : RedBlackTreeAlgorithm.i
+.PHONY : RedBlackTree_Implementation.i
 
 # target to preprocess a source file
-RedBlackTreeAlgorithm.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/RedBlackTreeAlgorithm.cpp.i
-.PHONY : RedBlackTreeAlgorithm.cpp.i
+RedBlackTree_Implementation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/RedBlackTree_Implementation.cpp.i
+.PHONY : RedBlackTree_Implementation.cpp.i
 
-RedBlackTreeAlgorithm.s: RedBlackTreeAlgorithm.cpp.s
+RedBlackTree_Implementation.s: RedBlackTree_Implementation.cpp.s
 
-.PHONY : RedBlackTreeAlgorithm.s
+.PHONY : RedBlackTree_Implementation.s
 
 # target to generate assembly for a file
-RedBlackTreeAlgorithm.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/RedBlackTreeAlgorithm.cpp.s
-.PHONY : RedBlackTreeAlgorithm.cpp.s
+RedBlackTree_Implementation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/RedBlackTree_Implementation.cpp.s
+.PHONY : RedBlackTree_Implementation.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... RedBlackTreeAlgorithm.o"
-	@echo "... RedBlackTreeAlgorithm.i"
-	@echo "... RedBlackTreeAlgorithm.s"
+	@echo "... RedBlackTree_Implementation.o"
+	@echo "... RedBlackTree_Implementation.i"
+	@echo "... RedBlackTree_Implementation.s"
 .PHONY : help
 
 

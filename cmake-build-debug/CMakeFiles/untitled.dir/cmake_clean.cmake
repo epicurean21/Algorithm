@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled.dir/RedBlackTreeAlgorithm.cpp.o"
+  "CMakeFiles/untitled.dir/RedBlackTree_Implementation.cpp.o"
   "untitled"
   "untitled.pdb"
 )
