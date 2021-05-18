@@ -14,24 +14,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/05/10">
-      <change afterPath="$PROJECT_DIR$/RedBlackTree_Implementation.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/05/12">
+      <change afterPath="$PROJECT_DIR$/16964.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LTN2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LTN3.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedBlackTree.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RedBlackTreeAlgorithm.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/RedBlackTreeAlgorithm.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RedBlackTree_Implementation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/RedBlackTree_Implementation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/RedBlackTree_Implementation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/RedBlackTree_Implementation.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled.cbp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +109,8 @@
     <MESSAGE value="21/05/07" />
     <MESSAGE value="21/05/08" />
     <MESSAGE value="21/05/10" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/05/10" />
+    <MESSAGE value="21/05/12" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/05/12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -798,20 +790,30 @@
           <line>664</line>
           <option name="timeStamp" value="330" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/16964.cpp</url>
+          <line>10</line>
+          <option name="timeStamp" value="331" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/LTN2.cpp</url>
+          <line>15</line>
+          <option name="timeStamp" value="332" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="rbt" language="ObjectiveC" />
-        <watch expression="node" language="ObjectiveC" />
-        <watch expression="parent_node" language="ObjectiveC" />
-        <watch expression="uncle_node" language="ObjectiveC" />
-        <watch expression="grand_parent_node" language="ObjectiveC" />
-        <watch expression="tmp_node" language="ObjectiveC" />
-        <watch expression="root" language="ObjectiveC" />
-        <watch expression="tmp_root" language="ObjectiveC" />
-        <watch expression="node-&gt;patient-&gt;code" language="ObjectiveC" />
-        <watch expression="tmp_root-&gt;patient-&gt;code" language="ObjectiveC" />
+        <watch expression="answer" language="ObjectiveC" />
+        <watch expression="i" language="ObjectiveC" />
+        <watch expression="r" language="ObjectiveC" />
+        <watch expression="r[i]" language="ObjectiveC" />
+        <watch expression="st2.top()" language="ObjectiveC" />
+        <watch expression="array[i]" language="ObjectiveC" />
+        <watch expression="array[st.top()]" language="ObjectiveC" />
+        <watch expression="st.top()" language="ObjectiveC" />
+        <watch expression="l" language="ObjectiveC" />
+        <watch expression="l[i]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>

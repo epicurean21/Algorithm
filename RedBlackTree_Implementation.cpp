@@ -20,7 +20,8 @@ public:
         this->treatRecord.clear();
     }
 
-    Patient(int code, string name, string contact, pair<int, int> address, pair<string, int> treatRecord) {
+    Patient(int code, string name, string contact,
+            pair<int, int> address, pair<string, int> treatRecord) {
         this->code = code;
         this->name = name;
         this->contact = contact;
@@ -31,7 +32,7 @@ public:
 
 class Node {
 public:
-    Patient *patient; // patient의 code로 redblacktree 정렬 이 값이 노드의 값
+    Patient *patient;
     bool isBlack; // true 이면 검정색 노드, false 이면 흰색 노드
     Node *parent;
     Node *left_child;
@@ -283,21 +284,21 @@ public:
         return patient.first;
     }
 
-    void countByInorder(Node *node, string DI) {
+    void countByPreorder(Node *node, string DI) {
         if (node == nullptr)
             return;
 
         if (node->patient->treatRecord[node->patient->treatRecord.size() - 1].first == DI)
             this->diagnose_count++;
-        countByInorder(node->left_child, DI);
-        countByInorder(node->right_child, DI);
+        countByPreorder(node->left_child, DI);
+        countByPreorder(node->right_child, DI);
     }
 
     int countDI(string DI) {
         this->diagnose_count = 0;
         if (this->root == nullptr)
             return 0;
-        countByInorder(this->root, DI);
+        countByPreorder(this->root, DI);
         return this->diagnose_count;
     }
 };
