@@ -1,42 +1,58 @@
 #include <iostream>
 #include <vector>
+#include <map>
+#include <string>
 
 using namespace std;
-#define MAX 100001
-vector<vector<int>> map;
-vector<int> ans;
-int N, a, b;
-int depth[MAX];
+vector<vector<int>> g;
+map<string, int> dfs;
+int N, a, b, cnt;
+string ans, str;
+vector<bool> chk;
 
-void dfs(int cur, int d) {
-    if (depth[cur]) return;
-    depth[cur] = d;
+void DFS(int cur) {
+    chk[cur] = true;
+    str += (cur + '0');
 
-    for (int i = 0; i < map[cur].size(); i++) {
-        int next = map[cur][i];
-        if (depth[next]) continue;
-        dfs(next, d + 1);
+    if (str.length() == N) {
+        dfs[str] = cnt++;
+        str.pop_back();
+        return;
+    }
+
+    for (int i = 0; i < g[cur].size(); i++) {
+        int next = g[cur][i];
+        if (chk[next]) continue;
+        chk[next] = true;
+        DFS(next);
+        chk[next] = false;
     }
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
-    cin >> N;
-    map.resize(N + 1);
-    ans.resize(N);
-    for (int i = 0; i < N - 1; i++) {
-        cin >> a >> b;
-        map[a].push_back(b);
-        map[b].push_back(a);
-    }
-    for (int i = 0; i < N; i++)
-        cin >> ans[i];
 
-    dfs(1, 1);
-    for (int i = 0; i < N; i++)
-        if (depth[ans[i]] != i + 1)
-            cout << "0\n";
-    cout << "1\n";
+    cin >> N;
+    chk.resize(N + 1);
+    g.resize(N + 1);
+    for (int i = 0; i < N; i++) {
+        cin >> a >> b;
+        g[a].push_back(b);
+    }
+    DFS(1);
+    char tmp;
+    for (int i = 0; i < N; i++) {
+        cin >> tmp;
+        ans += tmp;
+    }
+    for (auto f = dfs.begin(); f != dfs.end(); f++) {
+        cout << f->first << " " << f->second << "\n";
+    }
+    if (dfs.count(ans))
+        cout << "1\n";
+    else
+        cout << "0\n";
+
     return 0;
 }
