@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/Dijkstra_Implementation.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/1043.cpp
 iostream
 -
 vector
 -
 queue
--
-map
 -
 

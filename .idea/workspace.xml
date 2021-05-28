@@ -14,10 +14,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/05/19">
-      <change afterPath="$PROJECT_DIR$/Dijkstra_Implementation.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/05/26">
+      <change afterPath="$PROJECT_DIR$/1043-2.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1043.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/14675.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/16964.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/16964.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5719.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/5719.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Articulation_Point.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Articulation_Point.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
@@ -124,7 +127,8 @@
     <MESSAGE value="21/05/12" />
     <MESSAGE value="21/05/18" />
     <MESSAGE value="21/05/19" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/05/19" />
+    <MESSAGE value="21/05/26" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/05/26" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -819,13 +823,19 @@
           <line>12</line>
           <option name="timeStamp" value="341" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/1043.cpp</url>
+          <line>50</line>
+          <option name="timeStamp" value="344" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="n" language="ObjectiveC" />
-        <watch expression="m" language="ObjectiveC" />
-        <watch expression="q" language="ObjectiveC" />
+        <watch expression="truth" language="ObjectiveC" />
+        <watch expression="tmp" language="ObjectiveC" />
+        <watch expression="cur" language="ObjectiveC" />
+        <watch expression="chk[cur]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>

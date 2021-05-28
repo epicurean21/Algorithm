@@ -13,7 +13,7 @@ using namespace std;
  * 예외) 루트 노드로 잡은 특정 노드의 자식 수가 2개 이상이면 무조건 단절점.
  */
 
-int v, e, cnt, visit_order[10010], num = 1; // 방문순서를 저장하기위한 visit_order 변수와 순서를 저장한 num 변수
+int v, q, cnt, visit_order[10010], num = 1; // 방문순서를 저장하기위한 visit_order 변수와 순서를 저장한 num 변수
 bool ans[10010]; // 단절점이면 true로 체크
 vector<int> adj[10010];
 
@@ -61,8 +61,8 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    cin >> v >> e;
-    for (int i = 0; i < e; i++) {
+    cin >> v;
+    for (int i = 0; i < v - 1; i++) {
         int a, b;
         cin >> a >> b;
         adj[a].push_back(b);
@@ -77,8 +77,15 @@ int main() {
 
     // 출력
     // 개수
+    cin >> q;
+    for (int i = 0; i < q; i++) {
+        int t, k;
+        cin >> t >> k;
+        if (t == 1)
+            break;
+    }
     for (int i = 1; i <= v; i++)
-        if(ans[i])
+        if (ans[i])
             cnt++;
     cout << cnt << "\n";
     for (int i = 1; i <= v; i++) {

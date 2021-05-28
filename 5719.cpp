@@ -1,95 +1,79 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <cstring>
 
 using namespace std;
-#define MAX 5001
-#define INF 987654321
+#define MAX 501
+int N, M, S, D, U, V, P;
 
-int N, M, S, D;
-vector<pair<int, int>> graph[MAX];
-vector<pair<int, int>> trace[MAX];
-bool visited[MAX][MAX];
+pair<int, int> map[MAX];
+vector<int> predecessor;
 
-vector<int> dijkstra(int start, int vertex) {
-    vector<int> distance(vertex, INF);
-    distance[start] = 0;
-    priority_queue<pair<int, int>> pq; //Cost, Vertex;
-    pq.push(make_pair(0, start)); //초기 비용과 시작점
+int dijkstra(int s, int d) {
+    vector<int> final_distance;
+    vector<int> dist(N + 1, INT32_MAX);
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    dist[s] = 0;
+    pq.push({0, s});
 
     while (!pq.empty()) {
-        int cost = -pq.top().first;
-        int curVertex = pq.top().second;
+        int cur = pq.top().second;
+        int cost = pq.top().first;
         pq.pop();
 
-        if (distance[curVertex] < cost)
-            continue;
+        if (dist[cur] < cost) continue;
 
-        for (int i = 0; i < graph[curVertex].size(); i++) {
-            int neighbor = graph[curVertex][i].first;
-            int neighborDistance = cost + graph[curVertex][i].second;
+        for (int i = 0; i < N; i++) {
+            if (map[cur][i].second == -1) continue;
+            int next = map[cur][i].first;
+            int nextCost = map[cur][i].second + cost;
 
-            if (graph[curVertex][i].second == -1)
-                continue;
-
-            if (distance[neighbor] > neighborDistance) {
-                distance[neighbor] = neighborDistance;
-                pq.push(make_pair(-neighborDistance, neighbor));
-                trace[neighbor].clear();
-                trace[neighbor].push_back(make_pair(curVertex, neighborDistance));
-            } else if (distance[neighbor] == neighborDistance)
-                trace[neighbor].push_back(make_pair(curVertex, neighborDistance));
+            if (dist[next] > nextCost) {
+                dist[next] = nextCost;
+                predecessor.clear();
+            } else if (dist[next] >= nextCost) {
+                predecessor
+            }
         }
     }
-    return distance;
+    return dist[d];
 }
 
-void BFS(int destination) {
-    queue<int> q;
-    q.push(destination);
-    while (!q.empty()) {
-        int curVertex = q.front();
-        q.pop();
-        for (int i = 0; i < trace[curVertex].size(); i++) {
-            int neighbor = trace[curVertex][i].first;
-            if (visited[curVertex][neighbor])
-                continue;
-            for (int i = 0; i < graph[neighbor].size(); i++)
-                if (graph[neighbor][i].first == curVertex)
-                    graph[neighbor][i].second = -1;
-            q.push(neighbor);
-        }
+void remove_edges(int S, int D, int cur) {
+    if (now == S) return;
+
+    if (visited[now]) return;
+    visited[now] = true;
+
+    for (int i = 0; i < pre[now].size(); i++) {
+        int next = pre[now][i];
+        adj[next][now] = -1;
+        deletePath(pre[now][i]);
     }
 }
 
 int main() {
-    while (1) {
-        memset(visited, false, sizeof(visited));
-        memset(trace, 0, sizeof(trace));
-        for (int i = 0; i < MAX; i++)
-            graph[i].clear();
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
 
-        cin >> N >> M;
+    while (cin >> N >> M) {
         if (N == 0 && M == 0)
             break;
+        map.clear();
+        predecessor.clear();
+        map.resize(N + 1);
 
         cin >> S >> D;
-
         for (int i = 0; i < M; i++) {
-            int source, destination, cost;
-            cin >> source >> destination >> cost;
-            graph[source].push_back(make_pair(destination, cost));
+            cin >> U >> V >> P;
+            map[U].emplace_back(V, P);
         }
-        dijkstra(S, N);
-        BFS(D);
-        vector<int> result = dijkstra(S, N);
 
-        if (result[D] == INF)
-            cout << -1 << endl;
-        else
-            cout << result[D] << endl;
+        int dist = dijkstra(S, D);
+        if (dist == -1) {
+            cout << "-1\n";
+            return 0;
+        }
     }
-
     return 0;
 }
