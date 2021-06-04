@@ -14,14 +14,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/05/26">
-      <change afterPath="$PROJECT_DIR$/1043-2.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1043.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/14675.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/05/28">
+      <change afterPath="$PROJECT_DIR$/15783.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4196.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SCC.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ayoon.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_05_26_6_36___Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2021_05_26_6_36_오후_[Default_Changelist]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5719.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/5719.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Articulation_Point.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Articulation_Point.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/1043.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
@@ -128,7 +130,8 @@
     <MESSAGE value="21/05/18" />
     <MESSAGE value="21/05/19" />
     <MESSAGE value="21/05/26" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/05/26" />
+    <MESSAGE value="21/05/28" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/05/28" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -828,14 +831,34 @@
           <line>50</line>
           <option name="timeStamp" value="344" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/SCC.cpp</url>
+          <line>36</line>
+          <option name="timeStamp" value="346" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/4196.cpp</url>
+          <line>64</line>
+          <option name="timeStamp" value="347" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/4196.cpp</url>
+          <line>31</line>
+          <option name="timeStamp" value="348" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/4196.cpp</url>
+          <line>21</line>
+          <option name="timeStamp" value="349" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="truth" language="ObjectiveC" />
-        <watch expression="tmp" language="ObjectiveC" />
-        <watch expression="cur" language="ObjectiveC" />
-        <watch expression="chk[cur]" language="ObjectiveC" />
+        <watch expression="group_number" language="ObjectiveC" />
+        <watch expression="SCC" language="ObjectiveC" />
+        <watch expression="v" language="ObjectiveC" />
+        <watch expression="G[v][i]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
