@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/4196.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/KMP.cpp
 iostream
 -
-stack
+string
 -
 vector
--
-cstring
 -
 

@@ -142,32 +142,32 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-4196.o: 4196.cpp.o
+KMP.o: KMP.cpp.o
 
-.PHONY : 4196.o
+.PHONY : KMP.o
 
 # target to build an object file
-4196.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/4196.cpp.o
-.PHONY : 4196.cpp.o
+KMP.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/KMP.cpp.o
+.PHONY : KMP.cpp.o
 
-4196.i: 4196.cpp.i
+KMP.i: KMP.cpp.i
 
-.PHONY : 4196.i
+.PHONY : KMP.i
 
 # target to preprocess a source file
-4196.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/4196.cpp.i
-.PHONY : 4196.cpp.i
+KMP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/KMP.cpp.i
+.PHONY : KMP.cpp.i
 
-4196.s: 4196.cpp.s
+KMP.s: KMP.cpp.s
 
-.PHONY : 4196.s
+.PHONY : KMP.s
 
 # target to generate assembly for a file
-4196.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/4196.cpp.s
-.PHONY : 4196.cpp.s
+KMP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/KMP.cpp.s
+.PHONY : KMP.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... 4196.o"
-	@echo "... 4196.i"
-	@echo "... 4196.s"
+	@echo "... KMP.o"
+	@echo "... KMP.i"
+	@echo "... KMP.s"
 .PHONY : help
 
 
