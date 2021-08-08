@@ -45,7 +45,7 @@ void bfs(int sx, int sy) {
 }
 
 void print_dist() {
-    for (int d = 0; d < 2; d++) {
+    for (int d = 0; d <= 2; d++) {
         for (int i = 1; i <= N; i++) {
             for (int j = 1; j <= M; j++)
                 cout << dist[d][i][j] << " ";
