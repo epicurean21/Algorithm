@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2021_Kakao_Intern_1.cpp
-string
--
-vector
--
-map
--
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2206.cpp
 iostream
+-
+queue
+-
+string
 -
 

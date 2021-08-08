@@ -14,11 +14,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/06/06">
-      <change afterPath="$PROJECT_DIR$/2021_Kakao_Intern_1.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2206.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/08/08">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2206.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2206.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
@@ -67,7 +65,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
@@ -129,7 +127,8 @@
     <MESSAGE value="21/05/28" />
     <MESSAGE value="21/06/05" />
     <MESSAGE value="21/06/06" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/06/06" />
+    <MESSAGE value="21/08/08" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/08/08" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -855,22 +854,30 @@
           <option name="timeStamp" value="351" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/2206.cpp</url>
-          <line>9</line>
-          <option name="timeStamp" value="352" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Test.cpp</url>
           <line>21</line>
           <option name="timeStamp" value="353" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/2206.cpp</url>
+          <line>22</line>
+          <option name="timeStamp" value="354" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="s[i]" language="ObjectiveC" />
-        <watch expression="str" language="ObjectiveC" />
-        <watch expression="answer" language="ObjectiveC" />
+        <watch expression="cx" language="ObjectiveC" />
+        <watch expression="cy" language="ObjectiveC" />
+        <watch expression="wall_destroy_count" language="ObjectiveC" />
+        <watch expression="distance" language="ObjectiveC" />
+        <watch expression="nx" language="ObjectiveC" />
+        <watch expression="ny" language="ObjectiveC" />
+        <watch expression="map[ny][nx]" language="ObjectiveC" />
+        <watch expression="visited[wall_destroy_count][ny][nx]" language="ObjectiveC" />
+        <watch expression="dist[1][ny][nx]" language="ObjectiveC" />
+        <watch expression="dist[0][ny][nx]" language="ObjectiveC" />
+        <watch expression="dist[wall_destroy_count][ny][nx]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>

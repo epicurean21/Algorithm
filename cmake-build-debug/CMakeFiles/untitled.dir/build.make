@@ -76,27 +76,27 @@ include CMakeFiles/untitled.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/untitled.dir/flags.make
 
-CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.o: CMakeFiles/untitled.dir/flags.make
-CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.o: ../2021_Kakao_Intern_1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.o -c /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2021_Kakao_Intern_1.cpp
+CMakeFiles/untitled.dir/2206.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/2206.cpp.o: ../2206.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/2206.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/2206.cpp.o -c /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2206.cpp
 
-CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2021_Kakao_Intern_1.cpp > CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.i
+CMakeFiles/untitled.dir/2206.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/2206.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2206.cpp > CMakeFiles/untitled.dir/2206.cpp.i
 
-CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2021_Kakao_Intern_1.cpp -o CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.s
+CMakeFiles/untitled.dir/2206.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/2206.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2206.cpp -o CMakeFiles/untitled.dir/2206.cpp.s
 
 # Object files for target untitled
 untitled_OBJECTS = \
-"CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.o"
+"CMakeFiles/untitled.dir/2206.cpp.o"
 
 # External object files for target untitled
 untitled_EXTERNAL_OBJECTS =
 
-untitled: CMakeFiles/untitled.dir/2021_Kakao_Intern_1.cpp.o
+untitled: CMakeFiles/untitled.dir/2206.cpp.o
 untitled: CMakeFiles/untitled.dir/build.make
 untitled: CMakeFiles/untitled.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable untitled"
