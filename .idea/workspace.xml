@@ -14,9 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/06/05">
-      <change afterPath="$PROJECT_DIR$/DP_Fibonacci_Top_Down.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/KMP.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/06/06">
+      <change afterPath="$PROJECT_DIR$/2021_Kakao_Intern_1.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2206.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
@@ -69,6 +70,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -77,11 +83,6 @@
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
@@ -127,7 +128,8 @@
     <MESSAGE value="21/05/26" />
     <MESSAGE value="21/05/28" />
     <MESSAGE value="21/06/05" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/06/05" />
+    <MESSAGE value="21/06/06" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/06/06" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -852,17 +854,23 @@
           <line>41</line>
           <option name="timeStamp" value="351" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/2206.cpp</url>
+          <line>9</line>
+          <option name="timeStamp" value="352" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Test.cpp</url>
+          <line>21</line>
+          <option name="timeStamp" value="353" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="i" language="ObjectiveC" />
-        <watch expression="j" language="ObjectiveC" />
-        <watch expression="N" language="ObjectiveC" />
-        <watch expression="M" language="ObjectiveC" />
-        <watch expression="T[i]" language="ObjectiveC" />
-        <watch expression="P[j]" language="ObjectiveC" />
-        <watch expression="matching_index" language="ObjectiveC" />
+        <watch expression="s[i]" language="ObjectiveC" />
+        <watch expression="str" language="ObjectiveC" />
+        <watch expression="answer" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
