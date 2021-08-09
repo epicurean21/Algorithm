@@ -37,15 +37,17 @@ vector<int> solution(vector<vector<string>> places) {
                                 int mx = (nx + k) / 2;
                                 int my = (ny + j) / 2;
 
-                                if (mx < 0 || mx >= 5 || my < 0 || my >= 5) continue;
 
-                                if (places[i][my][mx] == 'X') continue;
-                                if (places[i][my][k] == 'X' && places[i][j][mx] == 'X') continue;
+                                if (k == nx || j == ny) {
+                                    if (places[i][my][mx] == 'X') continue;
+                                    flag = true;
+                                }
+
+                                if (places[i][ny][k] == 'X' && places[i][j][nx] == 'X') continue;
                                 flag = true;
                             }
                         }
                     }
-
                     if (flag) break;
                 }
                 if (flag) break;
@@ -74,6 +76,8 @@ int main() {
     }
 
     vector<int> answer = solution(places);
+    for (int i = 0; i < answer.size(); i++)
+        cout << answer[i] << " ";
     return 0;
 }
 /**
