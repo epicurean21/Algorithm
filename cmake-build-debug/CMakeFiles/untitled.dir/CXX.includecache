@@ -6,10 +6,10 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2206.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2021_Kakao_Intern_2.cpp
 iostream
 -
-queue
+vector
 -
 string
 -
