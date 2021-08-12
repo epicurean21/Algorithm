@@ -142,32 +142,32 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-2021_Kakao_Intern_3.o: 2021_Kakao_Intern_3.cpp.o
+1707.o: 1707.cpp.o
 
-.PHONY : 2021_Kakao_Intern_3.o
+.PHONY : 1707.o
 
 # target to build an object file
-2021_Kakao_Intern_3.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Intern_3.cpp.o
-.PHONY : 2021_Kakao_Intern_3.cpp.o
+1707.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/1707.cpp.o
+.PHONY : 1707.cpp.o
 
-2021_Kakao_Intern_3.i: 2021_Kakao_Intern_3.cpp.i
+1707.i: 1707.cpp.i
 
-.PHONY : 2021_Kakao_Intern_3.i
+.PHONY : 1707.i
 
 # target to preprocess a source file
-2021_Kakao_Intern_3.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Intern_3.cpp.i
-.PHONY : 2021_Kakao_Intern_3.cpp.i
+1707.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/1707.cpp.i
+.PHONY : 1707.cpp.i
 
-2021_Kakao_Intern_3.s: 2021_Kakao_Intern_3.cpp.s
+1707.s: 1707.cpp.s
 
-.PHONY : 2021_Kakao_Intern_3.s
+.PHONY : 1707.s
 
 # target to generate assembly for a file
-2021_Kakao_Intern_3.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Intern_3.cpp.s
-.PHONY : 2021_Kakao_Intern_3.cpp.s
+1707.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/1707.cpp.s
+.PHONY : 1707.cpp.s
 
 # Help Target
 help:
@@ -178,9 +178,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... 2021_Kakao_Intern_3.o"
-	@echo "... 2021_Kakao_Intern_3.i"
-	@echo "... 2021_Kakao_Intern_3.s"
+	@echo "... 1707.o"
+	@echo "... 1707.i"
+	@echo "... 1707.s"
 .PHONY : help
 
 
