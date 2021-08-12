@@ -71,7 +71,7 @@ int main() {
     int n, k;
     vector<string> cmd;
     cin >> n >> k;
-    cmd.emplace_back("U 10");
+    cmd.emplace_back("D 2");
     cmd.emplace_back("C");
     cmd.emplace_back("U 3");
     cmd.emplace_back("C");
