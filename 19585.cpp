@@ -1,11 +1,12 @@
 #include <iostream>
-#include <string>
 #include <vector>
+#include <map>
 
 using namespace std;
 #define alphabet 26
 int C, N, Q;
-vector<string> color;
+string insert;
+map<string, int> m;
 
 class Trie {
 private:
@@ -24,28 +25,30 @@ public:
                 delete next[i];
     }
 
-    void insert(string key, int idx) {
-        if (key[idx] == '\0') {
+    void insert(char *key) {
+        if (*key == '\0') {
             isFinished = true;
             return;
         }
 
-        if (!next[key[idx] - 'a'])
-            next[key[idx] - 'a'] = new Trie();
-        next[key[idx] - 'a']->insert(key, idx + 1);
+        int nextWord = *key - 'a';
+        if (!next[nextWord])
+            next[nextWord] = new Trie();
+        next[nextWord]->insert(key + 1);
     }
 
-    bool find(string key, int idx) {
-        if (key[idx] == '\0') {
-            if (!this->isFinished)
-                return false;
-            return true;
-        }
+    bool find(char *key) {
+        if (*key == '\0')
+            return false;
 
-        int nextWord = key[idx] - 'a';
+        if (this->isFinished)
+            if (m.find(key) != m.end())
+                return true;
+
+        int nextWord = *key - 'a';
         if (next[nextWord] == nullptr)
             return false;
-        return next[nextWord]->find(key, idx + 1);
+        return next[nextWord]->find(key + 1);
     }
 };
 
@@ -57,27 +60,20 @@ int main() {
     Trie *color_nickname = new Trie();
 
     for (int i = 0; i < C; i++) {
-        string insert;
         cin >> insert;
-        color.emplace_back(insert);
+        color_nickname->insert(&insert[0]);
     }
 
     for (int i = 0; i < N; i++) {
-        string insert;
         cin >> insert;
-        for (auto &j : color) {
-            string input = j + insert;
-            input += '\0';
-            color_nickname->insert(input, 0);
-        }
+        m[insert] = i;
     }
 
     cin >> Q;
     for (int i = 0; i < Q; i++) {
-        string teamName;
-        cin >> teamName;
+        cin >> insert;
 
-        if (color_nickname->find(teamName, 0))
+        if (color_nickname->find(&insert[0]))
             cout << "Yes\n";
         else
             cout << "No\n";
