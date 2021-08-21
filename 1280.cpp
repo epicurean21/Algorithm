@@ -1,6 +1,7 @@
 /**
  * Segment Tree
  * i번째 나무 심는 cost = 1 ~ (i-1) 까지의 거리의 합 --> 구간합
+ * - 근데 이게 오름차순 일 필요없음. 좌표에 따른 거리 값.
  * 문제의 정답: 2~N번 나무까지 심는 cost의 곱
  *
  * 즉 i번째 나무의 cost를 구해놓고
@@ -9,6 +10,7 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 #define MOD 1000000007
@@ -22,7 +24,32 @@ ll construct_tree(int node, int start, int end) {
         return tree[node] = X_sum[start];
 
     int m = (start + end) / 2;
-    return tree[node] = construct_tree(node * 2, start, m);
+    return (tree[node] = construct_tree(node * 2, start, m) % MOD) * (construct_tree(node * 2 + 1, m + 1, end) % MOD) %
+           MOD;
+}
+
+ll sum(int node, int start, int end, int left, int right) {
+    if (start > right || end < left)
+        return 0;
+
+    if (start >= left && end <= right)
+        return tree[node];
+
+    int m = (start + end) / 2;
+
+//    return (sum(node * 2, start, m, left, right) % MOD) +
+}
+
+ll query(int node, int start, int end, int left, int right) {
+    if (start > right || end < left)
+        return 1;
+
+    if (start >= left && end <= right) {
+        return tree[node];
+    }
+
+    int m = (start + end) / 2;
+    return (query(node * 2, start, m, left, right) % MOD) * (query(node * 2 + 1, m + 1, end, left, right) % MOD) % MOD;
 }
 
 int main() {
@@ -41,8 +68,11 @@ int main() {
     for (int i = 1; i <= N; i++) {
         cin >> X[i];
         if (i >= 2)
-            X_sum[i] = X_sum[i - 1] + X[i] - X[1];
+            X_sum[i] = X_sum[i - 1] + abs(X[i] - X[1]);
     }
 
+    construct_tree(1, 1, N);
+
+    cout << query(1, 1, N, 2, N) % MOD << '\n';
     return 0;
 }
