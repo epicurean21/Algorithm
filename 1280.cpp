@@ -6,6 +6,9 @@
  *
  * 즉 i번째 나무의 cost를 구해놓고
  * segment tree는 구간 곱?
+ *
+ * segment tree로 좌표에 따른 각 위치의 cost를 구하고,
+ * 그 값들을 이용해 또 다른 구간 곱 세그먼트 트리를 구성
  */
 
 #include <iostream>
@@ -17,6 +20,7 @@ using namespace std;
 #define ll long long
 int N;
 vector<ll> tree;
+vector<ll> distance;
 vector<int> X, X_sum;
 
 ll construct_tree(int node, int start, int end) {
