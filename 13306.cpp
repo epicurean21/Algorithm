@@ -27,7 +27,8 @@ int main() {
     for (int i = 1; i <= N; i++)
         p[i] = i;
 
-    for (int i = 0; i < N; i++) {
+
+    for (int i = 2; i <= N; i++) {
         cin >> a;
         merge(i + 1, a);
     }
