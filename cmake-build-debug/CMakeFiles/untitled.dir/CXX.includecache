@@ -6,11 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/1280.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/1132.cpp
 iostream
+-
+string
 -
 vector
 -
 cmath
+-
+algorithm
+-
+iostream
+-
+algorithm
+-
+string
 -
 
