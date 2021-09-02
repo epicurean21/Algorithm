@@ -14,12 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/08/31">
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/09/02 [오프라인 쿼리, 쿼리의 역출력, Union Find]">
+      <change afterPath="$PROJECT_DIR$/1107.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/13306.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/13306.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/21611.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/21611.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/21611.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/21611.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
@@ -105,7 +103,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/04/27" />
     <MESSAGE value="21/04/28" />
     <MESSAGE value="21/04/29" />
     <MESSAGE value="21/04/30" />
@@ -130,7 +127,8 @@
     <MESSAGE value="21/08/28" />
     <MESSAGE value="21/08/29" />
     <MESSAGE value="21/08/31" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/08/31" />
+    <MESSAGE value="21/09/02 [오프라인 쿼리, 쿼리의 역출력, Union Find]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/09/02 [오프라인 쿼리, 쿼리의 역출력, Union Find]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
