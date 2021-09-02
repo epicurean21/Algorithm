@@ -18,7 +18,9 @@ int min(int a, int b) {
     return a > b ? b : a;
 }
 
-int length(int num) {
+int numLength(int num) {
+    if (!num) return 1;
+
     int result = 0;
     while (num) {
         num /= 10;
@@ -28,11 +30,12 @@ int length(int num) {
 }
 
 bool isPossible(int num) {
-    if (num == 0)
+    if (num == 0) {
         if (find(button.begin(), button.end(), 0) == button.end())
             return true;
         else
             return false;
+    }
 
     while (num) {
         if (find(button.begin(), button.end(), num % 10) != button.end())
@@ -54,20 +57,21 @@ int main() {
     }
 
     int result = INF;
-    int similar = 0;
+    int calc = 0;
 
     for (int i = 0; i < MAX; i++) {
         if (isPossible(i)) { // 고장 안난 버튼
             int click = abs(N - i);
             if (result > click) {
                 result = click;
-                similar = i;
+                calc = i;
             }
         }
     }
 
-    int a = result + length(similar);
+    int a = result + numLength(calc);
     int b = abs(N - 100);
     cout << min(a, b) << "\n";
+
     return 0;
 }
