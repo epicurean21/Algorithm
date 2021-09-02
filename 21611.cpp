@@ -53,6 +53,8 @@ void spell(int di, int si) {
         int index = dir_index[di][i];
         marbles[index] = -1; // 터트려버림~
     }
+    cout << "\n--------after spell---------\n";
+    print();
 }
 
 void move_marbles() {
@@ -69,6 +71,9 @@ void move_marbles() {
         marbles[i++] = q.front();
         q.pop();
     }
+
+    cout << "\n--------after move---------\n";
+    print();
 }
 
 void explode_marbles() { // 연속된것들 터트리기
