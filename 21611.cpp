@@ -13,7 +13,8 @@ void print() {
     cout << '\n';
     for (int i = 1; i <= marble_count; i++)
         cout << marbles[i] << " ";
-    cout << '\n';
+    cout << "\ncur ans: " << ans << "\n";
+
 }
 
 void find_index(int n) {
@@ -53,8 +54,6 @@ void spell(int di, int si) {
         int index = dir_index[di][i];
         marbles[index] = -1; // 터트려버림~
     }
-    cout << "\n--------after spell---------\n";
-    print();
 }
 
 void move_marbles() {
@@ -71,9 +70,6 @@ void move_marbles() {
         marbles[i++] = q.front();
         q.pop();
     }
-
-    cout << "\n--------after move---------\n";
-    print();
 }
 
 void explode_marbles() { // 연속된것들 터트리기
@@ -85,7 +81,8 @@ void explode_marbles() { // 연속된것들 터트리기
         if (!flag)
             break;
         flag = false;
-        for (int i = 1; i <= marble_count; i++) {
+
+        for (int i = 1; i <= marble_count + 1; i++) {
             int next = marbles[i];
             if (now != next) {
                 if (cnt >= 4) {
@@ -110,6 +107,7 @@ void regrouping() {
     int now = marbles[1];
     int next = 0;
     int cnt = 0;
+
     for (int i = 1; i <= marble_count; i++) {
         next = marbles[i];
         if (now != next) {
@@ -153,6 +151,7 @@ int main() {
         explode_marbles();
         regrouping();
     }
+
     cout << ans << '\n';
     return 0;
 }
