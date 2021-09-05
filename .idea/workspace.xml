@@ -14,8 +14,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/09/05 [MST: 최소 신장 트리 정리]">
-      <change afterPath="$PROJECT_DIR$/20010.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/09/05 [20010 악덕 영주 혜유: MST 최소 신장 트리, DFS]">
+      <change afterPath="$PROJECT_DIR$/1926.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
@@ -103,7 +103,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/05/08" />
     <MESSAGE value="21/05/10" />
     <MESSAGE value="21/05/12" />
     <MESSAGE value="21/05/18" />
@@ -128,7 +127,8 @@
     <MESSAGE value="21/09/05 [1270 선 긋기: 스위핑, 정렬]" />
     <MESSAGE value="21/09/05 [15922 아우으 우아으이야!! : 스위핑, 정렬, 2170과 같은 문제]" />
     <MESSAGE value="21/09/05 [MST: 최소 신장 트리 정리]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/09/05 [MST: 최소 신장 트리 정리]" />
+    <MESSAGE value="21/09/05 [20010 악덕 영주 혜유: MST 최소 신장 트리, DFS]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/09/05 [20010 악덕 영주 혜유: MST 최소 신장 트리, DFS]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -884,14 +884,29 @@
           <line>69</line>
           <option name="timeStamp" value="364" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/1926.cpp</url>
+          <line>54</line>
+          <option name="timeStamp" value="369" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/1926.cpp</url>
+          <line>14</line>
+          <option name="timeStamp" value="370" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="cnt" language="ObjectiveC" />
-        <watch expression="cur " language="ObjectiveC" />
-        <watch expression="next" language="ObjectiveC" />
-        <watch expression="chk[next]" language="ObjectiveC" />
+        <watch expression="x" language="ObjectiveC" />
+        <watch expression="y" language="ObjectiveC" />
+        <watch expression="q" language="ObjectiveC" />
+        <watch expression="res" language="ObjectiveC" />
+        <watch expression="cx" language="ObjectiveC" />
+        <watch expression="cy" language="ObjectiveC" />
+        <watch expression="nx" language="ObjectiveC" />
+        <watch expression="ny" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
