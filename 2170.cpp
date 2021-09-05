@@ -11,33 +11,57 @@
  * 정렬을 해주고, 세 가지 케이스에 맞게 계산해준다 좆밥이네
  */
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
 using namespace std;
 
 int N, x, y, cur_min = INT32_MAX, cur_max, ans;
-
-int min(int a, int b) {
-    return a > b ? b : a;
-}
-
-int max(int a, int b) {
-    return a > b ? a : b;
-}
-
+vector<pair<int, int>> input;
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
+    cin >> N;
+
     for (int i = 0; i < N; i++) {
         cin >> x >> y;
+        input.emplace_back(x, y);
+    }
 
-        if (cur_max < x || cur_min > y) { // 기존 최대보다 큰 x, 기존 최소보다 작은 y
+    sort(input.begin(), input.end());
+
+    for (int i = 0; i < input.size(); i++) {
+        x = input[i].first;
+        y = input[i].second;
+
+        if (i == 0) { // 첫 번째
             ans += y - x;
+            cur_min = x;
+            cur_max = y;
             continue;
         }
 
+        if (cur_max < x || cur_min > y) { // case 1 : 선분과 안겹침
+            ans += (y - x);
 
+            cur_max = max(y, cur_max);
+            cur_min = min(x, cur_min);
+            continue;
+        }
+
+        if (cur_min <= x && cur_max >= y) { // case 2 : 기존에 포함됨 무시
+            continue;
+        }
+
+        if (cur_min <= x && cur_max <= y) { // case 3 : 일부만 겹침
+            ans += (y - cur_max);
+            cur_max = y;
+        }
     }
+
+    cout << ans << '\n';
+
     return 0;
 }
