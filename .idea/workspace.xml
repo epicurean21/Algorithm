@@ -14,8 +14,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/09/05 [20010 악덕 영주 혜유: MST 최소 신장 트리, DFS]">
-      <change afterPath="$PROJECT_DIR$/1926.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/09/05 [1926 그림: DFS, BFS]">
+      <change afterPath="$PROJECT_DIR$/16212.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
@@ -103,7 +103,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/05/10" />
     <MESSAGE value="21/05/12" />
     <MESSAGE value="21/05/18" />
     <MESSAGE value="21/05/19" />
@@ -128,7 +127,8 @@
     <MESSAGE value="21/09/05 [15922 아우으 우아으이야!! : 스위핑, 정렬, 2170과 같은 문제]" />
     <MESSAGE value="21/09/05 [MST: 최소 신장 트리 정리]" />
     <MESSAGE value="21/09/05 [20010 악덕 영주 혜유: MST 최소 신장 트리, DFS]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/09/05 [20010 악덕 영주 혜유: MST 최소 신장 트리, DFS]" />
+    <MESSAGE value="21/09/05 [1926 그림: DFS, BFS]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/09/05 [1926 그림: DFS, BFS]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
