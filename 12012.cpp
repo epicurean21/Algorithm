@@ -3,6 +3,11 @@
  * - Data Structure
  * - Disjoint Set (Union-Find)
  * - Offline Query
+ * 풀이: 질의를 역순으로 찾아가며, 각 컴포넌트의 개수를 세준다.
+ * 정점을 추가할 때 그래프에 이미 추가된것만 merge
+ * 거꾸로 접근하는 Offline Query가 포인트, 빈그래프에서 정점과 연결된 컴포넌트를 이어주면서
+ * 총 컴포넌트 개수를 유지시키는 문제이다.
+ *
  */
 #include <iostream>
 #include <vector>
@@ -66,18 +71,16 @@ int main() {
         cnt++;
         int cur = query.top();
         query.pop();
-        for (int i = 0; i < map[cur].size(); i++) {
-            int next = map[cur][i];
-            if (chk[next])
-                if (merge(cur, next))
-                    cnt--;
-
-            chk[cur] = true;
-            if (cnt)
-                ans.push("YES");
-            else
-                ans.push("NO");
+        for (auto next : map[cur]) {
+            if (chk[next] && merge(cur, next))
+                cnt--;
         }
+
+        chk[cur] = true;
+        if (cnt == 1)
+            ans.push("YES");
+        else
+            ans.push("NO");
     }
 
     while (!ans.empty()) {
