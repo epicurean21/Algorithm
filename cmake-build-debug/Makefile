@@ -129,29 +129,29 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-MST.o: MST.cpp.o
-.PHONY : MST.o
+20010.o: 20010.cpp.o
+.PHONY : 20010.o
 
 # target to build an object file
-MST.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/MST.cpp.o
-.PHONY : MST.cpp.o
+20010.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/20010.cpp.o
+.PHONY : 20010.cpp.o
 
-MST.i: MST.cpp.i
-.PHONY : MST.i
+20010.i: 20010.cpp.i
+.PHONY : 20010.i
 
 # target to preprocess a source file
-MST.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/MST.cpp.i
-.PHONY : MST.cpp.i
+20010.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/20010.cpp.i
+.PHONY : 20010.cpp.i
 
-MST.s: MST.cpp.s
-.PHONY : MST.s
+20010.s: 20010.cpp.s
+.PHONY : 20010.s
 
 # target to generate assembly for a file
-MST.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/MST.cpp.s
-.PHONY : MST.cpp.s
+20010.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/20010.cpp.s
+.PHONY : 20010.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... MST.o"
-	@echo "... MST.i"
-	@echo "... MST.s"
+	@echo "... 20010.o"
+	@echo "... 20010.i"
+	@echo "... 20010.s"
 .PHONY : help
 
 
