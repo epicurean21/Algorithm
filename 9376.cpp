@@ -47,12 +47,12 @@ void init(int H, int W) {
             map[i][j] = '.';
     prisoners.clear();
     prisoners.emplace_back(0, 0); // 상근이가 0,0 에 있다고 하자
-    memset(chk, false, sizeof(chk));
 
     for (int i = 0; i < 3; i++)
         for (int j = 0; j <= H + 1; j++)
             for (int k = 0; k <= W + 1; k++)
                 dist[i][j][k] = INT32_MAX;
+
     ans = INT32_MAX;
     while (!pq.empty())
         pq.pop();
@@ -74,39 +74,41 @@ int main() {
             cin >> input;
             for (int j = 1; j <= w; j++) {
                 map[i][j] = input[j - 1];
-                if (input[j] == '$')
+                if (input[j - 1] == '$')
                     prisoners.emplace_back(j, i); // 죄수 x, y 좌표
             }
         }
 
-        print_map(h, w);
+        //print_map(h, w);
 
         for (int i = 0; i < 3; i++) {
             pq.push({0, {prisoners[i]}});
             dist[i][prisoners[i].second][prisoners[i].first] = 0;
+            memset(chk, false, sizeof(chk));
 
             while (!pq.empty()) {
                 int x = pq.top().second.first;
                 int y = pq.top().second.second;
+                int cost = pq.top().first;
+
                 pq.pop();
 
                 for (int j = 0; j < 4; j++) {
                     int nx = x + dx[j];
                     int ny = y + dy[j];
+                    int next_cost = cost;
 
                     if (nx < 0 || nx > w + 1 || ny < 0 || ny > h + 1) continue;
                     if (chk[ny][nx]) continue; // 이미 방문
                     if (map[ny][nx] == '*') continue; // 벽
 
-                    int next_dist = dist[i][y][x];
-
                     if (map[ny][nx] == '#')
-                        next_dist++;
+                        next_cost++;
 
-                    if (next_dist < dist[i][ny][nx]) {
-                        dist[i][ny][nx] = next_dist;
+                    if (next_cost < dist[i][ny][nx]) {
+                        dist[i][ny][nx] = next_cost;
                         chk[ny][nx] = true;
-                        pq.push({next_dist, {nx, ny}});
+                        pq.push({next_cost, {nx, ny}});
                     }
                 }
             }
@@ -114,15 +116,13 @@ int main() {
 
         for (int i = 1; i <= h; i++) {
             for (int j = 1; j <= w; j++) {
-                if (map[i][j] != '*') {
-                    int sum = 0;
-                    for (int k = 0; k < 3; k++) {
-                        sum += dist[k][i][j];
-                    }
+                if (map[i][j] == '*') continue;
+                int tmp = 0;
+                for (int k = 0; k < 3; k++)
+                    tmp += dist[k][i][j];
+                if (map[i][j] == '#') tmp -= 2;
 
-                    sum -= 2 * (map[i][j] == '#');
-                    ans = min(ans, sum);
-                }
+                ans = min(ans, tmp);
             }
         }
 
