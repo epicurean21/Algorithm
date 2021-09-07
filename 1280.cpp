@@ -17,58 +17,48 @@
 
 using namespace std;
 #define MOD 1000000007
-#define MAX 200001
+#define MAX 200000
+#define SIZE 262144
 #define ll long long
+
 int N;
-vector<ll> tree, dist;
-vector<int> X, X_sum;
+vector<ll> tree(MAX * 4 + 1), dist(MAX * 4 + 1);
+vector<int> X;
 
-ll construct_tree(int node, int start, int end) {
-    if (start == end)
-        return tree[node] = X_sum[start];
+void update(int idx, int val) {
+    idx += SIZE;
+    dist[idx] += val;
+    tree[idx]++;
 
-    int m = (start + end) / 2;
-    return (tree[node] = construct_tree(node * 2, start, m) % MOD) * (construct_tree(node * 2 + 1, m + 1, end) % MOD) %
-           MOD;
-}
-
-void update(int node, int start, int end, int idx, int diff) {
-    if (start == end) {
-        tree[node] += diff;
-        dist[node]++;
-        return;
+    while (idx > 1) {
+        idx /= 2;
+        dist[idx] = dist[2 * idx] + dist[2 * idx + 1];
+        tree[idx] = tree[2 * idx] + tree[2 * idx + 1];
     }
-
-    int m = (start + end) / 2;
-    if (idx <= m)
-        update(node * 2, start, m, idx, diff);
-    else
-        update(node * 2 + 1, m + 1, end, idx, diff);
-
-    tree[node] = tree[node * 2] + tree[node * 2 + 1];
-    dist[node] = dist[node * 2] + dist[node * 2 + 1];
 }
 
-ll sum(int node, int start, int end, int left, int right) {
-    if (start > right || end < left)
+ll sumQuery(int L, int R, int nodeIdx, int nodeL, int nodeR) {
+    if (R < nodeL || nodeR < L)
         return 0;
 
-    if (start >= left && end <= right)
-        return dist[node];
+    if (L <= nodeL && nodeR <= R)
+        return dist[nodeIdx];
 
-    int m = (start + end) / 2;
-    return (sum(node * 2, start, m, left, right) % MOD) * (sum(node * 2 + 1, m + 1, end, left, right) % MOD) % MOD;
+    int m = (nodeL + nodeR) / 2;
+
+    return sumQuery(L, R, 2 * nodeIdx, nodeL, m) + sumQuery(L, R, 2 * nodeIdx + 1, m + 1, nodeR);
 }
 
-ll query(int node, int start, int end, int left, int right) {
-    if (start > right || end < left)
+ll cntQuery(int L, int R, int nodeIdx, int nodeL, int nodeR) {
+    if (R < nodeL || nodeR < L)
         return 0;
 
-    if (start >= left && end <= right)
-        return tree[node];
+    if (L <= nodeL && nodeR <= R)
+        return tree[nodeIdx];
 
-    int m = (start + end) / 2;
-    return (query(node * 2, start, m, left, right) % MOD) * (query(node * 2 + 1, m + 1, end, left, right) % MOD) % MOD;
+    int m = (nodeL + nodeR) / 2;
+
+    return cntQuery(L, R, 2 * nodeIdx, nodeL, m) + cntQuery(L, R, 2 * nodeIdx + 1, m + 1, nodeR);
 }
 
 int main() {
@@ -77,28 +67,20 @@ int main() {
 
     cin >> N;
 
-    X.resize(N + 1);
+    X.resize(N + 2);
 
-    int height = (ceil)(log2(N + 1));
-    tree.resize(1 << (height + 1));
-    dist.resize(1 << (height + 1));
     cin >> X[0];
-    update(1, 0, MAX, X[0], X[0]);
+    update(X[0], X[0]);
     ll ans = 1;
     for (int i = 1; i < N; i++) {
         cin >> X[i];
-        ll Lcnt = sum(1, 0, MAX, 0, X[i] - 1);
-        ll Rcnt = sum(1, 0, MAX, X[i] + 1, MAX);
-        ll Lsum = query(1, 0, MAX, 0, X[i] - 1);
-        ll Rsum = query(1, 0, MAX, X[i] + 1, MAX);
-        ll temp = (Rsum - Lsum) - (Rcnt - Lcnt) * X[i];
-        temp %= MOD;
-        ans *= temp;
-        ans %= MOD;
-        update(1, 0, MAX, X[i], X[i]);
+        ll left = cntQuery(0, X[i], 1, 0, SIZE) * X[i] - sumQuery(0, X[i], 1, 0, SIZE);
+        ll right = sumQuery(X[i] + 1, MAX, 1, 0, SIZE) - cntQuery(X[i] + 1, MAX, 1, 0, SIZE) * X[i];
+        ans = (left + right) % MOD * ans % MOD;
+        update(X[i], X[i]);
     }
 
     cout << ans << '\n';
-    
+
     return 0;
 }

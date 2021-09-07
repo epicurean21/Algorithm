@@ -14,21 +14,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/09/07 [20156 기왕 이렇게 된 거 암기왕이 되어라: 오프라인 쿼리, 자료구조, Disjoint Set]">
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/09/07 [1280 나무 심기: Segment Tree]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/1280.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/1280.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled.cbp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +94,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/05/19" />
     <MESSAGE value="21/05/26" />
     <MESSAGE value="21/05/28" />
     <MESSAGE value="21/06/05" />
@@ -128,7 +118,8 @@
     <MESSAGE value="21/09/05 [1926 그림: DFS, BFS]" />
     <MESSAGE value="21/09/06 [16212 정열적인 정렬: SORT 정렬]" />
     <MESSAGE value="21/09/07 [20156 기왕 이렇게 된 거 암기왕이 되어라: 오프라인 쿼리, 자료구조, Disjoint Set]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/09/07 [20156 기왕 이렇게 된 거 암기왕이 되어라: 오프라인 쿼리, 자료구조, Disjoint Set]" />
+    <MESSAGE value="21/09/07 [1280 나무 심기: Segment Tree]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/09/07 [1280 나무 심기: Segment Tree]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -845,7 +836,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>21</line>
+          <line>19</line>
           <option name="timeStamp" value="353" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -894,19 +885,22 @@
           <line>14</line>
           <option name="timeStamp" value="370" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/1280.cpp</url>
+          <line>74</line>
+          <option name="timeStamp" value="371" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="cnt" language="ObjectiveC" />
-        <watch expression="x" language="ObjectiveC" />
-        <watch expression="y" language="ObjectiveC" />
-        <watch expression="q" language="ObjectiveC" />
-        <watch expression="res" language="ObjectiveC" />
-        <watch expression="cx" language="ObjectiveC" />
-        <watch expression="cy" language="ObjectiveC" />
-        <watch expression="nx" language="ObjectiveC" />
-        <watch expression="ny" language="ObjectiveC" />
+        <watch expression="Lcnt" language="ObjectiveC" />
+        <watch expression="Rcnt" language="ObjectiveC" />
+        <watch expression="Lsum" language="ObjectiveC" />
+        <watch expression="Rsum" language="ObjectiveC" />
+        <watch expression="temp" language="ObjectiveC" />
+        <watch expression="X[i]" language="ObjectiveC" />
+        <watch expression="ans" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
