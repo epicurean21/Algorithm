@@ -17,10 +17,10 @@
 
 using namespace std;
 #define MOD 1000000007
+#define MAX 200001
 #define ll long long
 int N;
-vector<ll> tree;
-vector<ll> distance;
+vector<ll> tree, dist;
 vector<int> X, X_sum;
 
 ll construct_tree(int node, int start, int end) {
@@ -32,25 +32,40 @@ ll construct_tree(int node, int start, int end) {
            MOD;
 }
 
+void update(int node, int start, int end, int idx, int diff) {
+    if (start == end) {
+        tree[node] += diff;
+        dist[node]++;
+        return;
+    }
+
+    int m = (start + end) / 2;
+    if (idx <= m)
+        update(node * 2, start, m, idx, diff);
+    else
+        update(node * 2 + 1, m + 1, end, idx, diff);
+
+    tree[node] = tree[node * 2] + tree[node * 2 + 1];
+    dist[node] = dist[node * 2] + dist[node * 2 + 1];
+}
+
 ll sum(int node, int start, int end, int left, int right) {
     if (start > right || end < left)
         return 0;
 
     if (start >= left && end <= right)
-        return tree[node];
+        return dist[node];
 
     int m = (start + end) / 2;
-
-//    return (sum(node * 2, start, m, left, right) % MOD) +
+    return (sum(node * 2, start, m, left, right) % MOD) * (sum(node * 2 + 1, m + 1, end, left, right) % MOD) % MOD;
 }
 
 ll query(int node, int start, int end, int left, int right) {
     if (start > right || end < left)
-        return 1;
+        return 0;
 
-    if (start >= left && end <= right) {
+    if (start >= left && end <= right)
         return tree[node];
-    }
 
     int m = (start + end) / 2;
     return (query(node * 2, start, m, left, right) % MOD) * (query(node * 2 + 1, m + 1, end, left, right) % MOD) % MOD;
@@ -63,20 +78,27 @@ int main() {
     cin >> N;
 
     X.resize(N + 1);
-    X_sum.resize(N + 1);
-    X_sum[1] = 0;
 
     int height = (ceil)(log2(N + 1));
     tree.resize(1 << (height + 1));
-
-    for (int i = 1; i <= N; i++) {
+    dist.resize(1 << (height + 1));
+    cin >> X[0];
+    update(1, 0, MAX, X[0], X[0]);
+    ll ans = 1;
+    for (int i = 1; i < N; i++) {
         cin >> X[i];
-        if (i >= 2)
-            X_sum[i] = X_sum[i - 1] + abs(X[i] - X[1]);
+        ll Lcnt = sum(1, 0, MAX, 0, X[i] - 1);
+        ll Rcnt = sum(1, 0, MAX, X[i] + 1, MAX);
+        ll Lsum = query(1, 0, MAX, 0, X[i] - 1);
+        ll Rsum = query(1, 0, MAX, X[i] + 1, MAX);
+        ll temp = (Rsum - Lsum) - (Rcnt - Lcnt) * X[i];
+        temp %= MOD;
+        ans *= temp;
+        ans %= MOD;
+        update(1, 0, MAX, X[i], X[i]);
     }
 
-    construct_tree(1, 1, N);
-
-    cout << query(1, 1, N, 2, N) % MOD << '\n';
+    cout << ans << '\n';
+    
     return 0;
 }

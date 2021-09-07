@@ -129,29 +129,29 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-20156.o: 20156.cpp.o
-.PHONY : 20156.o
+1280.o: 1280.cpp.o
+.PHONY : 1280.o
 
 # target to build an object file
-20156.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/20156.cpp.o
-.PHONY : 20156.cpp.o
+1280.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/1280.cpp.o
+.PHONY : 1280.cpp.o
 
-20156.i: 20156.cpp.i
-.PHONY : 20156.i
+1280.i: 1280.cpp.i
+.PHONY : 1280.i
 
 # target to preprocess a source file
-20156.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/20156.cpp.i
-.PHONY : 20156.cpp.i
+1280.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/1280.cpp.i
+.PHONY : 1280.cpp.i
 
-20156.s: 20156.cpp.s
-.PHONY : 20156.s
+1280.s: 1280.cpp.s
+.PHONY : 1280.s
 
 # target to generate assembly for a file
-20156.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/20156.cpp.s
-.PHONY : 20156.cpp.s
+1280.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/1280.cpp.s
+.PHONY : 1280.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... 20156.o"
-	@echo "... 20156.i"
-	@echo "... 20156.s"
+	@echo "... 1280.o"
+	@echo "... 1280.i"
+	@echo "... 1280.s"
 .PHONY : help
 
 
