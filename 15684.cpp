@@ -6,33 +6,23 @@
  * 2개 설치시 가능한지 --> ~ (백트래킹)
  * 3개 설치시 가능한지 --> ~ (백트래킹)
  *
- * 가로 세로를 뒤집자 ? map을 그릴때 vector emplace_back 을 쓰면서 가로로 늘어나게
- *
+
  */
 
 #include <iostream>
-#include <vector>
 
 using namespace std;
-#define MAX 280
-int N, M, H, a, b, ans;
-vector<vector<int>> map;
+#define MAX 50
+int N, M, H, a, b, ans = -1, map[MAX][MAX];
 
 void print_map() {
+    cout << "\n--------------print map--------------\n";
     for (int i = 1; i <= N; i++) {
-        for (int j = 1; j <= M; j++) {
-            cout << map[i][j] << " ";
-        }
+        for (int j = 1; j <= M; j++)
+            cout << j << " ";
         cout << '\n';
     }
-}
-
-void init(int n, int m) {
-    map.resize(m + 1);
-    for (int i = 1; i <= n; i++) {
-        map[i].emplace_back()
-    }
-
+    cout << '\n';
 }
 
 int main() {
@@ -40,12 +30,11 @@ int main() {
     cin.tie(NULL);
 
     cin >> N >> M >> H; // N: 세로선 개수 1 ~ N, M: 가로선 개수 1 ~ M, H: 가로선 놓을 수 있는 위치 개수
-
-    init(N, M);
+    map.resize(N + 1);
     print_map();
     for (int i = 0; i < M; i++) {
         cin >> a >> b; // b번 & b+1번을 a번 점선 위치에서 연결 즉 a는 가로 b는 세로
-
+        map[b][a] = 1;
     }
 
     return 0;
