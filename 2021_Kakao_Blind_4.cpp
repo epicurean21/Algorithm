@@ -16,10 +16,10 @@ void sol(int i) {
             flag = true;
             ans = score2 - score1;
             answer.clear();
-            for (int i = 0; i < 10; i++) {
-                answer.push_back(arr2[10 - i]);
-            }
-            answer.push_back(arrow);
+            for (int i = 0; i < 10; i++)
+                answer.emplace_back(arr2[10 - i]);
+
+            answer.emplace_back(arrow);
         }
         return;
     }
@@ -56,9 +56,9 @@ vector<int> solution(int n, vector<int> info) {
     for (int i = 0; i < 11; i++)
         arr[10 - i] = info[i];
     sol(1);
-    if (!flag) {
-        answer.push_back(-1);
-    }
+    if (!flag)
+        answer.emplace_back(-1);
+
     return answer;
 }
 
