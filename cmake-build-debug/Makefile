@@ -129,29 +129,29 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-15684.o: 15684.cpp.o
-.PHONY : 15684.o
+2021_Kakao_Blind_4.o: 2021_Kakao_Blind_4.cpp.o
+.PHONY : 2021_Kakao_Blind_4.o
 
 # target to build an object file
-15684.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/15684.cpp.o
-.PHONY : 15684.cpp.o
+2021_Kakao_Blind_4.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Blind_4.cpp.o
+.PHONY : 2021_Kakao_Blind_4.cpp.o
 
-15684.i: 15684.cpp.i
-.PHONY : 15684.i
+2021_Kakao_Blind_4.i: 2021_Kakao_Blind_4.cpp.i
+.PHONY : 2021_Kakao_Blind_4.i
 
 # target to preprocess a source file
-15684.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/15684.cpp.i
-.PHONY : 15684.cpp.i
+2021_Kakao_Blind_4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Blind_4.cpp.i
+.PHONY : 2021_Kakao_Blind_4.cpp.i
 
-15684.s: 15684.cpp.s
-.PHONY : 15684.s
+2021_Kakao_Blind_4.s: 2021_Kakao_Blind_4.cpp.s
+.PHONY : 2021_Kakao_Blind_4.s
 
 # target to generate assembly for a file
-15684.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/15684.cpp.s
-.PHONY : 15684.cpp.s
+2021_Kakao_Blind_4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Blind_4.cpp.s
+.PHONY : 2021_Kakao_Blind_4.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... 15684.o"
-	@echo "... 15684.i"
-	@echo "... 15684.s"
+	@echo "... 2021_Kakao_Blind_4.o"
+	@echo "... 2021_Kakao_Blind_4.i"
+	@echo "... 2021_Kakao_Blind_4.s"
 .PHONY : help
 
 
