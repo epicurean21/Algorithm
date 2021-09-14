@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/untitled.dir/2021_Kakao_Blind_6.cpp.o"
+  "CMakeFiles/untitled.dir/2230.cpp.o"
   "untitled"
   "untitled.pdb"
 )

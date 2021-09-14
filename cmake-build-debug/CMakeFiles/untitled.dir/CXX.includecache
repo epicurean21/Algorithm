@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2021_Kakao_Blind_6.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/2230.cpp
 iostream
 -
-string
--
 vector
+-
+algorithm
 -
 
