@@ -32,9 +32,8 @@ int main() {
         if (A[r] - A[l] >= M) {
             ans = min(ans, A[r] - A[l]);
             l++;
-        } else {
+        } else
             r++;
-        }
     }
 
     cout << ans << '\n';
