@@ -14,12 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/09/14 [2230 수 고르기: 정렬, 투 포인터]">
-      <change afterPath="$PROJECT_DIR$/1253.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2230_binary_search.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/09/14 [1253 좋다: 정렬, 투 포인터]">
+      <change afterPath="$PROJECT_DIR$/1520.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/2230.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
@@ -105,7 +103,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/08/24" />
     <MESSAGE value="21/08/28" />
     <MESSAGE value="21/08/29" />
     <MESSAGE value="21/08/31" />
@@ -130,7 +127,8 @@
     <MESSAGE value="21/09/11 [Kakao #4: 브루트포스, 완탐]" />
     <MESSAGE value="21/09/11 [Kakao #6: 세그먼트 트리 ?, 해결못함]" />
     <MESSAGE value="21/09/14 [2230 수 고르기: 정렬, 투 포인터]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/09/14 [2230 수 고르기: 정렬, 투 포인터]" />
+    <MESSAGE value="21/09/14 [1253 좋다: 정렬, 투 포인터]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/09/14 [1253 좋다: 정렬, 투 포인터]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -906,13 +904,21 @@
           <line>84</line>
           <option name="timeStamp" value="376" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/1520.cpp</url>
+          <line>7</line>
+          <option name="timeStamp" value="379" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="i" language="ObjectiveC" />
-        <watch expression="arr[i]" language="ObjectiveC" />
-        <watch expression="score2" language="ObjectiveC" />
+        <watch expression="x" language="ObjectiveC" />
+        <watch expression="y" language="ObjectiveC" />
+        <watch expression="height" language="ObjectiveC" />
+        <watch expression="nx" language="ObjectiveC" />
+        <watch expression="ny" language="ObjectiveC" />
+        <watch expression="map[ny][nx]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
