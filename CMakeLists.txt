@@ -3,4 +3,4 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(untitled 2021_Kakao_Blind_4.cpp)
+add_executable(untitled 2021_Kakao_Blind_6.cpp)

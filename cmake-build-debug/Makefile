@@ -129,29 +129,29 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-2021_Kakao_Blind_4.o: 2021_Kakao_Blind_4.cpp.o
-.PHONY : 2021_Kakao_Blind_4.o
+2021_Kakao_Blind_6.o: 2021_Kakao_Blind_6.cpp.o
+.PHONY : 2021_Kakao_Blind_6.o
 
 # target to build an object file
-2021_Kakao_Blind_4.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Blind_4.cpp.o
-.PHONY : 2021_Kakao_Blind_4.cpp.o
+2021_Kakao_Blind_6.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Blind_6.cpp.o
+.PHONY : 2021_Kakao_Blind_6.cpp.o
 
-2021_Kakao_Blind_4.i: 2021_Kakao_Blind_4.cpp.i
-.PHONY : 2021_Kakao_Blind_4.i
+2021_Kakao_Blind_6.i: 2021_Kakao_Blind_6.cpp.i
+.PHONY : 2021_Kakao_Blind_6.i
 
 # target to preprocess a source file
-2021_Kakao_Blind_4.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Blind_4.cpp.i
-.PHONY : 2021_Kakao_Blind_4.cpp.i
+2021_Kakao_Blind_6.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Blind_6.cpp.i
+.PHONY : 2021_Kakao_Blind_6.cpp.i
 
-2021_Kakao_Blind_4.s: 2021_Kakao_Blind_4.cpp.s
-.PHONY : 2021_Kakao_Blind_4.s
+2021_Kakao_Blind_6.s: 2021_Kakao_Blind_6.cpp.s
+.PHONY : 2021_Kakao_Blind_6.s
 
 # target to generate assembly for a file
-2021_Kakao_Blind_4.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Blind_4.cpp.s
-.PHONY : 2021_Kakao_Blind_4.cpp.s
+2021_Kakao_Blind_6.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/2021_Kakao_Blind_6.cpp.s
+.PHONY : 2021_Kakao_Blind_6.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... 2021_Kakao_Blind_4.o"
-	@echo "... 2021_Kakao_Blind_4.i"
-	@echo "... 2021_Kakao_Blind_4.s"
+	@echo "... 2021_Kakao_Blind_6.o"
+	@echo "... 2021_Kakao_Blind_6.i"
+	@echo "... 2021_Kakao_Blind_6.s"
 .PHONY : help
 
 
