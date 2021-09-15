@@ -43,11 +43,14 @@ bool isPossible(int x, int y) { // 치즈 내부 공기인지 확인
             int nx = cx + dx[i];
             int ny = cy + dy[i];
 
-            if (nx < 0 || nx >= M || ny < 0 || ny >= N) continue;
+            if (nx < 0 || nx >= M || ny < 0 || ny >= N) return true;
             if (map[ny][nx]) continue;
             if (air_chk[ny][nx]) continue;
+            air_chk[ny][nx] = true;
+            q.push({nx, ny});
         }
     }
+    return false;
 }
 
 void dfs(int x, int y) {
@@ -62,7 +65,9 @@ void dfs(int x, int y) {
             dfs(nx, ny);
         }
         if (chk[ny][nx]) continue;
-        side_cnt++;
+
+        if (isPossible(nx, ny))
+            side_cnt++;
     }
     if (side_cnt >= 2) {
         map[y][x] = 0;
@@ -89,7 +94,7 @@ int main() {
 
     while (cnt) {
         init();
-        print_map();
+        //print_map();
         ans++;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
