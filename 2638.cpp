@@ -22,6 +22,16 @@ void print_map() {
     cout << "\n";
 }
 
+void print_air_map() {
+    cout << "\n----------print_air----------\n";
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++)
+            cout << air_chk[i][j] << " ";
+        cout << "\n";
+    }
+    cout << "\n";
+}
+
 void init() {
     for (int i = 0; i < N; i++)
         for (int j = 0; j < M; j++)
@@ -29,6 +39,7 @@ void init() {
 }
 
 bool isPossible(int x, int y) { // 치즈 내부 공기인지 확인
+    if (y == 0 || y == N - 1 || x == 0 || x == M - 1) return true;
     memset(air_chk, false, sizeof(air_chk));
     queue<pair<int, int>> q;
     air_chk[y][x] = true;
@@ -42,7 +53,7 @@ bool isPossible(int x, int y) { // 치즈 내부 공기인지 확인
         for (int i = 0; i < 4; i++) {
             int nx = cx + dx[i];
             int ny = cy + dy[i];
-
+            if (ny == 0 || ny == N - 1 || nx == 0 || nx == M - 1) return true;
             if (nx < 0 || nx >= M || ny < 0 || ny >= N) return true;
             if (map[ny][nx]) continue;
             if (air_chk[ny][nx]) continue;
@@ -50,6 +61,7 @@ bool isPossible(int x, int y) { // 치즈 내부 공기인지 확인
             q.push({nx, ny});
         }
     }
+
     return false;
 }
 
@@ -59,15 +71,17 @@ void dfs(int x, int y) {
     for (int i = 0; i < 4; i++) {
         int nx = x + dx[i];
         int ny = y + dy[i];
-
         if (nx < 0 || nx >= M || ny < 0 || ny >= N) continue;
+
         if (map[ny][nx] && !chk[ny][nx]) {
             dfs(nx, ny);
         }
         if (chk[ny][nx]) continue;
 
-        if (isPossible(nx, ny))
+        if (isPossible(nx, ny)) { // 외부 공기인지 내부 공기인지 확인
             side_cnt++;
+            //print_air_map();
+        }
     }
     if (side_cnt >= 2) {
         map[y][x] = 0;
