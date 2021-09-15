@@ -14,9 +14,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/09/15 [2638 치즈: 그래프 탐색, BFS, DFS, 시뮬레이션]">
-      <change afterPath="$PROJECT_DIR$/2636.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/09/15 [2636 치즈: 그래프 탐색, DFS]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2636.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2636.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2638.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2638.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
@@ -102,7 +102,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/09/02 [오프라인 쿼리, 쿼리의 역출력, Union Find]" />
     <MESSAGE value="21/09/02 [1107 리모컨: 브루투포스 알고리즘]" />
     <MESSAGE value="21/09/02 [21511 마법사 상어와 블리자드: 구현]" />
     <MESSAGE value="21/09/02 [12012 Closing the Farm: Disjoint Set, Offline Query]" />
@@ -127,7 +126,8 @@
     <MESSAGE value="21/09/14 [1520 내리막 길: 그래프 탐색, DP, DFS]" />
     <MESSAGE value="21/09/15 [1520 내리막 길: 그래프 탐색, DP, DFS]" />
     <MESSAGE value="21/09/15 [2638 치즈: 그래프 탐색, BFS, DFS, 시뮬레이션]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/09/15 [2638 치즈: 그래프 탐색, BFS, DFS, 시뮬레이션]" />
+    <MESSAGE value="21/09/15 [2636 치즈: 그래프 탐색, DFS]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/09/15 [2636 치즈: 그래프 탐색, DFS]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -910,7 +910,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/2638.cpp</url>
-          <line>66</line>
+          <line>70</line>
           <option name="timeStamp" value="381" />
         </line-breakpoint>
       </breakpoints>
@@ -923,6 +923,7 @@
         <watch expression="nx" language="ObjectiveC" />
         <watch expression="ny" language="ObjectiveC" />
         <watch expression="map[ny][nx]" language="ObjectiveC" />
+        <watch expression="q" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
