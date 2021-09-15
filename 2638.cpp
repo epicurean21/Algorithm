@@ -5,7 +5,6 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <cstring>
 
 using namespace std;
 #define MAX 101
@@ -22,25 +21,16 @@ void print_map() {
     cout << "\n";
 }
 
-void print_air_map() {
-    cout << "\n----------print_air----------\n";
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < M; j++)
-            cout << air_chk[i][j] << " ";
-        cout << "\n";
-    }
-    cout << "\n";
-}
-
 void init() {
-    for (int i = 0; i < N; i++)
-        for (int j = 0; j < M; j++)
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
             chk[i][j] = false;
+            air_chk[i][j] = false;
+        }
+    }
 }
 
-bool isPossible(int x, int y) { // 치즈 내부 공기인지 확인
-    if (y == 0 || y == N - 1 || x == 0 || x == M - 1) return true;
-    memset(air_chk, false, sizeof(air_chk));
+void isPossible(int x, int y) { // 치즈 내부 공기인지 확인
     queue<pair<int, int>> q;
     air_chk[y][x] = true;
     q.push({x, y});
@@ -53,17 +43,30 @@ bool isPossible(int x, int y) { // 치즈 내부 공기인지 확인
         for (int i = 0; i < 4; i++) {
             int nx = cx + dx[i];
             int ny = cy + dy[i];
-            if (ny == 0 || ny == N - 1 || nx == 0 || nx == M - 1) return true;
-            if (nx < 0 || nx >= M || ny < 0 || ny >= N) return true;
+            if (nx < 0 || nx > M - 1 || ny < 0 || ny > N - 1) continue;
             if (map[ny][nx]) continue;
             if (air_chk[ny][nx]) continue;
             air_chk[ny][nx] = true;
             q.push({nx, ny});
         }
     }
-
-    return false;
 }
+
+void chk_air() {
+    for (int i = 0; i < M; i++) {
+        if (!air_chk[0][i])
+            isPossible(i, 0);
+        if (!air_chk[N - 1][i])
+            isPossible(i, N - 1);
+    }
+    for (int i = 0; i < N; i++) {
+        if (!air_chk[i][0])
+            isPossible(0, i);
+        if (!air_chk[i][M - 1])
+            isPossible(M - 1, i);
+    }
+}
+
 
 void dfs(int x, int y) {
     chk[y][x] = true;
@@ -78,11 +81,10 @@ void dfs(int x, int y) {
         }
         if (chk[ny][nx]) continue;
 
-        if (isPossible(nx, ny)) { // 외부 공기인지 내부 공기인지 확인
+        if (air_chk[ny][nx]) // 외부 공기인지 내부 공기인지 확인
             side_cnt++;
-            //print_air_map();
-        }
     }
+
     if (side_cnt >= 2) {
         map[y][x] = 0;
         cnt--;
@@ -108,15 +110,12 @@ int main() {
 
     while (cnt) {
         init();
-        //print_map();
+        chk_air();
         ans++;
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < M; j++) {
-                if (map[i][j] && !chk[i][j]) {
+        for (int i = 0; i < N; i++)
+            for (int j = 0; j < M; j++)
+                if (map[i][j] && !chk[i][j])
                     dfs(j, i);
-                }
-            }
-        }
     }
 
     cout << ans << '\n';
