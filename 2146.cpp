@@ -1,3 +1,11 @@
+/**
+ * 2146 다리만들기
+ * DFS, BFS
+ * 섬부터 다른 섬까지 DFS를 돌리며 최단 다리 최신화
+ * 이 때, 다른 지역에 도달했을 때 같은 섬인지 아닌지를 BFS로 판단했음.
+ * Disjoint Set 등을 이용하면 더욱 빠르게 할 수 있을듯
+ */
+
 #include <iostream>
 #include <cstring>
 #include <queue>
@@ -27,7 +35,7 @@ bool isIsland(int x, int y, int fx, int fy) {
             int nx = cx + dx[i];
             int ny = cy + dy[i];
             if (nx < 0 || nx >= N || ny < 0 || ny >= N) continue;
-            if (been[ny][nx]) continue;
+            if (been[ny][nx] || !map[ny][nx]) continue;
             been[ny][nx] = true;
 
             q.push({nx, ny});
@@ -37,7 +45,7 @@ bool isIsland(int x, int y, int fx, int fy) {
     return false;
 }
 
-void dfs(int x, int y, int cnt) {
+void dfs(int sx, int sy, int x, int y, int cnt) {
     chk[y][x] = true;
 
     if (cnt >= ans) return;
@@ -49,14 +57,15 @@ void dfs(int x, int y, int cnt) {
         if (nx < 0 || nx >= N || ny < 0 || ny >= N) continue;
         if (chk[ny][nx]) continue;
         if (map[ny][nx]) {
-            if (isIsland(x, y, nx, ny)) {
+            if (isIsland(sx, sy, nx, ny))
+                continue;
+            else {
                 ans = min(ans, cnt);
                 return;
-            } else
-                continue;
+            }
         }
 
-        dfs(nx, ny, cnt + 1);
+        dfs(sx, sy, nx, ny, cnt + 1);
     }
 }
 
@@ -71,9 +80,9 @@ int main() {
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
-            if (map[i][j] == 0) {
+            if (map[i][j] == 1) {
                 memset(chk, false, sizeof(chk));
-                dfs(j, i, 1);
+                dfs(j, i, j, i, 0);
             }
         }
     }
