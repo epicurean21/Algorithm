@@ -6,7 +6,7 @@ using namespace std;
 int T, N;
 char X;
 int Failure_Function[MAX];
-string P, tmp;
+string P, tmp; // Text, Pattern
 
 void calculate_failure_function(int n) {
     Failure_Function[0] = 0; // Failure Function 0 은 항상 0
@@ -24,7 +24,7 @@ void calculate_failure_function(int n) {
     }
 }
 
-int KMP(int n, int m) {
+vector<int> KMP(int n, int m) {
     int i = 0, j = 0;
     vector<int> matching_index;
 
@@ -41,7 +41,7 @@ int KMP(int n, int m) {
             i++;
     }
 
-    return matching_index.size();
+    return matching_index;
 }
 
 int main() {
@@ -57,16 +57,33 @@ int main() {
             cin >> X;
             P += X;
         }
-        calculate_failure_function(N);
 
         int length = 0;
+        vector<int> ans;
         for (int i = 0; i < N; i++) {
             tmp += P[i];
-            length = max(length, KMP(tmp.length(), P.length()));
+            calculate_failure_function(tmp.length());
+            vector<int> kmp_answer = KMP(P.length(), tmp.length());
+            if (kmp_answer.size() > length)
+                ans = kmp_answer;
         }
 
-        cout << length << "\n";
+        for (auto i : ans)
+            cout << i << " ";
+        cout << "\n";
     }
 
     return 0;
 }
+
+/**
+4
+10
+5 2 1 5 5 2 1 5 5 2
+10
+1 2 3 4 5 6 7 1 2 3
+10
+1 2 3 4 5 6 7 1 2 2
+15
+1 2 1 2 1 2 1 2 1 2 1 2 1 2 1
+*/
