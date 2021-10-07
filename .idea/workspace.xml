@@ -14,13 +14,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/10/01 [11758 CCW: 기하학, CCW]">
-      <change afterPath="$PROJECT_DIR$/17387.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/10/01 [17387 선분 교차 2: 기하학, CCW, 선분 교차 판별]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCW.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CCW.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" afterDir="false" />
@@ -104,7 +104,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/09/05 [15922 아우으 우아으이야!! : 스위핑, 정렬, 2170과 같은 문제]" />
     <MESSAGE value="21/09/05 [MST: 최소 신장 트리 정리]" />
     <MESSAGE value="21/09/05 [20010 악덕 영주 혜유: MST 최소 신장 트리, DFS]" />
     <MESSAGE value="21/09/05 [1926 그림: DFS, BFS]" />
@@ -129,7 +128,8 @@
     <MESSAGE value="21/09/28 [2146 다리 만들기: 그래프 탐색, DFS, BFS]" />
     <MESSAGE value="21/10/01 [2146 다리 만들기: 그래프 탐색, DFS, BFS]" />
     <MESSAGE value="21/10/01 [11758 CCW: 기하학, CCW]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/10/01 [11758 CCW: 기하학, CCW]" />
+    <MESSAGE value="21/10/01 [17387 선분 교차 2: 기하학, CCW, 선분 교차 판별]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/10/01 [17387 선분 교차 2: 기하학, CCW, 선분 교차 판별]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -846,7 +846,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>21</line>
+          <line>49</line>
           <option name="timeStamp" value="353" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
