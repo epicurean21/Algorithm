@@ -7,12 +7,24 @@
  * 7, 13, 14, 20, 21, 26, 27, 28 이런식으로 조합을 만들어야한다.
  */
 #include <iostream>
+
 using namespace std;
 
-int main()
-{
+int D, P, Q;
+
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
+
+    cin >> D >> P >> Q;
+    if (P > Q)
+        swap(P, Q);
+
+    if (D % P == 0 || D % Q == 0) // 나눠 떨어짐
+        cout << D << "\n";
+    else {
+
+    }
 
     return 0;
 }
