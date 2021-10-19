@@ -14,12 +14,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/10/01 [17387 선분 교차 2: 기하학, CCW, 선분 교차 판별]">
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/10/07 [문제해결기법: KMP]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +56,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -94,7 +86,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/09/05 [MST: 최소 신장 트리 정리]" />
     <MESSAGE value="21/09/05 [20010 악덕 영주 혜유: MST 최소 신장 트리, DFS]" />
     <MESSAGE value="21/09/05 [1926 그림: DFS, BFS]" />
     <MESSAGE value="21/09/06 [16212 정열적인 정렬: SORT 정렬]" />
@@ -119,7 +110,8 @@
     <MESSAGE value="21/10/01 [2146 다리 만들기: 그래프 탐색, DFS, BFS]" />
     <MESSAGE value="21/10/01 [11758 CCW: 기하학, CCW]" />
     <MESSAGE value="21/10/01 [17387 선분 교차 2: 기하학, CCW, 선분 교차 판별]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/10/01 [17387 선분 교차 2: 기하학, CCW, 선분 교차 판별]" />
+    <MESSAGE value="21/10/07 [문제해결기법: KMP]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/10/07 [문제해결기법: KMP]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
