@@ -2,134 +2,102 @@
  * 20056: 마법사 상어와 파이어볼
  * 삼성 S/W 검정 시험
  */
-
 #include <iostream>
 #include <vector>
-#include <queue>
-#include <cmath>
 
 using namespace std;
 #define MAX 52
-int N, M, K, r, c, m, d, s, ans;
-int map[MAX][MAX];
-queue<pair<pair<int, int>, pair<pair<int, int>, int>>> fireballs; // x, y, 질량, 방향, 속력
-vector<pair<pair<int, int>, int>> overlap[MAX][MAX];
+int num, fb, k, result = 0;
+int dx[] = {0, 1, 1, 1, 0, -1, -1, -1}, dy[] = {-1, -1, 0, 1, 1, 1, 0, -1};
 
-int dx[] = {0, 1, 1, 1, 0, -1, -1, -1}, dy[] = {1, 1, 0, -1, -1, -1, 0, 1};
+struct fireball {
+    int x, y, m, d, s;
+};
+vector<fireball> fire, dup;
+fireball tmp;
 
-void init() {
-    for (int i = 1; i <= N; i++)
-        for (int j = 1; j <= N; j++)
-            overlap[i][j].clear();
-}
-
-void spell_active(int cnt) {
-    while (cnt--) {
-        int x = fireballs.front().first.first;
-        int y = fireballs.front().first.second;
-        int mass = fireballs.front().second.first.first;
-        int dir = fireballs.front().second.first.second;
-        int speed = fireballs.front().second.second;
-        fireballs.pop();
-
-        map[y][x] -= 1;
-        int nx = x + dx[dir] * speed;
-        if (nx < 1) nx = N - (abs(nx) % N);
-        else nx = nx % N;
-        int ny = y + dy[dir] * speed;
-        if (ny < 1) ny = N - (abs(ny) % N);
-        else ny = ny % N;
-        cout << "nx: " << nx << ", ny: " << ny << '\n';
-
-        map[ny][nx] += 1;
-        overlap[ny][nx].push_back({{mass, dir},
-                                   speed});
-
-        fireballs.push({{nx,          ny},
-                        {{mass, dir}, speed}});
+int rtnPos(int a) {
+    while (a < 1 || a > num) {
+        if (a < 1) a += num;
+        else a -= num;
     }
+    return a;
 }
 
-void magic() {
-    for (int i = 1; i <= N; i++) {
-        for (int j = 1; j <= N; j++) {
-            if (map[i][j] >= 2) {
-                int cnt = 0;
-                int mass = 0;
-                int speed = 0;
-                int dir = -1;
-                int final_dir = -1;
-                for (int k = 0; k < overlap[i][j].size(); k++) {
-                    cnt++;
-                    mass += overlap[i][j][k].first.first;
-                    speed += overlap[i][j][k].second;
-                    if (dir == -1) dir = overlap[i][j][k].first.second;
-                    else {
-                        if (final_dir != -1) continue;
-                        if ((dir % 2 == 0 && overlap[i][j][k].first.second % 2 == 0)
-                            || (dir % 2 == 1 && overlap[i][j][k].first.second % 2 == 1))
-                            final_dir = 0;
-                        else
-                            final_dir = 1;
+void spell() {
+    vector<int> arr[MAX][MAX];
+
+    for (int i = 0; i < fire.size(); i++) {
+        int cx = fire[i].x;
+        int cy = fire[i].y;
+        int cd = fire[i].d;
+        int cs = fire[i].s;
+        int nx = cx + dx[cd] * cs;
+        int ny = cy + dy[cd] * cs;
+        fire[i].x = rtnPos(nx);
+        fire[i].y = rtnPos(ny);
+        arr[fire[i].y][fire[i].x].push_back(i);
+    }
+
+    dup.clear();
+    for (int i = 1; i <= num; i++) {
+        for (int j = 1; j <= num; j++) {
+            int len = arr[i][j].size();
+            if (len > 1) {
+                int sm = 0, ss = 0;
+                bool allOdd = true, allEven = true;
+                for (int t = 0; t < len; t++) {
+                    sm += fire[arr[i][j][t]].m;
+                    ss += fire[arr[i][j][t]].s;
+                    if (fire[arr[i][j][t]].d % 2 == 0) allOdd = false;
+                    if (fire[arr[i][j][t]].d % 2 == 1) allEven = false;
+                }
+                sm /= 5;
+                if (sm) {
+                    ss /= len;
+                    int t = 1;
+                    if (allEven || allOdd) t = 0;
+                    tmp.x = fire[arr[i][j][0]].x;
+                    tmp.y = fire[arr[i][j][0]].y;
+                    tmp.s = ss;
+                    tmp.m = sm;
+                    for (; t < 8; t += 2) {
+                        tmp.d = t;
+                        dup.push_back(tmp);
                     }
                 }
-
-                int new_mass = mass / 5;
-                int new_speed = speed / cnt;
-                if (new_mass == 0) continue;
-
-                if (final_dir) {
-                    for (int k = 1; k < 8; k += 2) {
-                        int y = i + dy[k];
-                        if (y < 1) y = N - (abs(y) % N);
-                        else y = y % N;
-                        int x = j + dx[k];
-                        if (x < 1) x = N - ((abs(x) % N));
-                        else x = x % N;
-                        fireballs.push({{x,             y},
-                                        {{new_mass, k}, new_speed}});
-                    }
-                } else {
-                    for (int k = 0; k < 8; k += 2) {
-                        int y = i + dy[k];
-                        if (y < 1) y = N - (abs(y) % N);
-                        else y = y % N;
-                        int x = j + dx[k];
-                        if (x < 1) x = N - ((abs(x) % N));
-                        else x = x % N;
-                        fireballs.push({{x,             y},
-                                        {{new_mass, k}, new_speed}});
-                    }
-                }
+            } else if (len == 1) {
+                tmp.x = fire[arr[i][j][0]].x;
+                tmp.y = fire[arr[i][j][0]].y;
+                tmp.m = fire[arr[i][j][0]].m;
+                tmp.d = fire[arr[i][j][0]].d;
+                tmp.s = fire[arr[i][j][0]].s;
+                dup.push_back(tmp);
             }
         }
     }
+    fire = dup;
 }
 
 int main() {
-    ios::sync_with_stdio(false);
+    ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    cin >> N >> M >> K;
-
-    for (int i = 0; i < M; i++) {
-        cin >> r >> c >> m >> d >> s;
-        fireballs.push({{c,      r},
-                        {{m, d}, s}});
-        map[r][c] += 1;
+    cin >> num >> fb >> k;
+    int r, c, m, s, d;
+    for (int i = 0; i < fb; i++) {
+        cin >> r >> c >> m >> s >> d;
+        tmp.x = c;
+        tmp.y = r;
+        tmp.m = m;
+        tmp.d = d;
+        tmp.s = s;
+        fire.push_back(tmp);
     }
-
-    while (K-- && !fireballs.empty()) {
-        init();
-        spell_active(fireballs.size());
-        magic();
+    while (k--) {
+        spell();
     }
-
-    while (!fireballs.empty()) {
-        ans += fireballs.front().second.first.first;
-        fireballs.pop();
-    }
-
-    cout << ans << '\n';
-
+    for (int i = 0; i < fire.size(); i++)
+        result += fire[i].m;
+    cout << result;
     return 0;
 }
