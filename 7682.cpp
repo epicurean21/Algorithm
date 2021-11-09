@@ -32,7 +32,7 @@ int main() {
         for (int i = 0; i < input.length(); i++) {
             map[i / 3][i % 3] = input[i];
             if (input[i] == 'X') x_cnt++;
-            else if (input[i] == 'O')o_cnt++;
+            else if (input[i] == 'O') o_cnt++;
             else empty_cnt++;
         }
 
