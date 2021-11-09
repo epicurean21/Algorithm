@@ -6,17 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/20056.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/7682.cpp
 iostream
 -
-vector
--
-queue
--
-cmath
--
-iostream
--
-vector
+string
 -
 
