@@ -1,81 +1,92 @@
 /**
  * 17822 원판 돌리기
  * 구현, 시뮬레이션
- *
+ * 졸라 까다롭네;.. 재밌게 풀었음 그래도
  */
 
 #include <iostream>
-#include <vector>
 
 using namespace std;
-#define MAX 52
-int N, M, T, x, d, k, number_count, dx[] = {1, 0, -1, 0}, dy[] = {0, 1, 0, -1};
-bool chk[MAX][MAX];
-vector<vector<int>> frisbee;
+#define MAX 55
+int N, M, T, x, d, k;
+float arr[MAX][MAX];
+int dx[] = {1, 0, 0, -1}, dy[] = {0, 1, -1, 0};
+bool is_changed;
 
-int abs(int a) {
-    return a < 0 ? -a : a;
+void rotate(int x) {
+    float temp = arr[x][M - 1];
+    for (int i = M - 1; i > 0; i--)
+        arr[x][i] = arr[x][i - 1];
+    arr[x][0] = temp;
 }
 
-void print_map() {
+void dfs(int x, int y, float value) {
+    for (int i = 0; i < 4; i++) {
+        int nx = x + dx[i], ny = y + dy[i];
 
-    for (int i = 1; i <= N; i++) {
-        cout << i << "번째 판\n";
-        for (int j = 0; j < M; j++) {
-            cout << frisbee[i][j] << " ";
+        if (ny == -1) ny = M - 1;
+        if (ny == M) ny = 0;
+
+        if (nx < 0 || nx >= N || arr[nx][ny] != value) continue;
+        if (arr[x][y] != -1) {
+            is_changed = true;
+            arr[x][y] = -1;
         }
-        cout << '\n';
+        arr[nx][ny] = -1;
+        dfs(nx, ny, value);
     }
 }
-
-bool do_magical() { // 인접한 수가 있는 경우 지운다.
-    bool option = false; // 1 번 옵션. 지우기
-
-    for (int i = 1; i <= N; i++) {
-
-    }
-}
-
-void rotate(int xi, int di, int ki) {
-    int mul = 1;
-    while (xi <= N) {
-        vector<int> tmp;
-        int pointer = 0;
-
-        if (di) pointer = ki; // 반시계
-        else pointer = M - ki; // 시계
-
-        for (int i = 0; i < M; i++) {
-            tmp.emplace_back(frisbee[xi][pointer]);
-            pointer++;
-            pointer %= M;
-        }
-        frisbee[xi] = tmp;
-
-        xi *= ++mul;
-    }
-}
-
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(NULL);
 
-    cin >> N >> M >> T; // N개 원판, 각 원판[i] 에 M개 정수, T번 회전
+    cin >> N >> M >> T;
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < M; j++)
+            cin >> arr[i][j];
 
-    number_count = N * M;
-    frisbee.resize(N + 1);
-
-    for (int i = 1; i <= N; i++) {
-        for (int j = 0; j < M; j++) {
-            cin >> x;
-            frisbee[i].emplace_back(x);
-        }
-    }
     for (int i = 0; i < T; i++) {
         cin >> x >> d >> k;
-        rotate(x, d, k);
+
+        if (d == 1) k = M - k;
+        for (int j = 1; (x * j) <= N; j++)
+            for (int kk = 0; kk < k; kk++) rotate(x * j - 1);
+
+        is_changed = false;
+
+        for (int x = 0; x < N; x++)
+            for (int y = 0; y < M; y++)
+                if (arr[x][y] != -1) dfs(x, y, arr[x][y]);
+
+        if (!is_changed) {
+            float avg = 0, num = 0;
+            for (int x = 0; x < N; x++)
+                for (int y = 0; y < M; y++)
+                    if (arr[x][y] != -1) {
+                        num++;
+                        avg += arr[x][y];
+                    }
+
+            if (num > 1) {
+                avg = avg / num;
+                for (int x = 0; x < N; x++)
+                    for (int y = 0; y < M; y++) {
+                        if (arr[x][y] == -1) continue;
+                        else if (arr[x][y] < avg) arr[x][y]++;
+                        else if (arr[x][y] > avg) arr[x][y]--;
+                        else if (arr[x][y] == avg) {}
+                    }
+            }
+
+        }
     }
+
+    int ans = 0;
+    for (int x = 0; x < N; x++)
+        for (int y = 0; y < M; y++)
+            if (arr[x][y] != -1) ans += arr[x][y];
+    cout << ans;
 
     return 0;
 }
