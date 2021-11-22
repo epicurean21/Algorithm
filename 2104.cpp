@@ -16,17 +16,13 @@ vector<int> tree_min, A;
 vector<ll> tree_sum;
 
 
-void print() {
-    cout << "\n-----tree_min print-----\n";
-    for (int i = 0; i < tree_min.size(); i++) {
-        cout << tree_min[i] << " ";
-    }
-    cout << '\n';
-    cout << "\n-----tree_sum print-----\n";
-    for (int i = 0; i < tree_sum.size(); i++) {
-        cout << tree_sum[i] << " ";
-    }
-    cout << '\n';
+int cal_index(int a, int b) {
+    if (a == -1)
+        return b;
+    if (b == -1)
+        return a;
+    if (A[a] < A[b]) return a;
+    return b;
 }
 
 int min_value(int node, int start, int end, int left, int right) {
@@ -36,7 +32,7 @@ int min_value(int node, int start, int end, int left, int right) {
         return tree_min[node];
 
     int m = (start + end) / 2;
-    return min(min_value(node * 2, start, m, left, right), min_value(node * 2 + 1, m + 1, end, left, right));
+    return cal_index(min_value(node * 2, start, m, left, right), min_value(node * 2 + 1, m + 1, end, left, right));
 }
 
 ll sum_value(int node, int start, int end, int left, int right) {
@@ -63,7 +59,21 @@ int construct_tree_min(int node, int start, int end) {
     if (start == end)
         return tree_min[node] = A[start];
     int m = (start + end) / 2;
-    return tree_min[node] = min(construct_tree_min(node * 2, start, m), construct_tree_min(node * 2 + 1, m + 1, end));
+    return tree_min[node] = cal_index(construct_tree_min(node * 2, start, m),
+                                      construct_tree_min(node * 2 + 1, m + 1, end));
+}
+
+ll query(int start, int end) {
+    if (start == end)
+        return tree_sum[start] * tree_min[start];
+    int idx = min_value(1, 1, N, start, end);
+    ll ans = A[idx] * sum_value(1, 1, N, start, end);
+    if (start < idx)
+        ans = max(ans, query(start, idx - 1));
+    if (idx < end)
+        ans = max(ans, query(idx + 1, end));
+
+    return ans;
 }
 
 int main() {
@@ -79,16 +89,9 @@ int main() {
     for (int i = 1; i <= N; i++)
         cin >> A[i];
 
-    construct_tree_sum(1, 1, N);
     construct_tree_min(1, 1, N);
+    construct_tree_sum(1, 1, N);
 
-    //print();
-    ll ans = 0;
-    for (int i = 1; i < N; i++) {
-        for (int j = i + 1; j <= N; j++) {
-            ans = max(ans, sum_value(1, 1, N, i, j) * min_value(1, 1, N, i, j));
-        }
-    }
-    cout << ans << '\n';
+    cout << query(1, N) << '\n';
     return 0;
 }
