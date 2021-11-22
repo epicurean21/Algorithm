@@ -10,10 +10,9 @@
 #include <vector>
 
 using namespace std;
-#define MAX 100002
 #define ll long long
-int N, M, A[MAX], Q, I, J, V;
-vector<ll> tree;
+int N, M, Q, I, J, V;
+vector<ll> tree, A;
 
 ll min(ll a, ll b) {
     return a > b ? b : a;
@@ -21,16 +20,20 @@ ll min(ll a, ll b) {
 
 ll construct_tree(int node, int start, int end) {
     if (start == end)
-        return tree[node] = A[node];
+        return tree[node] = A[start];
     int m = (start + end) / 2;
     return tree[node] = min(construct_tree(node * 2, start, m), construct_tree(node * 2 + 1, m + 1, end));
 }
 
-ll update_tree(int node, int start, int end) {
-    if (start == end)
+ll update_tree(int node, int start, int end, int idx) {
+    if (start > idx || end < idx)
         return tree[node];
+    if (start == end)
+        return tree[node] = A[idx];
+
     int m = (start + end) / 2;
-    return tree[node] = min(update_tree(node * 2, start, m), update_tree(node * 2 + 1, m + 1, end));
+
+    return tree[node] = min(update_tree(node * 2, start, m, idx), update_tree(node * 2 + 1, m + 1, end, idx));
 }
 
 ll get_min_value(int node, int start, int end, int left, int right) {
@@ -49,7 +52,8 @@ int main() {
 
     cin >> N;
     int h = (int) ceil(log2(N + 1));
-    tree.resize(1 << h);
+    tree.resize(1 << (h + 1));
+    A.resize(N + 1);
     for (int i = 1; i <= N; i++)
         cin >> A[i];
 
@@ -61,7 +65,7 @@ int main() {
         if (Q == 1) {
             cin >> I >> V;
             A[I] = V;
-            update_tree(1, 1, N);
+            update_tree(1, 1, N, I);
         } else if (Q == 2) {
             cin >> I >> J;
             cout << get_min_value(1, 1, N, I, J) << "\n";
