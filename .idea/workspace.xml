@@ -14,8 +14,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/11/23 [2104 부분배열 고르기: 세그먼트 트리, 부분합, 스택, 분할정복]">
-      <change afterPath="$PROJECT_DIR$/2104 (stack).cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/11/23 [2104 부분배열 고르기: 부분합, 스택]">
+      <change afterPath="$PROJECT_DIR$/13913.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled.cbp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +68,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
@@ -90,7 +103,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/09/14 [1520 내리막 길: 그래프 탐색, DP, DFS]" />
     <MESSAGE value="21/09/15 [1520 내리막 길: 그래프 탐색, DP, DFS]" />
     <MESSAGE value="21/09/15 [2638 치즈: 그래프 탐색, BFS, DFS, 시뮬레이션]" />
     <MESSAGE value="21/09/15 [2636 치즈: 그래프 탐색, DFS]" />
@@ -115,7 +127,8 @@
     <MESSAGE value="21/11/18 [18500 미네랄2: 구현, DFS, 그래프이론]" />
     <MESSAGE value="21/11/22 [14438 수열과 쿼리 17: 자료구조, 세그먼트 트리]" />
     <MESSAGE value="21/11/23 [2104 부분배열 고르기: 세그먼트 트리, 부분합, 스택, 분할정복]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/11/23 [2104 부분배열 고르기: 세그먼트 트리, 부분합, 스택, 분할정복]" />
+    <MESSAGE value="21/11/23 [2104 부분배열 고르기: 부분합, 스택]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/11/23 [2104 부분배열 고르기: 부분합, 스택]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -916,19 +929,32 @@
           <line>49</line>
           <option name="timeStamp" value="404" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/13913.cpp</url>
+          <line>64</line>
+          <option name="timeStamp" value="406" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/13913.cpp</url>
+          <line>19</line>
+          <option name="timeStamp" value="407" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="frisbee" language="ObjectiveC" />
-        <watch expression="frisbee[i][j]" language="ObjectiveC" />
-        <watch expression="cx" language="ObjectiveC" />
-        <watch expression="cy" language="ObjectiveC" />
-        <watch expression="nx" language="ObjectiveC" />
-        <watch expression="ny" language="ObjectiveC" />
-        <watch expression="frisbee[cy][cx]" language="ObjectiveC" />
-        <watch expression="frisbee[ny][nx]" language="ObjectiveC" />
-        <watch expression="i" language="ObjectiveC" />
+        <watch expression="points" language="ObjectiveC" />
+        <watch expression="cur" language="ObjectiveC" />
+        <watch expression="map[cur]" language="ObjectiveC" />
+        <watch expression="walk1" language="ObjectiveC" />
+        <watch expression="map[walk1]" language="ObjectiveC" />
+        <watch expression="walk2" language="ObjectiveC" />
+        <watch expression="map[walk2]" language="ObjectiveC" />
+        <watch expression="teleport" language="ObjectiveC" />
+        <watch expression="map[teleport]" language="ObjectiveC" />
+        <watch expression="ans" language="ObjectiveC" />
+        <watch expression="start" language="ObjectiveC" />
+        <watch expression="map" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
