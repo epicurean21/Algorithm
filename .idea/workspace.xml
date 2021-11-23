@@ -14,8 +14,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/11/23 [2104 부분배열 고르기: 부분합, 스택]">
-      <change afterPath="$PROJECT_DIR$/13913.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/11/23 [13913 숨바꼭질 4: 그래프 이론, BFS, 스택]">
+      <change afterPath="$PROJECT_DIR$/12851.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
@@ -68,11 +68,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -103,7 +98,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/09/15 [1520 내리막 길: 그래프 탐색, DP, DFS]" />
     <MESSAGE value="21/09/15 [2638 치즈: 그래프 탐색, BFS, DFS, 시뮬레이션]" />
     <MESSAGE value="21/09/15 [2636 치즈: 그래프 탐색, DFS]" />
     <MESSAGE value="21/09/15 [2638 치즈: 그래프 탐색, DFS, BFS, 시뮬레이션]" />
@@ -128,7 +122,8 @@
     <MESSAGE value="21/11/22 [14438 수열과 쿼리 17: 자료구조, 세그먼트 트리]" />
     <MESSAGE value="21/11/23 [2104 부분배열 고르기: 세그먼트 트리, 부분합, 스택, 분할정복]" />
     <MESSAGE value="21/11/23 [2104 부분배열 고르기: 부분합, 스택]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/11/23 [2104 부분배열 고르기: 부분합, 스택]" />
+    <MESSAGE value="21/11/23 [13913 숨바꼭질 4: 그래프 이론, BFS, 스택]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/11/23 [13913 숨바꼭질 4: 그래프 이론, BFS, 스택]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
