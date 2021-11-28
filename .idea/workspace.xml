@@ -14,13 +14,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/11/28 [12865 평범한 배낭: 0/1 Knapsack, DP]">
-      <change afterPath="$PROJECT_DIR$/17845.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/11/28 [17845 수강 과목: 0/1 Knapsack, DP]">
+      <change afterPath="$PROJECT_DIR$/3015.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BaseCode" beforeDir="false" afterPath="$PROJECT_DIR$/BaseCode" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" afterDir="false" />
@@ -104,7 +105,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/10/01 [2146 다리 만들기: 그래프 탐색, DFS, BFS]" />
     <MESSAGE value="21/10/01 [11758 CCW: 기하학, CCW]" />
     <MESSAGE value="21/10/01 [17387 선분 교차 2: 기하학, CCW, 선분 교차 판별]" />
     <MESSAGE value="21/10/07 [문제해결기법: KMP]" />
@@ -129,7 +129,8 @@
     <MESSAGE value="21/11/27 [1365 꼬인 전깃줄: 이분탐색, 가장 긴 증가하는 부분 수열]" />
     <MESSAGE value="21/11/27 [16236 아기 상어: 구현, 시뮬레이션, 너비우선탐색]" />
     <MESSAGE value="21/11/28 [12865 평범한 배낭: 0/1 Knapsack, DP]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/11/28 [12865 평범한 배낭: 0/1 Knapsack, DP]" />
+    <MESSAGE value="21/11/28 [17845 수강 과목: 0/1 Knapsack, DP]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/11/28 [17845 수강 과목: 0/1 Knapsack, DP]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -911,16 +912,6 @@
           <option name="timeStamp" value="381" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>62</line>
-          <option name="timeStamp" value="384" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>26</line>
-          <option name="timeStamp" value="385" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/7682.cpp</url>
           <line>79</line>
           <option name="timeStamp" value="396" />
@@ -940,22 +931,19 @@
           <line>19</line>
           <option name="timeStamp" value="407" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Test.cpp</url>
+          <line>14</line>
+          <option name="timeStamp" value="408" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="points" language="ObjectiveC" />
-        <watch expression="cur" language="ObjectiveC" />
-        <watch expression="map[cur]" language="ObjectiveC" />
-        <watch expression="walk1" language="ObjectiveC" />
-        <watch expression="map[walk1]" language="ObjectiveC" />
-        <watch expression="walk2" language="ObjectiveC" />
-        <watch expression="map[walk2]" language="ObjectiveC" />
-        <watch expression="teleport" language="ObjectiveC" />
-        <watch expression="map[teleport]" language="ObjectiveC" />
+        <watch expression="height" language="ObjectiveC" />
+        <watch expression="max_height" language="ObjectiveC" />
         <watch expression="ans" language="ObjectiveC" />
-        <watch expression="start" language="ObjectiveC" />
-        <watch expression="map" language="ObjectiveC" />
+        <watch expression="st" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>

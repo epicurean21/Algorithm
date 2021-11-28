@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/17845.cpp
+/Users/jaemincho/Desktop/JaeMinCho/Algorithm/C,C++/Test.cpp
 iostream
+-
+stack
 -
 

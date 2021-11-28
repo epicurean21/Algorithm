@@ -3,4 +3,4 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(untitled 17845.cpp)
+add_executable(untitled Test.cpp)
