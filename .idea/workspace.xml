@@ -14,16 +14,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/11/27 [16236 아기 상어: 구현, 시뮬레이션, 너비우선탐색]">
-      <change afterPath="$PROJECT_DIR$/12865.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/11/28 [12865 평범한 배낭: 0/1 Knapsack, DP]">
+      <change afterPath="$PROJECT_DIR$/17845.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseCode" beforeDir="false" afterPath="$PROJECT_DIR$/BaseCode" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled.cbp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +104,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/09/28 [2146 다리 만들기: 그래프 탐색, DFS, BFS]" />
     <MESSAGE value="21/10/01 [2146 다리 만들기: 그래프 탐색, DFS, BFS]" />
     <MESSAGE value="21/10/01 [11758 CCW: 기하학, CCW]" />
     <MESSAGE value="21/10/01 [17387 선분 교차 2: 기하학, CCW, 선분 교차 판별]" />
@@ -124,7 +128,8 @@
     <MESSAGE value="21/11/23 [13913 숨바꼭질 3: 그래프 이론, BFS]" />
     <MESSAGE value="21/11/27 [1365 꼬인 전깃줄: 이분탐색, 가장 긴 증가하는 부분 수열]" />
     <MESSAGE value="21/11/27 [16236 아기 상어: 구현, 시뮬레이션, 너비우선탐색]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/11/27 [16236 아기 상어: 구현, 시뮬레이션, 너비우선탐색]" />
+    <MESSAGE value="21/11/28 [12865 평범한 배낭: 0/1 Knapsack, DP]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/11/28 [12865 평범한 배낭: 0/1 Knapsack, DP]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
