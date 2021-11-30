@@ -14,10 +14,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/11/30 [15649 N과 M(2):백트래킹]">
-      <change afterPath="$PROJECT_DIR$/15650.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/11/30 [15649 N과 M(2): 백트래킹]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +59,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -82,7 +89,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/10/19 [1214 쿨한 물건 구매: 브루트포스, 정수론]" />
     <MESSAGE value="21/10/19 [1214 쿨한 물건 구매: 수학, 브루트포스, 정수론]" />
     <MESSAGE value="21/10/19 [20056 마법사 상어와 파이어볼: 구현, 시뮬레이션]" />
     <MESSAGE value="21/10/31 [1114 통나무 자르기: 그리디 알고리즘, 이분탐색]" />
@@ -107,7 +113,8 @@
     <MESSAGE value="21/11/28 [3015 오아시스 재결합: 스택]" />
     <MESSAGE value="21/11/29 [3015 불켜기: BFS, 그래프 이론]" />
     <MESSAGE value="21/11/30 [15649 N과 M(1): 백트래킹]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/11/30 [15649 N과 M(1): 백트래킹]" />
+    <MESSAGE value="21/11/30 [15649 N과 M(2): 백트래킹]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/11/30 [15649 N과 M(2): 백트래킹]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -921,6 +928,7 @@
         <watch expression="M" language="ObjectiveC" />
         <watch expression="i" language="ObjectiveC" />
         <watch expression="arr" language="ObjectiveC" />
+        <watch expression="arr[count]" language="ObjectiveC" />
         <watch expression="arr[count-1]" language="ObjectiveC" />
       </configuration>
     </watches-manager>

@@ -11,12 +11,12 @@ void dfs(int count) {
         return;
     }
     for (int i = 1; i <= N; i++) {
-        if (!chk[i]) {
-            if (arr[count - 1] < i) {
-                chk[i] = true;
+        if (chk[i] != M) {
+            if (arr[count - 1] <= i) {
+                chk[i]++;
                 arr[count] = i;
                 dfs(count + 1);
-                chk[i] = false;
+                chk[i]--;
             }
         }
     }
