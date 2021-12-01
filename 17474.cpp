@@ -1,3 +1,7 @@
+/**
+ * 17474 수열과 쿼리 26 [다이아 2]
+ *  세그먼트 트리, Lazy Propagation, 자료구로
+ */
 #include <iostream>
 #include <vector>
 #include <cmath>
