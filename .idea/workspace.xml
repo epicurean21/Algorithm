@@ -14,14 +14,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/11/30 [15649 N과 M(2): 백트래킹]">
-      <change afterPath="$PROJECT_DIR$/17474.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/07 [23801 두 단계 최단 경로 2 : 다익스트라, 그래프 이론]">
+      <change afterPath="$PROJECT_DIR$/23801.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +63,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="CMake Application.untitled" />
@@ -91,7 +83,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/10/19 [1214 쿨한 물건 구매: 수학, 브루트포스, 정수론]" />
     <MESSAGE value="21/10/19 [20056 마법사 상어와 파이어볼: 구현, 시뮬레이션]" />
     <MESSAGE value="21/10/31 [1114 통나무 자르기: 그리디 알고리즘, 이분탐색]" />
     <MESSAGE value="21/11/09 [7682 틱택토: 구현, 백트레킹, 시뮬레이션]" />
@@ -116,7 +107,8 @@
     <MESSAGE value="21/11/29 [3015 불켜기: BFS, 그래프 이론]" />
     <MESSAGE value="21/11/30 [15649 N과 M(1): 백트래킹]" />
     <MESSAGE value="21/11/30 [15649 N과 M(2): 백트래킹]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/11/30 [15649 N과 M(2): 백트래킹]" />
+    <MESSAGE value="21/12/01 [17474 수열과 쿼리 26: 자료구조, 세그먼트 트리, Lazy Propagation]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/12/01 [17474 수열과 쿼리 26: 자료구조, 세그먼트 트리, Lazy Propagation]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
