@@ -1,7 +1,8 @@
 /**
  * 13547 수열과 쿼리 5 [플래티넘 2]
  * 오프라인 쿼리 & mo's
- */
+*/
+
 #include <iostream>
 #include <vector>
 #include <algorithm>

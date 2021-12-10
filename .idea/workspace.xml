@@ -14,9 +14,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/07 [23801 두 단계 최단 경로 2 : 다익스트라, 그래프 이론]">
-      <change afterPath="$PROJECT_DIR$/13547.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/10 [13547 수열과 쿼리 5 : 오프라인 쿼리]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11781.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/11781.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
@@ -91,7 +91,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/10/31 [1114 통나무 자르기: 그리디 알고리즘, 이분탐색]" />
     <MESSAGE value="21/11/09 [7682 틱택토: 구현, 백트레킹, 시뮬레이션]" />
     <MESSAGE value="21/11/10 [7682 틱택토: 구현, 백트레킹, 시뮬레이션]" />
     <MESSAGE value="21/11/10 [5338 마이크로소프트 로고: 출력, 구현]" />
@@ -116,7 +115,8 @@
     <MESSAGE value="21/11/30 [15649 N과 M(2): 백트래킹]" />
     <MESSAGE value="21/12/01 [17474 수열과 쿼리 26: 자료구조, 세그먼트 트리, Lazy Propagation]" />
     <MESSAGE value="21/12/07 [23801 두 단계 최단 경로 2 : 다익스트라, 그래프 이론]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/12/07 [23801 두 단계 최단 경로 2 : 다익스트라, 그래프 이론]" />
+    <MESSAGE value="21/12/10 [13547 수열과 쿼리 5 : 오프라인 쿼리]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/12/10 [13547 수열과 쿼리 5 : 오프라인 쿼리]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
