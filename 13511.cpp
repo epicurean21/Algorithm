@@ -1,3 +1,9 @@
+/**
+ * 13511 트리와 쿼리 2 [플레티넘 2]
+ * LCA, 공통조상찾기
+ * 어렵네.. 해결못했음
+ */
+
 #include <iostream>
 #include <vector>
 #include <algorithm>

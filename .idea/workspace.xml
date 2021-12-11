@@ -15,7 +15,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/11 [23087 최단최단경로: 그래프이론, 다익스트라]">
-      <change beforePath="$PROJECT_DIR$/23087.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/23087.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/13511.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/11781.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/11781.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseCode" beforeDir="false" afterPath="$PROJECT_DIR$/BaseCode" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +63,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -918,16 +921,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>39</line>
-          <option name="timeStamp" value="408" />
+          <line>30</line>
+          <option name="timeStamp" value="414" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="cur" language="ObjectiveC" />
-        <watch expression="next" language="ObjectiveC" />
-        <watch expression="transfer_count" language="ObjectiveC" />
+        <watch expression="c" language="ObjectiveC" />
+        <watch expression="p" language="ObjectiveC" />
+        <watch expression="dep" language="ObjectiveC" />
+        <watch expression="cost" language="ObjectiveC" />
+        <watch expression="cost_tree[a][i]" language="ObjectiveC" />
+        <watch expression="ancestor[a][i]" language="ObjectiveC" />
+        <watch expression="ancestor[a]" language="ObjectiveC" />
+        <watch expression="ancestor[b][i]" language="ObjectiveC" />
+        <watch expression="ancestor[b]" language="ObjectiveC" />
+        <watch expression="a" language="ObjectiveC" />
+        <watch expression="b" language="ObjectiveC" />
+        <watch expression="depth[a]" language="ObjectiveC" />
+        <watch expression="depth[b]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
