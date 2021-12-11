@@ -1,63 +1,84 @@
 #include <iostream>
-#include <algorithm>
-#include <cmath>
+#include <vector>
+#include <queue>
 
 using namespace std;
 #define MAX 100001
-int n, m, p, q;
-int A[MAX], cnt[MAX * 10], query[MAX];
-struct Query {
-    int idx, s, e;
-} Q[MAX];
-int sq;
+#define ll long long
+#define MOD 1000000009
+int N, M, X, Y, u, v, w;
+ll dist[MAX];
+pair<ll, ll> transfer_count[MAX]; // 최단경로이면서 최소 환승
+vector<vector<pair<int, int>>> map;
 
-bool cmp(Query u, Query v) {
-    if (u.s / sq == v.s / sq) return u.e < v.e;
-    return u.s / sq < v.s / sq;
+void init() {
+    for (int i = 0; i <= N; i++) {
+        dist[i] = INT64_MAX;
+        transfer_count[i].first = INT64_MAX;
+        transfer_count[i].second = 0;
+    }
+}
+
+void dijkstra() {
+    priority_queue<pair<pair<ll, ll>, int>, vector<pair<pair<ll, ll>, int>>, greater<>> pq;
+    pq.push({{0, 0}, X});
+    dist[X] = 0;
+    transfer_count[X].first = 0;
+    while (!pq.empty()) {
+        int cur = pq.top().second;
+        ll cost = pq.top().first.first;
+        ll transfer = pq.top().first.second;
+        pq.pop();
+        if (dist[cur] < cost) continue;
+        if (transfer_count[cur].first < transfer) continue;
+
+        for (auto &i : map[cur]) {
+            int next = i.first;
+            ll next_cost = i.second + cost;
+
+            // 거리가 같거나 작으면서 환승 수가 기존보다 크거나 같으면
+            if (next_cost <= dist[next] && (transfer + 1) <= transfer_count[next].first) {
+                if (transfer_count[next].first == INT64_MAX) { // 최초 도달
+                    transfer_count[next].first = (transfer + 1) % MOD;
+                    transfer_count[next].second = 1;
+                    dist[next] = next_cost;
+                    pq.push({{next_cost, transfer + 1}, next});
+                } else if (dist[next] < next_cost && transfer_count[next].first > (transfer + 1)) {
+                    // 더 빠른 길로, 더 빠르게 올 수 있었으면
+                    transfer_count[next].first = (transfer + 1) % MOD;
+                    transfer_count[next].second = 1;
+                    dist[next] = next_cost;
+                    pq.push({{next_cost, transfer + 1}, next});
+                } else if (dist[next] == next_cost && transfer_count[next].first == (transfer + 1)) {
+                    // 기존과 똑같은 최단최단경로 존재
+                    transfer_count[next].second = (transfer_count[next].second + 1) % MOD;
+                    pq.push({{next_cost, transfer + 1}, next});
+                }
+            }
+        }
+    }
 }
 
 int main() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cin >> n;
-    sq = sqrt(n);
-    for (int i = 0; i < n; i++) cin >> A[i];
-    cin >> m;
-    for (int i = 0; i < m; i++) {
-        cin >> p >> q;
-        Q[i] = {i, p - 1, q - 1};
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    cin >> N >> M >> X >> Y;
+    map.resize(N + 1);
+
+    for (int i = 0; i < M; i++) {
+        cin >> u >> v >> w;
+        map[u].emplace_back(v, w);
     }
-    sort(Q, Q + m, cmp);
-    int ret = 0;
-    int st = Q[0].s;
-    int ed = Q[0].e;
-    for (int i = st; i <= ed; i++) {
-        if (cnt[A[i]]++ == 0) ret++;
+    init();
+    dijkstra();
+
+    if (dist[Y] == INT64_MAX) cout << "-1\n";
+    else {
+        cout << dist[Y] << "\n";
+        cout << transfer_count[Y].first << "\n";
+        cout << transfer_count[Y].second % MOD << '\n';
     }
-    query[Q[0].idx] = ret;
 
-    for (int i = 1; i < m; i++) {
-        while (Q[i].s < st) {
-            if (cnt[A[--st]]++ == 0)
-                ret++;
-        }
-
-        while (Q[i].e > ed) {
-            if (cnt[A[++ed]]++ == 0)
-                ret++;
-        }
-
-        while (Q[i].s > st) {
-            if (--cnt[A[st++]] == 0) ret--;
-        }
-
-        while (Q[i].e < ed) {
-            if (--cnt[A[ed--]] == 0) ret--;
-        }
-
-        query[Q[i].idx] = ret;
-    }
-    for (int i = 0; i < m; i++) {
-        cout << query[i] << '\n';
-    }
+    return 0;
 }
