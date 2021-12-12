@@ -14,8 +14,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/12 [3584 트리와 쿼리 2: LCA, DFS, 최소 공통 조상]">
-      <change afterPath="$PROJECT_DIR$/5972.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/12 [5072 택배 배송 : 그래프이론, 다익스트라]">
+      <change afterPath="$PROJECT_DIR$/7469.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
@@ -91,7 +91,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/11/17 [1114 통나무 자르기: 이분탐색 그리디]" />
     <MESSAGE value="21/11/17 [14938 서강그라운드: Dijkstra]" />
     <MESSAGE value="21/11/17 [17822 원판 돌리기: 구현, 시뮬레이션]" />
     <MESSAGE value="21/11/18 [18500 미네랄2: 구현, DFS, 그래프이론]" />
@@ -116,7 +115,8 @@
     <MESSAGE value="21/12/11 [13511 트리와 쿼리 2: LCA, 최소 공통 조상]" />
     <MESSAGE value="21/12/12 [3854 가장 가까운 공통 조상: LCA, 최소 공통 조상, DFS]" />
     <MESSAGE value="21/12/12 [3584 트리와 쿼리 2: LCA, DFS, 최소 공통 조상]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/12/12 [3584 트리와 쿼리 2: LCA, DFS, 최소 공통 조상]" />
+    <MESSAGE value="21/12/12 [5072 택배 배송 : 그래프이론, 다익스트라]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/12/12 [5072 택배 배송 : 그래프이론, 다익스트라]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -919,26 +919,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>34</line>
-          <option name="timeStamp" value="414" />
+          <line>29</line>
+          <option name="timeStamp" value="415" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="c" language="ObjectiveC" />
-        <watch expression="p" language="ObjectiveC" />
-        <watch expression="dep" language="ObjectiveC" />
-        <watch expression="cost" language="ObjectiveC" />
-        <watch expression="cost_tree[a][i]" language="ObjectiveC" />
-        <watch expression="ancestor[a][i]" language="ObjectiveC" />
-        <watch expression="ancestor[a]" language="ObjectiveC" />
-        <watch expression="ancestor[b][i]" language="ObjectiveC" />
-        <watch expression="ancestor[b]" language="ObjectiveC" />
-        <watch expression="a" language="ObjectiveC" />
-        <watch expression="b" language="ObjectiveC" />
-        <watch expression="depth[a]" language="ObjectiveC" />
-        <watch expression="depth[b]" language="ObjectiveC" />
+        <watch expression="tree" language="ObjectiveC" />
+        <watch expression="node" language="ObjectiveC" />
+        <watch expression="start" language="ObjectiveC" />
+        <watch expression="end" language="ObjectiveC" />
+        <watch expression="left" language="ObjectiveC" />
+        <watch expression="right" language="ObjectiveC" />
+        <watch expression="tree[node]" language="ObjectiveC" />
+        <watch expression="left_value" language="ObjectiveC" />
+        <watch expression="right_value" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
