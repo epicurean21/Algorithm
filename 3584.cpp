@@ -87,13 +87,13 @@ int main() {
             if (p[i] == 0)
                 root = i;
 
-        depth[0] = -1;
+            depth[0] = -1;
 
-        dfs(root, 0);
+            dfs(root, 0);
 
-        cin >> X >> Y;
+            cin >> X >> Y;
 
-        cout << lca(X, Y) << '\n';
+            cout << lca(X, Y) << '\n';
     }
     return 0;
 }

@@ -9,8 +9,12 @@
 /Users/jaemincho/Desktop/Algorithm/Test.cpp
 iostream
 -
+algorithm
+-
 vector
 -
-algorithm
+cmath
+-
+cstring
 -
 
