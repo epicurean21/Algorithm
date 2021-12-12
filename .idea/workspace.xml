@@ -14,9 +14,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/11 [13511 트리와 쿼리 2: LCA, 최소 공통 조상]">
-      <change afterPath="$PROJECT_DIR$/3584.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/12 [3854 가장 가까운 공통 조상: LCA, 최소 공통 조상, DFS]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3584.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/3584.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
@@ -91,7 +91,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/11/12 [5338 마이크로소프트 로고: 출력, 구현]" />
     <MESSAGE value="21/11/17 [2665 미로만들기: DFS, 다익스트라]" />
     <MESSAGE value="21/11/17 [1114 통나무 자르기: 이분탐색 그리디]" />
     <MESSAGE value="21/11/17 [14938 서강그라운드: Dijkstra]" />
@@ -116,7 +115,8 @@
     <MESSAGE value="21/12/10 [11781 퇴근 시간 : 그래프 이론, 다익스트라, 구현]" />
     <MESSAGE value="21/12/11 [23087 최단최단경로: 그래프이론, 다익스트라]" />
     <MESSAGE value="21/12/11 [13511 트리와 쿼리 2: LCA, 최소 공통 조상]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/12/11 [13511 트리와 쿼리 2: LCA, 최소 공통 조상]" />
+    <MESSAGE value="21/12/12 [3854 가장 가까운 공통 조상: LCA, 최소 공통 조상, DFS]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/12/12 [3854 가장 가까운 공통 조상: LCA, 최소 공통 조상, DFS]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -919,7 +919,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>70</line>
+          <line>87</line>
           <option name="timeStamp" value="414" />
         </line-breakpoint>
       </breakpoints>
