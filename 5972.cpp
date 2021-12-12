@@ -1,5 +1,6 @@
 /**
- *
+ * 5972 택배 배송 [골드 5]
+ * 다익스트라, 그래프 이론
  */
 #include <iostream>
 #include <vector>
