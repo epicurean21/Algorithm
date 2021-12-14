@@ -14,9 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/12 [5072 택배 배송 : 그래프이론, 다익스트라]">
-      <change afterPath="$PROJECT_DIR$/7469.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/13 [7469 K번째 수: 세그먼트 트리, 머지 소트 트리, 이분 탐색]">
+      <change afterPath="$PROJECT_DIR$/Berlekamp_Massey.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7469.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/7469.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
@@ -61,14 +62,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
@@ -91,7 +92,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/11/17 [14938 서강그라운드: Dijkstra]" />
     <MESSAGE value="21/11/17 [17822 원판 돌리기: 구현, 시뮬레이션]" />
     <MESSAGE value="21/11/18 [18500 미네랄2: 구현, DFS, 그래프이론]" />
     <MESSAGE value="21/11/22 [14438 수열과 쿼리 17: 자료구조, 세그먼트 트리]" />
@@ -116,7 +116,8 @@
     <MESSAGE value="21/12/12 [3854 가장 가까운 공통 조상: LCA, 최소 공통 조상, DFS]" />
     <MESSAGE value="21/12/12 [3584 트리와 쿼리 2: LCA, DFS, 최소 공통 조상]" />
     <MESSAGE value="21/12/12 [5072 택배 배송 : 그래프이론, 다익스트라]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/12/12 [5072 택배 배송 : 그래프이론, 다익스트라]" />
+    <MESSAGE value="21/12/13 [7469 K번째 수: 세그먼트 트리, 머지 소트 트리, 이분 탐색]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/12/13 [7469 K번째 수: 세그먼트 트리, 머지 소트 트리, 이분 탐색]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -919,7 +920,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>29</line>
+          <line>87</line>
           <option name="timeStamp" value="415" />
         </line-breakpoint>
       </breakpoints>

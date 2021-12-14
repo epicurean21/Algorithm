@@ -22,7 +22,7 @@ string construct_tree(int node, int start, int end) {
     string right = construct_tree(node * 2 + 1, m + 1, end);
 
     tree[node] = left + right;
-    sort(tree[node].begin(), tree[node].end());
+    //sort(tree[node].begin(), tree[node].end());
 
     return tree[node];
 }
@@ -39,7 +39,6 @@ string query(int node, int start, int end, int left, int right) {
     string right_value = query(node * 2 + 1, m + 1, end, left, right);
 
     string temp = left_value + right_value;
-    sort(temp.begin(), temp.end());
 
     return temp;
 }
@@ -59,6 +58,7 @@ int main() {
     while (M--) {
         cin >> I >> J >> K;
         string value = query(1, 1, N, I, J);
+        sort(value.begin(), value.end());
         cout << value[K - 1] - '0' << '\n';
     }
 

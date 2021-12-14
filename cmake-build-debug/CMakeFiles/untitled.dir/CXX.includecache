@@ -9,10 +9,12 @@
 /Users/jaemincho/Desktop/Algorithm/Test.cpp
 iostream
 -
-vector
--
 algorithm
 -
-cmath
+tuple
+-
+vector
+-
+random
 -
 
