@@ -14,9 +14,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/16 [11444 피보나치 수 6: 벌레캠프-메시, DP, 수학]">
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/21 [11444 피보나치 수 6: 벌레캠프-메시, DP, 수학]">
+      <change afterPath="$PROJECT_DIR$/23796.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +61,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -81,7 +91,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/11/23 [2104 부분배열 고르기: 세그먼트 트리, 부분합, 스택, 분할정복]" />
     <MESSAGE value="21/11/23 [2104 부분배열 고르기: 부분합, 스택]" />
     <MESSAGE value="21/11/23 [13913 숨바꼭질 4: 그래프 이론, BFS, 스택]" />
     <MESSAGE value="21/11/23 [13913 숨바꼭질 3: 그래프 이론, BFS]" />
@@ -106,7 +115,8 @@
     <MESSAGE value="21/12/14 [7469 K번째 수: 세그먼트 트리, 머지 소트 트리, 이분 탐색]" />
     <MESSAGE value="21/12/14 [이론: 벨레켐프-메시: DP의 일반항을 찾기위한 수학적 구현]" />
     <MESSAGE value="21/12/16 [11444 피보나치 수 6: 벌레캠프-메시, DP, 수학]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/12/16 [11444 피보나치 수 6: 벌레캠프-메시, DP, 수학]" />
+    <MESSAGE value="21/12/21 [11444 피보나치 수 6: 벌레캠프-메시, DP, 수학]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/12/21 [11444 피보나치 수 6: 벌레캠프-메시, DP, 수학]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -909,22 +919,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>87</line>
-          <option name="timeStamp" value="415" />
+          <line>37</line>
+          <option name="timeStamp" value="408" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="tree" language="ObjectiveC" />
-        <watch expression="node" language="ObjectiveC" />
-        <watch expression="start" language="ObjectiveC" />
-        <watch expression="end" language="ObjectiveC" />
-        <watch expression="left" language="ObjectiveC" />
-        <watch expression="right" language="ObjectiveC" />
-        <watch expression="tree[node]" language="ObjectiveC" />
-        <watch expression="left_value" language="ObjectiveC" />
-        <watch expression="right_value" language="ObjectiveC" />
+        <watch expression="q" language="ObjectiveC" />
+        <watch expression="cur" language="ObjectiveC" />
+        <watch expression="next" language="ObjectiveC" />
+        <watch expression="map" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
