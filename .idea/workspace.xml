@@ -14,8 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/21 [23796 2,147,483,648 게임: 구현, 시뮬레이션]">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/22 [23796 2,147,483,648 게임: 구현, 시뮬레이션]">
+      <change afterPath="$PROJECT_DIR$/17144.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/11/23 [13913 숨바꼭질 4: 그래프 이론, BFS, 스택]" />
     <MESSAGE value="21/11/23 [13913 숨바꼭질 3: 그래프 이론, BFS]" />
     <MESSAGE value="21/11/27 [1365 꼬인 전깃줄: 이분탐색, 가장 긴 증가하는 부분 수열]" />
     <MESSAGE value="21/11/27 [16236 아기 상어: 구현, 시뮬레이션, 너비우선탐색]" />
@@ -110,7 +111,8 @@
     <MESSAGE value="21/12/16 [11444 피보나치 수 6: 벌레캠프-메시, DP, 수학]" />
     <MESSAGE value="21/12/21 [11444 피보나치 수 6: 벌레캠프-메시, DP, 수학]" />
     <MESSAGE value="21/12/21 [23796 2,147,483,648 게임: 구현, 시뮬레이션]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/12/21 [23796 2,147,483,648 게임: 구현, 시뮬레이션]" />
+    <MESSAGE value="21/12/22 [23796 2,147,483,648 게임: 구현, 시뮬레이션]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/12/22 [23796 2,147,483,648 게임: 구현, 시뮬레이션]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -910,11 +912,6 @@
           <url>file://$PROJECT_DIR$/13913.cpp</url>
           <line>19</line>
           <option name="timeStamp" value="407" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>37</line>
-          <option name="timeStamp" value="408" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
