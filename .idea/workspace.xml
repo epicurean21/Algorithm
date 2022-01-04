@@ -14,14 +14,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/23 [17144 미세먼지 안녕! : 구현, 시뮬레이션]">
-      <change afterPath="$PROJECT_DIR$/23843.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/12/30 [23843 콘센트 : 자료구조, 그리디 알고리즘, 우선순위 큐]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,11 +56,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -91,7 +81,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/11/27 [16236 아기 상어: 구현, 시뮬레이션, 너비우선탐색]" />
     <MESSAGE value="21/11/28 [12865 평범한 배낭: 0/1 Knapsack, DP]" />
     <MESSAGE value="21/11/28 [17845 수강 과목: 0/1 Knapsack, DP]" />
     <MESSAGE value="21/11/28 [3015 오아시스 재결합: 스택]" />
@@ -116,7 +105,8 @@
     <MESSAGE value="21/12/22 [23796 2,147,483,648 게임: 구현, 시뮬레이션]" />
     <MESSAGE value="21/12/22 [17144 미세먼지 안녕! : 구현, 시뮬레이션]" />
     <MESSAGE value="21/12/23 [17144 미세먼지 안녕! : 구현, 시뮬레이션]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/12/23 [17144 미세먼지 안녕! : 구현, 시뮬레이션]" />
+    <MESSAGE value="21/12/30 [23843 콘센트 : 자료구조, 그리디 알고리즘, 우선순위 큐]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/12/30 [23843 콘센트 : 자료구조, 그리디 알고리즘, 우선순위 큐]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
