@@ -1,53 +1,71 @@
 /**
- * 23843 콘센트
- * 자료구조, 우선순위 큐, 그리디 알고리즘
+ * 11967 불켜기
+ * BFS, 시뮬레이션, 그래프 탐색
  */
 
 #include <iostream>
 #include <queue>
-#include <vector>
 
 using namespace std;
-int N, M, t, ans, tmp;
-priority_queue<int, vector<int>, greater<>> pq;
-vector<int> n;
+#define MAX 102
+int N, M, x, y, a, b;
+vector<vector<vector<pair<int, int>>>> map;
+int dx[] = {1, 0, -1, 0}, dy[] = {0, 1, 0, -1};
+int chk[MAX][MAX];
+
+void init() {
+    map.resize(N + 1);
+    for (int i = 0; i <= N; i++)
+        map[i].resize(N + 1);
+}
+
+int bfs() {
+    int ans = 1;
+    queue<pair<int, int>> q;
+    q.push({1, 1});
+    chk[1][1] = 1;
+
+    while (!q.empty()) {
+        auto f = q.front();
+        q.pop();
+        int cy = f.second, cx = f.first;
+        for (auto p : map[cy][cx]) {
+            int ny = p.second, nx = p.first;
+            if (!chk[ny][nx]) {
+                for (int i = 0; i < 4; i++) {
+                    int ty = ny + dy[i];
+                    int tx = nx + dx[i];
+                    if (chk[ty][tx] == 2) {
+                        q.push({tx, ty});
+                        break;
+                    }
+                }
+                chk[ny][nx] = 1;
+                ans++;
+            }
+        }
+        for (int i = 0; i < 4; i++) {
+            int ny = cy + dy[i];
+            int nx = cx + dx[i];
+            if (chk[ny][nx] == 1) {
+                chk[ny][nx] = 2;
+                q.push({nx, ny});
+            }
+        }
+    }
+    return ans;
+}
 
 int main() {
     ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
+    cin.tie(NULL);
     cin >> N >> M;
-    for (int i = 0; i < N; i++) {
-        cin >> t;
-        n.emplace_back(t);
-    }
-    sort(n.begin(), n.end(), greater<>());
-
-    if (M == 1) {
-        for (int i = 0; i < N; i++)
-            ans += n[i];
-    } else if (N < M) {
-        ans += n[0];
-    } else {
-        tmp += M;
-        for (int i = 0; i < M; i++)
-            pq.push(n[i]);
-
-        while (tmp < N) {
-            int top_value = pq.top();
-            pq.pop();
-            while (top_value <= pq.top() && tmp < N) {
-                top_value += n[tmp];
-                tmp++;
-            }
-            pq.push(top_value);
-        }
-        for (int i = 0; i < M - 1; i++)
-            pq.pop();
-        ans = pq.top();
+    init();
+    for (int i = 0; i < M; i++) {
+        cin >> x >> y >> a >> b;
+        map[y][x].emplace_back(a, b);
     }
 
-    cout << ans << '\n';
-
+    cout << bfs() << '\n';
     return 0;
 }

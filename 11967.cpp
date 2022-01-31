@@ -7,7 +7,7 @@
 #include <queue>
 
 using namespace std;
-#define MAX 101
+#define MAX 102
 int N, M, x, y, a, b;
 vector<vector<vector<pair<int, int>>>> map;
 int dx[] = {1, 0, -1, 0}, dy[] = {0, 1, 0, -1};
