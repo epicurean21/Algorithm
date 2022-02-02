@@ -14,23 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]">
-      <change afterPath="$PROJECT_DIR$/11047.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/01/31 [11047 동전 0: 그리디 알고리즘]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-f3edd48fc80190aef8e9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-814beff4362978623f86.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-da09a448a6bd933a6c90.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-38a0a86ed2c450b967d7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-27T08-28-13-0220.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-01-27T08-31-17-0539.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-untitled-Debug-4784adbbcc9809940c10.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,11 +60,6 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -97,7 +79,8 @@
       <option name="presentableId" value="Default" />
       <updated>1643272273756</updated>
       <workItem from="1643272275410" duration="119000" />
-      <workItem from="1643629122919" duration="850000" />
+      <workItem from="1643629122919" duration="1178000" />
+      <workItem from="1643805971406" duration="542000" />
     </task>
     <task id="LOCAL-00001" summary="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]">
       <created>1643632125861</created>
@@ -113,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643632163118</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="21/01/31 [11047 동전 0: 그리디 알고리즘]">
+      <created>1643632727531</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1643632727531</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +121,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/11/28 [17845 수강 과목: 0/1 Knapsack, DP]" />
     <MESSAGE value="21/11/28 [3015 오아시스 재결합: 스택]" />
     <MESSAGE value="21/11/29 [3015 불켜기: BFS, 그래프 이론]" />
     <MESSAGE value="21/11/30 [15649 N과 M(1): 백트래킹]" />
@@ -156,7 +145,8 @@
     <MESSAGE value="21/12/23 [17144 미세먼지 안녕! : 구현, 시뮬레이션]" />
     <MESSAGE value="21/12/30 [23843 콘센트 : 자료구조, 그리디 알고리즘, 우선순위 큐]" />
     <MESSAGE value="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]" />
+    <MESSAGE value="21/01/31 [11047 동전 0: 그리디 알고리즘]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/01/31 [11047 동전 0: 그리디 알고리즘]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -957,19 +947,19 @@
           <line>19</line>
           <option name="timeStamp" value="407" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Test.cpp</url>
+          <line>70</line>
+          <option name="timeStamp" value="408" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="x" language="ObjectiveC" />
-        <watch expression="y" language="ObjectiveC" />
-        <watch expression="cnt" language="ObjectiveC" />
-        <watch expression="pol" language="ObjectiveC" />
-        <watch expression="tmp[y][x]" language="ObjectiveC" />
-        <watch expression="nx" language="ObjectiveC" />
-        <watch expression="ny" language="ObjectiveC" />
-        <watch expression="tmp[ny][nx]" language="ObjectiveC" />
-        <watch expression="tmp[1][7]" language="ObjectiveC" />
+        <watch expression="ans" language="ObjectiveC" />
+        <watch expression="idx" language="ObjectiveC" />
+        <watch expression="K" language="ObjectiveC" />
+        <watch expression="coin[idx + 1]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
