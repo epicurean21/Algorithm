@@ -7,8 +7,9 @@
 #include <stack>
 
 using namespace std;
+#define ll long long
 int N, height, max_height = INT32_MAX, ans;
-stack<int> st;
+stack<pair<ll, ll>> st;
 
 int main() {
     ios::sync_with_stdio(false);
