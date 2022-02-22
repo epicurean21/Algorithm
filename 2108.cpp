@@ -1,51 +1,7 @@
-/*
-#include <iostream>
-#include <algorithm>
-#include <cmath>
-
-using namespace std;
-#define MAX 500001
-int N, num[MAX], median, mode, cnt[MAX / 4 + 2], cur, isMulti;
-double sum;
-
-int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    cin >> N;
-    for (int i = 0; i < N; i++) {
-        cin >> num[i];
-        sum += num[i];
-        cnt[num[i] + 4000]++;
-    }
-    sort(num, num + N);
-    cout << fixed;
-    cout.precision(0);
-    cout << abs(sum / N) << '\n';
-
-    median = (N - 1) / 2;
-    cout << num[median] << '\n';
-
-    for (int i = 0; i <= 8000; i++) {
-        if (cur < cnt[i]) {
-            cur = cnt[i];
-            mode = i - 4000;
-            isMulti = 0;
-        } else if (cur == cnt[i] && cnt[i] != 0) {
-            if (isMulti < 1) {
-                isMulti++;
-                cur = cnt[i];
-                mode = i - 4000;
-            }
-        }
-    }
-    cout << mode << '\n';
-
-    cout << num[N - 1] - num[0] << '\n';
-
-    return 0;
-}*/
-
+/**
+ * 2108 통계학
+ * 수학, 출력
+ */
 #include <iostream>
 #include <vector>
 #include <algorithm>
