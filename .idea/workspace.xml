@@ -14,15 +14,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/02/17 [2878 캔디캔디: 그리디 알고리즘, 수학]">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/03/07 [2174 로봇 시뮬레이션: 구현, 시뮬레이션]">
+      <change afterPath="$PROJECT_DIR$/2174.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +88,7 @@
       <workItem from="1643967751512" duration="332000" />
       <workItem from="1644328365418" duration="31000" />
       <workItem from="1645080636303" duration="1683000" />
-      <workItem from="1646660534070" duration="3202000" />
+      <workItem from="1646660534070" duration="3350000" />
     </task>
     <task id="LOCAL-00001" summary="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]">
       <created>1643632125861</created>
@@ -146,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645082323434</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="21/03/07 [2174 로봇 시뮬레이션: 구현, 시뮬레이션]">
+      <created>1646663896074</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1646663896074</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,7 +164,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/11/30 [15649 N과 M(2): 백트래킹]" />
     <MESSAGE value="21/12/01 [17474 수열과 쿼리 26: 자료구조, 세그먼트 트리, Lazy Propagation]" />
     <MESSAGE value="21/12/07 [23801 두 단계 최단 경로 2 : 다익스트라, 그래프 이론]" />
     <MESSAGE value="21/12/10 [13547 수열과 쿼리 5 : 오프라인 쿼리]" />
@@ -189,7 +188,8 @@
     <MESSAGE value="21/02/02 [7682 틱택토: 구현, 시뮬레이션, 백트레킹]" />
     <MESSAGE value="21/02/04 [3015 오아시스 재결합: 스택, 수학]" />
     <MESSAGE value="21/02/17 [2878 캔디캔디: 그리디 알고리즘, 수학]" />
-    <option name="LAST_COMMIT_MESSAGE" value="21/02/17 [2878 캔디캔디: 그리디 알고리즘, 수학]" />
+    <MESSAGE value="21/03/07 [2174 로봇 시뮬레이션: 구현, 시뮬레이션]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/03/07 [2174 로봇 시뮬레이션: 구현, 시뮬레이션]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
