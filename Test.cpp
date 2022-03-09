@@ -1,108 +1,95 @@
 /**
- * 2174 로봇 시뮬레이션
- * 구현, 시뮬레이션
+ * 14466 소가 길을 건너간 이유 6
+ * 그래프 이론, 그래프 탐색, BFS
  */
-
 #include <iostream>
 #include <map>
+#include <vector>
 
 using namespace std;
 #define MAX 101
+bool chk[MAX][MAX], cowMap[MAX][MAX];
+int N, K, R, r, c, rr, cc, dx[] = {1, 0, -1, 0}, dy[] = {0, 1, 0, -1};
+vector<pair<int, int>> cows;
+map<pair<pair<int, int>, pair<int, int>>, int> roads;
+map<pair<pair<int, int>, pair<int, int>>, int> ans;
 
-int X, Y, N, M, x, y, land[MAX][MAX], j, iter, dx[] = {0, 1, 0, -1}, dy[] = {1, 0, -1, 0};
-char direction;
-map<int, pair<pair<int, int>, int>> robots;
-string error_message;
-bool flag = true;
-
-int rotate(char dir, int cur_dir) {
-    if (dir == 'L') {
-        cur_dir--;
-        if (cur_dir < 0)
-            return 3;
-        else
-            return cur_dir;
-    } else if (dir == 'R')
-        return ((cur_dir + 1) % 4);
-    else
-        return -1;
+void init() {
+    for (int i = 1; i <= N; i++)
+        for (int j = 1; j <= N; j++)
+            chk[i][j] = false;
 }
 
-pair<pair<int, int>, bool> move(int robot_num, int xx, int yy, int cur_dir, int times) {
-    land[yy][xx] = 0;
-    for (int i = 0; i < times; i++) {
-        int nx = xx + dx[cur_dir];
-        int ny = yy + dy[cur_dir];
+void bfs(int x, int y, bool isOverRoad) {
+    chk[y][x] = true;
+    for (int i = 0; i < 4; i++) {
+        int nx = x + dx[i];
+        int ny = y + dy[i];
+        if (nx < 1 || nx > N || ny < 1 || ny > N) continue;
+        if (!cowMap[ny][nx]) continue;
+        if (chk[ny][nx]) continue;
+        chk[ny][nx] = true;
 
-        if (nx < 1 || nx > X || ny < 1 || ny > Y) {
-            error_message = "Robot " + to_string(robot_num) + " crashes into the wall\n";
-            return {{nx, ny}, false};
+        if (isOverRoad) { // 이미 길 건너야 함
+            if ((ans.find({{x,  y},
+                           {nx, ny}}) != ans.end())
+                || (ans.find({{nx, ny},
+                              {x,  y}}) != ans.end())) { // 이미 정답에 있음
+                bfs(nx, ny, true);
+            } else { // 정답에 없음
+                ans.insert({{{x, y}, {nx, ny}}, (int) ans.size() + 1}); // 정답에 추가
+                bfs(nx, ny, true);
+            }
+        } else { // 길 건너기 전
+            if (roads.find({{x,  y},
+                            {nx, ny}}) != roads.end()) { // 길 건너야 하는 사이
+                if ((ans.find({{x,  y},
+                               {nx, ny}}) != ans.end())
+                    || (ans.find({{nx, ny},
+                                  {x,  y}}) != ans.end())) { // 정답에 이미 있음
+                    bfs(nx, ny, false);
+                } else { // 정답에 없음
+                    //cout << "x: " << x << " y: " << y << " nx: " << nx << " ny: " << ny << '\n';
+                    ans.insert({{{x, y}, {nx, ny}}, (int) ans.size() + 1});
+                    bfs(nx, ny, true);
+                }
+            } else { // 길 안건너도 되는 사이
+                //cout << "no answer, " << "x: " << x << " y: " << y << " nx: " << nx << " ny: " << ny << '\n';
+                bfs(nx, ny, false);
+            }
         }
-        if (land[ny][nx]) {
-            error_message = "Robot " + to_string(robot_num) + " crashes into robot " + to_string(land[ny][nx]) + "\n";
-            return {{nx, ny}, false};
-        }
-
-        xx = nx;
-        yy = ny;
     }
-    land[yy][xx] = robot_num;
-    return {{xx, yy}, true};
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    cin >> X >> Y >> N >> M;
-    for (int i = 1; i <= N; i++) {
-        cin >> x >> y >> direction;
-        land[y][x] = i;
-        switch (direction) {
-            case 'N':
-                robots.insert({i, {{x, y}, 0}});
-                break;
-            case 'E':
-                robots.insert({i, {{x, y}, 1}});
-                break;
-            case 'S':
-                robots.insert({i, {{x, y}, 2}});
-                break;
-            case 'W':
-                robots.insert({i, {{x, y}, 3}});
-                break;
-            default:
-                break;
-        }
+    cin >> N >> K >> R;
+    for (int i = 0; i < R; i++) {
+        cin >> r >> c >> rr >> cc;
+        roads.insert({{{c, r}, {cc, rr}}, i});
+        roads.insert({{{cc, rr}, {c, r}}, i + R});
     }
 
-    while (M-- && flag) {
-        cin >> j >> direction >> iter;
-        auto robot = robots.find(j);
-        int cur_dir = robot->second.second;
-        int cur_x = robot->second.first.first;
-        int cur_y = robot->second.first.second;
-        robots.erase(j);
-
-        if (direction == 'L' || direction == 'R') {
-            for (int i = 0; i < iter; i++)
-                cur_dir = rotate(direction, cur_dir);
-        } else if (direction == 'F') {
-            pair<pair<int, int>, bool> next = move(j, robot->second.first.first, robot->second.first.second, cur_dir,
-                                                   iter);
-            flag = next.second;
-            cur_x = next.first.first;
-            cur_y = next.first.second;
-        }
-
-        if (flag)
-            robots.insert({j, {{cur_x, cur_y}, cur_dir}});
+    for (int i = 0; i < K; i++) {
+        cin >> r >> c;
+        cows.emplace_back(c, r);
+        cowMap[r][c] = true;
     }
 
-    if (flag)
-        cout << "OK\n";
-    else
-        cout << error_message;
+    for (int i = 0; i < K; i++) {
+        int x = cows[i].first;
+        int y = cows[i].second;
+        init();
+        bfs(x, y, false);
+    }
 
+    for (auto & an : ans) {
+        cout << "r: " << an.first.first.second << " , c: " << an.first.first.first << ", ans rr: "
+             << an.first.second.second << " , cc: " << an.first.second.first << '\n';
+    }
+
+    cout << ans.size() << '\n';
     return 0;
 }
