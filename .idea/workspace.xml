@@ -14,8 +14,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="22/02/22 [2108 통계학: 수학, 출력]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="21/03/09 [14466 소가 길을 건너간 이유 6 : 그래프 이론, 그래프 탐색, BFS]">
+      <change afterPath="$PROJECT_DIR$/14466.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
+>>>>>>> 586041739c32272b0971e7b7a4a3188e1ef55e7d
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,16 +67,9 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
-    <property name="structure.view.defaults.are.configured" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -84,37 +84,72 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <created>1643272089737</created>
+      <created>1643272273756</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1643272089737</updated>
       <workItem from="1643272091103" duration="68000" />
       <workItem from="1643357558814" duration="117000" />
       <workItem from="1644583450291" duration="144000" />
       <workItem from="1645510554741" duration="1000" />
       <workItem from="1645511592506" duration="3318000" />
+=======
+      <updated>1643272273756</updated>
+      <workItem from="1643272275410" duration="119000" />
+      <workItem from="1643629122919" duration="1178000" />
+      <workItem from="1643805971406" duration="878000" />
+      <workItem from="1643807050113" duration="856000" />
+      <workItem from="1643967751512" duration="332000" />
+      <workItem from="1644328365418" duration="31000" />
+      <workItem from="1645080636303" duration="1683000" />
+      <workItem from="1646660534070" duration="3554000" />
+      <workItem from="1646833491053" duration="3773000" />
+>>>>>>> 586041739c32272b0971e7b7a4a3188e1ef55e7d
     </task>
-    <task id="LOCAL-00001" summary="22/01/28 [Project Setting Renewal]">
-      <created>1643357653983</created>
+    <task id="LOCAL-00001" summary="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]">
+      <created>1643632125861</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1643357653983</updated>
+      <updated>1643632125861</updated>
     </task>
-    <task id="LOCAL-00002" summary="22/01/28 [Project Setting Renewal]">
-      <created>1644583540898</created>
+    <task id="LOCAL-00002" summary="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]">
+      <created>1643632163118</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1644583540898</updated>
+      <updated>1643632163118</updated>
     </task>
-    <task id="LOCAL-00003" summary="22/02/22 [2108 통계학: 수학, 출력]">
-      <created>1645514282751</created>
+    <task id="LOCAL-00003" summary="21/01/31 [11047 동전 0: 그리디 알고리즘]">
+      <created>1643632727531</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1645514282751</updated>
+      <updated>1643632727531</updated>
     </task>
+    <task id="LOCAL-00004" summary="21/02/02 [7682 틱택토: 구현, 시뮬레이션, 백트레킹]">
+      <created>1643806713452</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1643806713452</updated>
+    </task>
+    <task id="LOCAL-00005" summary="21/02/04 [3015 오아시스 재결합: 스택, 수학]">
+      <created>1643967778179</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1643967778179</updated>
+    </task>
+    <task id="LOCAL-00006" summary="21/02/04 [3015 오아시스 재결합: 스택, 수학]">
+      <created>1644328388096</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644328388096</updated>
+    </task>
+<<<<<<< HEAD
     <task id="LOCAL-00004" summary="22/02/22 [2108 통계학: 수학, 출력]">
       <created>1645514321250</created>
       <option name="number" value="00004" />
@@ -123,6 +158,44 @@
       <updated>1645514321250</updated>
     </task>
     <option name="localTasksCounter" value="5" />
+=======
+    <task id="LOCAL-00007" summary="21/02/17 [2878 캔디캔디: 그리디 알고리즘, 수학]">
+      <created>1645082323434</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1645082323434</updated>
+    </task>
+    <task id="LOCAL-00008" summary="21/03/07 [2174 로봇 시뮬레이션: 구현, 시뮬레이션]">
+      <created>1646663896074</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1646663896074</updated>
+    </task>
+    <task id="LOCAL-00009" summary="21/03/07 [2174 로봇 시뮬레이션: 구현, 시뮬레이션]">
+      <created>1646663911682</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1646663911682</updated>
+    </task>
+    <task id="LOCAL-00010" summary="21/03/07 [2174 로봇 시뮬레이션: 구현, 시뮬레이션]">
+      <created>1646833498957</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1646833498957</updated>
+    </task>
+    <task id="LOCAL-00011" summary="21/03/09 [14466 소가 길을 건너간 이유 6 : 그래프 이론, 그래프 탐색, BFS]">
+      <created>1646836757345</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1646836757345</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+>>>>>>> 586041739c32272b0971e7b7a4a3188e1ef55e7d
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,11 +213,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/11/28 [3015 오아시스 재결합: 스택]" />
-    <MESSAGE value="21/11/29 [3015 불켜기: BFS, 그래프 이론]" />
-    <MESSAGE value="21/11/30 [15649 N과 M(1): 백트래킹]" />
-    <MESSAGE value="21/11/30 [15649 N과 M(2): 백트래킹]" />
-    <MESSAGE value="21/12/01 [17474 수열과 쿼리 26: 자료구조, 세그먼트 트리, Lazy Propagation]" />
     <MESSAGE value="21/12/07 [23801 두 단계 최단 경로 2 : 다익스트라, 그래프 이론]" />
     <MESSAGE value="21/12/10 [13547 수열과 쿼리 5 : 오프라인 쿼리]" />
     <MESSAGE value="21/12/10 [11781 퇴근 시간 : 그래프 이론, 다익스트라, 구현]" />
@@ -163,9 +231,14 @@
     <MESSAGE value="21/12/22 [17144 미세먼지 안녕! : 구현, 시뮬레이션]" />
     <MESSAGE value="21/12/23 [17144 미세먼지 안녕! : 구현, 시뮬레이션]" />
     <MESSAGE value="21/12/30 [23843 콘센트 : 자료구조, 그리디 알고리즘, 우선순위 큐]" />
-    <MESSAGE value="22/01/28 [Project Setting Renewal]" />
-    <MESSAGE value="22/02/22 [2108 통계학: 수학, 출력]" />
-    <option name="LAST_COMMIT_MESSAGE" value="22/02/22 [2108 통계학: 수학, 출력]" />
+    <MESSAGE value="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]" />
+    <MESSAGE value="21/01/31 [11047 동전 0: 그리디 알고리즘]" />
+    <MESSAGE value="21/02/02 [7682 틱택토: 구현, 시뮬레이션, 백트레킹]" />
+    <MESSAGE value="21/02/04 [3015 오아시스 재결합: 스택, 수학]" />
+    <MESSAGE value="21/02/17 [2878 캔디캔디: 그리디 알고리즘, 수학]" />
+    <MESSAGE value="21/03/07 [2174 로봇 시뮬레이션: 구현, 시뮬레이션]" />
+    <MESSAGE value="21/03/09 [14466 소가 길을 건너간 이유 6 : 그래프 이론, 그래프 탐색, BFS]" />
+    <option name="LAST_COMMIT_MESSAGE" value="21/03/09 [14466 소가 길을 건너간 이유 6 : 그래프 이론, 그래프 탐색, BFS]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -968,19 +1041,10 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>28</line>
-          <option name="timeStamp" value="410" />
+          <line>4</line>
+          <option name="timeStamp" value="414" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="CMakeRunConfiguration">
-        <watch expression="i" language="ObjectiveC" />
-        <watch expression="cur" language="ObjectiveC" />
-        <watch expression="cnt[i]" language="ObjectiveC" />
-        <watch expression="isMulti" language="ObjectiveC" />
-        <watch expression="mode" language="ObjectiveC" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
