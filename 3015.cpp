@@ -2,47 +2,41 @@
  * 3015 오아시스 재결합
  * 스택, 수학
  */
-
 #include <iostream>
 #include <stack>
 
 using namespace std;
 #define ll long long
-int N, height, max_height = INT32_MAX, ans;
+ll N, h, ans, tmp;
 stack<pair<ll, ll>> st;
 
 int main() {
     ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(nullptr);
 
     cin >> N;
-
     for (int i = 0; i < N; i++) {
-        cin >> height;
+        cin >> h;
+        tmp = 1;
 
-        if (st.empty() && (height <= max_height)) {
-            st.push(height);
-            max_height = st.top();
-        } else {
-            while (st.top() >= height) {
-
-            }
-        }
-        if (st.empty()) {
-            st.push(height);
-            max_height = height;
-        } else {
-            if (height >= max_height) {
-                ans++;
-                max_height = height;
-            } else {
+        while (!st.empty()) {
+            if (st.top().first < h) {
+                ans += st.top().second;
+                tmp = 1;
                 st.pop();
-                st.push(max_height);
-                max_height = height;
+            } else if (st.top().first == h) {
+                ans += st.top().second;
+                tmp = st.top().second + 1;
+                st.pop();
+            } else {
+                ans++;
+                break;
             }
         }
+        st.push({h, tmp});
     }
 
     cout << ans << '\n';
+
     return 0;
 }

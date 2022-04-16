@@ -129,30 +129,6 @@ untitled/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-17298.o: 17298.cpp.o
-.PHONY : 17298.o
-
-# target to build an object file
-17298.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/17298.cpp.o
-.PHONY : 17298.cpp.o
-
-17298.i: 17298.cpp.i
-.PHONY : 17298.i
-
-# target to preprocess a source file
-17298.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/17298.cpp.i
-.PHONY : 17298.cpp.i
-
-17298.s: 17298.cpp.s
-.PHONY : 17298.s
-
-# target to generate assembly for a file
-17298.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/17298.cpp.s
-.PHONY : 17298.cpp.s
-
 Test.o: Test.cpp.o
 .PHONY : Test.o
 
@@ -186,9 +162,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... untitled"
-	@echo "... 17298.o"
-	@echo "... 17298.i"
-	@echo "... 17298.s"
 	@echo "... Test.o"
 	@echo "... Test.i"
 	@echo "... Test.s"
