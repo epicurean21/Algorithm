@@ -40,7 +40,7 @@ public:
 
     bool find(char *key) { // 찾기
         if (*key == '\0') { // 끝이라면
-            if (this->finished == false)
+            if (!this->finished)
                 return false;
             return true;
         }// 다 찾았으니 true
