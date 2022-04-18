@@ -1,5 +1,5 @@
-CMakeFiles/untitled.dir/Test.cpp.o: \
-  /Users/user/Desktop/Study/Algorithm/Test.cpp \
+CMakeFiles/untitled.dir/17299.cpp.o: \
+  /Users/user/Desktop/Study/Algorithm/17299.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk/usr/include/pthread.h \
