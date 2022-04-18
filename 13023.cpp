@@ -21,7 +21,7 @@ void dfs(int cur, int cnt) {
     for (int i: map[cur])
         if (!visited[i])
             dfs(i, cnt + 1);
-    visited[cur] = false;
+    visited[cur] = false; // for 문 돌고나서 방문 해제 해줘야 끝부분 조건을 맞춰줄 수 있다.
 }
 
 int main() {
