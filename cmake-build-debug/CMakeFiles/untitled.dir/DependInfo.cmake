@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/user/Desktop/Study/Algorithm/16967.cpp" "CMakeFiles/untitled.dir/16967.cpp.o" "gcc" "CMakeFiles/untitled.dir/16967.cpp.o.d"
   "/Users/user/Desktop/Study/Algorithm/Test.cpp" "CMakeFiles/untitled.dir/Test.cpp.o" "gcc" "CMakeFiles/untitled.dir/Test.cpp.o.d"
   )
 
