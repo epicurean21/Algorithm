@@ -1,45 +1,61 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <map>
-#include <set>
+#include <queue>
+#include <algorithm>
 
 using namespace std;
-map<string, int> report_cnt;
-map<string, set<string>> report_map;
-vector<int> solution(vector<string> id_list, vector<string> report, int k) {
-    vector<int> answer;
 
-    for (string s: report) {
-        int blank = s.find(' ');
-        string reporter = s.substr(0, blank);
-        string abuser = s.substr(blank);
+int dijkstra(int start, int end) {
+    priority_queue<pair<int, pair<int, int>>> pq;
 
-        if (report_map[reporter].find(abuser) == report_map[reporter].end()) {
-            report_cnt[abuser]++;
-            report_map[reporter].insert(abuser);
+}
+
+vector<vector<int>> solution(vector<vector<int>> rc, vector<string> operations) {
+    vector<vector<int>> answer;
+    int col = rc[0].size();
+    int row = rc.size();
+    int idx = 0;
+    vector<int> rotateList;
+    for (int i = 0; i < col; i++) {
+        rotateList.emplace_back(rc[0][i]);
+    }
+    for (int i = 1; i < row; i++) {
+        rotateList.emplace_back(rc[i][col-1]);
+    }
+    for (int i = col - 2; i >= 0; i--) {
+        rotateList.emplace_back(rc[row - 1][i]);
+    }
+    for(int i = col - 2; i > 0; i--) {
+        rotateList.emplace_back(rc[i][0]);
+    }
+
+    for(int i : rotateList)
+        cout << i << " ";
+    cout << "\n";
+
+    for (string op: operations) {
+        if (op == "Rotate") {
+            idx--;
+            if(idx < 0) {
+                idx = rotateList.size()- 1;
+            }
+        } else if (op == "ShiftRow") {
+            /*
+             * 1 2 3 6 9 8 7 4
+             * 7 8 9 3 6 5 4 1
+             */
         }
     }
-    for (string s: id_list) {
-        int res = 0;
-        for (string target: report_map[s]) {
-            if (report_cnt[target] >= k) res++;
-        }
-        answer.emplace_back(res);
-    }
+
+
     return answer;
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
-    vector<string> id_list = {"muzi", "frodo", "apeach", "neo"};
-    vector<string> report = {"muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"};
-    int k = 2;
-
-    vector<int> ans= solution(id_list, report, k);
-    for(int i : ans) {
-        cout << i << " ";
-    }
+    vector<vector<int>> rc = {{1,2,3}, {4,5,6}, {7,8,9}};
+    vector<string> operations = {"Rotate", "ShiftRow"};
+    solution(rc, operations);
 }
