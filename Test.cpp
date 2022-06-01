@@ -1,61 +1,62 @@
 #include <iostream>
-#include <string>
-#include <vector>
 #include <queue>
-#include <algorithm>
+#include <map>
 
 using namespace std;
+int T, k, n;
+char oper;
+priority_queue<int> max_heap;
+priority_queue<int, vector<int>, greater<>> min_heap;
+map<int, int> m;
 
-int dijkstra(int start, int end) {
-    priority_queue<pair<int, pair<int, int>>> pq;
-
-}
-
-vector<vector<int>> solution(vector<vector<int>> rc, vector<string> operations) {
-    vector<vector<int>> answer;
-    int col = rc[0].size();
-    int row = rc.size();
-    int idx = 0;
-    vector<int> rotateList;
-    for (int i = 0; i < col; i++) {
-        rotateList.emplace_back(rc[0][i]);
-    }
-    for (int i = 1; i < row; i++) {
-        rotateList.emplace_back(rc[i][col-1]);
-    }
-    for (int i = col - 2; i >= 0; i--) {
-        rotateList.emplace_back(rc[row - 1][i]);
-    }
-    for(int i = col - 2; i > 0; i--) {
-        rotateList.emplace_back(rc[i][0]);
-    }
-
-    for(int i : rotateList)
-        cout << i << " ";
-    cout << "\n";
-
-    for (string op: operations) {
-        if (op == "Rotate") {
-            idx--;
-            if(idx < 0) {
-                idx = rotateList.size()- 1;
-            }
-        } else if (op == "ShiftRow") {
-            /*
-             * 1 2 3 6 9 8 7 4
-             * 7 8 9 3 6 5 4 1
-             */
-        }
-    }
-
-
-    return answer;
+void init() {
+    while (!max_heap.empty())
+        max_heap.pop();
+    while (!min_heap.empty())
+        min_heap.pop();
+    m.clear();
 }
 
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-    vector<vector<int>> rc = {{1,2,3}, {4,5,6}, {7,8,9}};
-    vector<string> operations = {"Rotate", "ShiftRow"};
-    solution(rc, operations);
+
+    cin >> T;
+    while (T--) {
+        init();
+        cin >> k;
+        while (k--) {
+            cin >> oper;
+            if (oper == 'I') {
+                cin >> n;
+                min_heap.push(n);
+                max_heap.push(n);
+                m[n]++;
+            } else {
+                cin >> n;
+                if (n == -1) {
+                    while (!min_heap.empty() && m[min_heap.top()] == 0)
+                        min_heap.pop();
+                    if (min_heap.empty()) continue;
+                    m[min_heap.top()]--;
+                    min_heap.pop();
+                } else {
+                    while (!max_heap.empty() && m[(max_heap.top())] == 0)
+                        max_heap.pop();
+                    if (max_heap.empty()) continue;
+                    m[max_heap.top()]--;
+                    max_heap.pop();
+                }
+            }
+        }
+        while (!max_heap.empty() && m[max_heap.top()] == 0) max_heap.pop();
+        while (!min_heap.empty() && m[min_heap.top()] == 0) min_heap.pop();
+
+        if (max_heap.empty() || min_heap.empty())
+            cout << "EMPTY\n";
+        else
+            cout << max_heap.top() << " " << min_heap.top() << '\n';
+    }
+
+    return 0;
 }
