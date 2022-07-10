@@ -14,9 +14,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="22/07/10 [16936 나3곱2: 구현, 정렬]">
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="22/07/10 [2841 외계인의 기타 연주: 스택, 구현]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
@@ -99,7 +101,7 @@
       <workItem from="1646660534070" duration="3554000" />
       <workItem from="1646833491053" duration="3773000" />
       <workItem from="1657445618329" duration="36000" />
-      <workItem from="1657445665596" duration="8301000" />
+      <workItem from="1657445665596" duration="9363000" />
     </task>
     <task id="LOCAL-00001" summary="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]">
       <created>1643632125861</created>
@@ -192,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657453952565</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="22/07/10 [2841 외계인의 기타 연주: 스택, 구현]">
+      <created>1657460011086</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657460011086</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +219,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/12/11 [23087 최단최단경로: 그래프이론, 다익스트라]" />
     <MESSAGE value="21/12/11 [13511 트리와 쿼리 2: LCA, 최소 공통 조상]" />
     <MESSAGE value="21/12/12 [3854 가장 가까운 공통 조상: LCA, 최소 공통 조상, DFS]" />
     <MESSAGE value="21/12/12 [3584 트리와 쿼리 2: LCA, DFS, 최소 공통 조상]" />
@@ -235,7 +243,8 @@
     <MESSAGE value="2 [14466 소가 길을 건너간 이유 6 : 그래프 이론, 그래프 탐색, BFS]" />
     <MESSAGE value="22/07/10 [1302 베스트셀러: map, 해시를 이용한 집합과 셋]" />
     <MESSAGE value="22/07/10 [16936 나3곱2: 구현, 정렬]" />
-    <option name="LAST_COMMIT_MESSAGE" value="22/07/10 [16936 나3곱2: 구현, 정렬]" />
+    <MESSAGE value="22/07/10 [2841 외계인의 기타 연주: 스택, 구현]" />
+    <option name="LAST_COMMIT_MESSAGE" value="22/07/10 [2841 외계인의 기타 연주: 스택, 구현]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
