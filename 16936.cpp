@@ -13,8 +13,6 @@ public:
     A *pre;
     A *next;
 
-    A() {}
-
     A(int v, A *p, A *n) {
         this->value = v;
         this->pre = p;
