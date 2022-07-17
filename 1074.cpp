@@ -1,3 +1,7 @@
+/**
+ * 1074 Z
+ * 분할정복
+ */
 #include <iostream>
 
 using namespace std;

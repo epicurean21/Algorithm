@@ -14,17 +14,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="22/07/11 [2580 스도쿠: 구현, 백트래킹]">
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="22/07/17 [16936 나3곱2: 구현, 수학, 정렬]">
       <change afterPath="$PROJECT_DIR$/1074.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_07_06_2_30_PM_[Changes]1/Test.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_07_06_2_30_PM_[Changes]1/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_07_06_2_30_PM_[Changes]1/untitled" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_07_06_2_30_PM__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/16936.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/16936.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +94,7 @@
       <workItem from="1657445665596" duration="10000000" />
       <workItem from="1657540960719" duration="3314000" />
       <workItem from="1657553858736" duration="622000" />
-      <workItem from="1658062211588" duration="6911000" />
+      <workItem from="1658062211588" duration="7317000" />
     </task>
     <task id="LOCAL-00001" summary="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]">
       <created>1643632125861</created>
@@ -216,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657545821843</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="22/07/17 [16936 나3곱2: 구현, 수학, 정렬]">
+      <created>1658069699872</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1658069699872</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +233,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/12/12 [3584 트리와 쿼리 2: LCA, DFS, 최소 공통 조상]" />
     <MESSAGE value="21/12/12 [5072 택배 배송 : 그래프이론, 다익스트라]" />
     <MESSAGE value="21/12/13 [7469 K번째 수: 세그먼트 트리, 머지 소트 트리, 이분 탐색]" />
     <MESSAGE value="21/12/14 [7469 K번째 수: 세그먼트 트리, 머지 소트 트리, 이분 탐색]" />
@@ -259,7 +257,8 @@
     <MESSAGE value="22/07/10 [2841 외계인의 기타 연주: 스택, 구현]" />
     <MESSAGE value="22/07/10 [17219 비밀번호 찾기: 해시를 이용한 집합과 맵]" />
     <MESSAGE value="22/07/11 [2580 스도쿠: 구현, 백트래킹]" />
-    <option name="LAST_COMMIT_MESSAGE" value="22/07/11 [2580 스도쿠: 구현, 백트래킹]" />
+    <MESSAGE value="22/07/17 [16936 나3곱2: 구현, 수학, 정렬]" />
+    <option name="LAST_COMMIT_MESSAGE" value="22/07/17 [16936 나3곱2: 구현, 수학, 정렬]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
