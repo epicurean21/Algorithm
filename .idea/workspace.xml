@@ -14,14 +14,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="22/07/10 [17219 비밀번호 찾기: 해시를 이용한 집합과 맵]">
-      <change afterPath="$PROJECT_DIR$/2580.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="22/07/11 [2580 스도쿠: 구현, 백트래킹]">
+      <change afterPath="$PROJECT_DIR$/1074.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_07_06_2_30_PM_[Changes]1/Test.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_07_06_2_30_PM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_07_06_2_30_PM_[Changes]1/untitled" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_07_06_2_30_PM__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/16936.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/16936.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o.d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
     </list>
@@ -99,7 +100,9 @@
       <workItem from="1646833491053" duration="3773000" />
       <workItem from="1657445618329" duration="36000" />
       <workItem from="1657445665596" duration="10000000" />
-      <workItem from="1657540960719" duration="2751000" />
+      <workItem from="1657540960719" duration="3314000" />
+      <workItem from="1657553858736" duration="622000" />
+      <workItem from="1658062211588" duration="6911000" />
     </task>
     <task id="LOCAL-00001" summary="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]">
       <created>1643632125861</created>
@@ -206,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657461182218</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="22/07/11 [2580 스도쿠: 구현, 백트래킹]">
+      <created>1657545821843</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1657545821843</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +234,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/12/12 [3854 가장 가까운 공통 조상: LCA, 최소 공통 조상, DFS]" />
     <MESSAGE value="21/12/12 [3584 트리와 쿼리 2: LCA, DFS, 최소 공통 조상]" />
     <MESSAGE value="21/12/12 [5072 택배 배송 : 그래프이론, 다익스트라]" />
     <MESSAGE value="21/12/13 [7469 K번째 수: 세그먼트 트리, 머지 소트 트리, 이분 탐색]" />
@@ -249,7 +258,8 @@
     <MESSAGE value="22/07/10 [16936 나3곱2: 구현, 정렬]" />
     <MESSAGE value="22/07/10 [2841 외계인의 기타 연주: 스택, 구현]" />
     <MESSAGE value="22/07/10 [17219 비밀번호 찾기: 해시를 이용한 집합과 맵]" />
-    <option name="LAST_COMMIT_MESSAGE" value="22/07/10 [17219 비밀번호 찾기: 해시를 이용한 집합과 맵]" />
+    <MESSAGE value="22/07/11 [2580 스도쿠: 구현, 백트래킹]" />
+    <option name="LAST_COMMIT_MESSAGE" value="22/07/11 [2580 스도쿠: 구현, 백트래킹]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1052,18 +1062,14 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>46</line>
-          <option name="timeStamp" value="422" />
+          <line>22</line>
+          <option name="timeStamp" value="427" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="name" language="ObjectiveC" />
-        <watch expression="condition" language="ObjectiveC" />
-        <watch expression="commute" language="ObjectiveC" />
-        <watch expression="map[i][j]" language="ObjectiveC" />
-        <watch expression="(i / 3) * 3 + (j / 3)" language="ObjectiveC" />
+        <watch expression="map" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
