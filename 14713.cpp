@@ -8,25 +8,19 @@
 using namespace std;
 #define MAX 101
 int N;
-vector<string> S;
-queue<string> words[MAX], L;
-string message, tmp;
+string message, tmp, L;
+queue<string> parrot_messages[MAX];
 
-bool isPossible() {
-    while (!L.empty()) {
-        string cur = L.front();
-        L.pop();
-        bool result = false;
-        for (int i = 0; i < N; i++) {
-            if (!words[i].empty() && cur == words[i].front()) {
-                words[i].pop();
-                result = true;
-            }
+bool check(string cur) {
+    bool result = false;
+    for (int i = 0; i < N; i++) {
+        if (!parrot_messages[i].empty() && cur == parrot_messages[i].front()) {
+            parrot_messages[i].pop();
+            result = true;
+            break;
         }
-        if (!result)
-            return false;
     }
-    return true;
+    return result;
 }
 
 int main() {
@@ -34,41 +28,35 @@ int main() {
     cin.tie(nullptr);
 
     cin >> N;
-    getline(cin, message);
+    cin.ignore(MAX, '\n');
     for (int i = 0; i < N; i++) {
+        tmp = "";
         getline(cin, message);
-        S.emplace_back(message);
-    }
-
-    int idx = 0;
-    for (string s: S) {
-        for (char c: s) {
+        for (char c: message) {
             if (c == ' ') {
-                words[idx].push(tmp);
+                parrot_messages[i].push(tmp);
                 tmp = "";
             } else
                 tmp += c;
         }
-
-        words[idx++].push(tmp);
-        tmp = "";
+        parrot_messages[i].push(tmp);
     }
 
-    getline(cin, message); // L 입력받기
-    for (char c: message) {
-        if (c == ' ') {
-            L.push(tmp);
+    getline(cin, L);
+    tmp = "";
+    for (char i: L) {
+        if (i == ' ') {
+            if (!check(tmp)) {
+                cout << "Impossible\n";
+                return 0;
+            }
             tmp = "";
         } else
-            tmp += c;
+            tmp += i;
     }
-    L.push(tmp);
-
-    if (isPossible())
+    if (check(tmp))
         cout << "Possible\n";
     else
         cout << "Impossible\n";
-
-
     return 0;
 }
