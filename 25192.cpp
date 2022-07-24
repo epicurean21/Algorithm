@@ -1,6 +1,6 @@
 /**
  * 25192 인사성 밝은 곰곰이
- * map
+ * set
  */
 #include <iostream>
 #include <unordered_set>
