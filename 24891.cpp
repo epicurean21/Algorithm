@@ -1,3 +1,7 @@
+/**
+ * 24891: 단어 마방진
+ * 백트래킹, 완전탐색
+ */
 #include <iostream>
 #include <vector>
 

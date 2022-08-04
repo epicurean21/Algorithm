@@ -14,13 +14,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="22/07/27 [15573 채굴: 그래프이론, 그래프 탐색, BFS]">
-      <change afterPath="$PROJECT_DIR$/10819.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6987.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="22/08/04 [10819 차이를 최대로: 백트래킹, 조합, Next Permutation]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/9663.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/9663.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/Test.cpp.o.d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
@@ -115,7 +111,7 @@
       <workItem from="1659444894370" duration="2922000" />
       <workItem from="1659520190435" duration="2295000" />
       <workItem from="1659588096411" duration="1844000" />
-      <workItem from="1659623613850" duration="865000" />
+      <workItem from="1659623613850" duration="3574000" />
     </task>
     <task id="LOCAL-00001" summary="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]">
       <created>1643632125861</created>
@@ -271,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659273470210</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="22/08/04 [10819 차이를 최대로: 백트래킹, 조합, Next Permutation]">
+      <created>1659624542019</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1659624542019</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +292,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/12/16 [11444 피보나치 수 6: 벌레캠프-메시, DP, 수학]" />
     <MESSAGE value="21/12/21 [11444 피보나치 수 6: 벌레캠프-메시, DP, 수학]" />
     <MESSAGE value="21/12/21 [23796 2,147,483,648 게임: 구현, 시뮬레이션]" />
     <MESSAGE value="21/12/22 [23796 2,147,483,648 게임: 구현, 시뮬레이션]" />
@@ -314,7 +316,8 @@
     <MESSAGE value="22/07/24 [14713 앵무새: 자료구조, 큐, 문자열]" />
     <MESSAGE value="22/07/24 [25192 인사성 밝은 곰곰이: set]" />
     <MESSAGE value="22/07/27 [15573 채굴: 그래프이론, 그래프 탐색, BFS]" />
-    <option name="LAST_COMMIT_MESSAGE" value="22/07/27 [15573 채굴: 그래프이론, 그래프 탐색, BFS]" />
+    <MESSAGE value="22/08/04 [10819 차이를 최대로: 백트래킹, 조합, Next Permutation]" />
+    <option name="LAST_COMMIT_MESSAGE" value="22/08/04 [10819 차이를 최대로: 백트래킹, 조합, Next Permutation]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1130,15 +1133,28 @@
           <line>7</line>
           <option name="timeStamp" value="458" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Test.cpp</url>
+          <line>20</line>
+          <option name="timeStamp" value="466" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Test.cpp</url>
+          <line>32</line>
+          <option name="timeStamp" value="467" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Test.cpp</url>
+          <line>12</line>
+          <option name="timeStamp" value="468" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="win_cnt" language="ObjectiveC" />
-        <watch expression="draw_cnt" language="ObjectiveC" />
-        <watch expression="lost_cnt" language="ObjectiveC" />
-        <watch expression="suspicious" language="ObjectiveC" />
-        <watch expression="game_cnt" language="ObjectiveC" />
+        <watch expression="cur" language="ObjectiveC" />
+        <watch expression="tmp" language="ObjectiveC" />
+        <watch expression="candidate" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
