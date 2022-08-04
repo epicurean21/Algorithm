@@ -1,3 +1,7 @@
+/**
+ * 10819 차이를 최대로
+ * 백트래킹, 조합, Next Permutation
+ */
 #include <iostream>
 #include <algorithm>
 #include <vector>
