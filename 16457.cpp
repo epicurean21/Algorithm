@@ -1,3 +1,7 @@
+/**
+ * 16457 단풍잎 이야기
+ * 백트래킹, 탐색
+ */
 #include <iostream>
 #include <vector>
 #include <algorithm>
