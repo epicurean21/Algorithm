@@ -14,12 +14,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="22/08/05 [24891 단어 마방진: 백트래킹]">
-      <change afterPath="$PROJECT_DIR$/16457.cpp" afterDir="false" />
+    <list default="true" id="618a29be-a4a1-4d14-bf0e-48bfbe69f1ad" name="Default Changelist" comment="22/08/05 [16457 단풍잎 이야기: 백트래킹]">
+      <change afterPath="$PROJECT_DIR$/1799.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Test.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2022-07-10T09-33-43-0021.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.internal" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/untitled.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/untitled" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/untitled" afterDir="false" />
@@ -70,11 +68,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -118,7 +111,11 @@
       <workItem from="1659444894370" duration="2922000" />
       <workItem from="1659520190435" duration="2295000" />
       <workItem from="1659588096411" duration="1844000" />
-      <workItem from="1659623613850" duration="6125000" />
+      <workItem from="1659623613850" duration="9482000" />
+      <workItem from="1660056537297" duration="5161000" />
+      <workItem from="1660063342383" duration="770000" />
+      <workItem from="1660128525934" duration="796000" />
+      <workItem from="1660550661553" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="21/01/31 [11967 불켜기: DFS, 시뮬레이션, 그래프 탐색]">
       <created>1643632125861</created>
@@ -288,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659627879486</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="22/08/05 [16457 단풍잎 이야기: 백트래킹]">
+      <created>1659693504176</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1659693504176</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +310,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21/12/21 [23796 2,147,483,648 게임: 구현, 시뮬레이션]" />
     <MESSAGE value="21/12/22 [23796 2,147,483,648 게임: 구현, 시뮬레이션]" />
     <MESSAGE value="21/12/22 [17144 미세먼지 안녕! : 구현, 시뮬레이션]" />
     <MESSAGE value="21/12/23 [17144 미세먼지 안녕! : 구현, 시뮬레이션]" />
@@ -331,7 +334,8 @@
     <MESSAGE value="22/07/27 [15573 채굴: 그래프이론, 그래프 탐색, BFS]" />
     <MESSAGE value="22/08/04 [10819 차이를 최대로: 백트래킹, 조합, Next Permutation]" />
     <MESSAGE value="22/08/05 [24891 단어 마방진: 백트래킹]" />
-    <option name="LAST_COMMIT_MESSAGE" value="22/08/05 [24891 단어 마방진: 백트래킹]" />
+    <MESSAGE value="22/08/05 [16457 단풍잎 이야기: 백트래킹]" />
+    <option name="LAST_COMMIT_MESSAGE" value="22/08/05 [16457 단풍잎 이야기: 백트래킹]" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1147,24 +1151,14 @@
           <line>7</line>
           <option name="timeStamp" value="458" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>27</line>
-          <option name="timeStamp" value="469" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Test.cpp</url>
-          <line>20</line>
-          <option name="timeStamp" value="472" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
-        <watch expression="ans" language="ObjectiveC" />
-        <watch expression="keySettings" language="ObjectiveC" />
-        <watch expression="quests[i]" language="ObjectiveC" />
-        <watch expression="i" language="ObjectiveC" />
+        <watch expression="possible()" language="ObjectiveC" />
+        <watch expression="map" language="ObjectiveC" />
+        <watch expression="map[y][x]" language="ObjectiveC" />
+        <watch expression="map[ny][nx]" language="ObjectiveC" />
       </configuration>
     </watches-manager>
   </component>
