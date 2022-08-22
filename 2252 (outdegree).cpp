@@ -1,3 +1,9 @@
+/**
+ * 2252 줄 세우기
+ * 위상 정렬
+ * out-degree 가 0인 경우부터 탐색하는 방식
+ * DFS
+ */
 #include <iostream>
 #include <stack>
 #include <vector>
