@@ -1,3 +1,7 @@
+/**
+ * 1922 네트워크 연결
+ * 최소 스패닝 트리
+ */
 #include <iostream>
 #include <vector>
 #include <queue>
