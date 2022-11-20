@@ -1,107 +1,77 @@
 /**
- * 5719 거의 최단 경로
+ * 20183 골목 대장 효석 - 효율성 2
  * 다익스트라, 그래프 이론
- * - 거의 최단 경로란, 최단 경로에 포함되는 간선을 제외한 최단 경로를 찾자
- * - 함정 1: 최단 경로 값이 여러개라면, 해당 간선들은 사용해선 안된다.
  *
- * 풀이 방법:
- * 1. Dijkstra를 돌려서 시작점 부터 각 점까지 최단 경로를 찾고 저장한다.
- * 2. BFS 를 역그래프 (도착지 -> 출발지)로 순회하여 최단 경로를 삭제한다.
- *      ** 이게 핵심, 역방향으로 돌려야, 올바르게 최단 경로를 삭제한다.
- * 3. 순방향그래프로 다시 Dijkstra를 돌려 최단 경로를 찾는다.
+ * 최단(최소비용) 경로를 찾으면서, 각 행성지이동 중 비용이 적은걸 우선으로 탐색.
+ * 전체 비용도 계산해야한다.
  */
-
 #include <iostream>
 #include <vector>
 #include <queue>
 
 using namespace std;
-#define MAX 501
-int N, M, S, D, U, V, P, dist[MAX];
-bool chk[MAX];
+#define MAX 100001
+#define ll long long
+int N, M, A, B, C, a, b, c, cost[MAX]; // max_cost
 vector<vector<pair<int, int>>> map;
-vector<vector<int>> reversed_map;
-priority_queue<pair<int, int>> pq;
+priority_queue<pair<pair<ll, int>, int>> pq; // total_cost & max_cost & next
 
-void init() {
-    map.clear();
-    reversed_map.clear();
-    map.resize(N + 1);
-    reversed_map.resize(N + 1);
-    while (!pq.empty()) pq.pop();
-    for (int i = 0; i < N; i++) {
-        dist[i] = INT32_MAX;
-        chk[i] = false;
-    }
+int max(int x, int y) {
+    return x > y ? x : y;
 }
 
-void find_dijkstra() {
-    pq.push({0, S});
-    dist[S] = 0;
+void dijkstra() {
+    pq.push({{0, 0}, A});
+    cost[A] = 0;
 
     while (!pq.empty()) {
         int cur = pq.top().second;
-        int cost = pq.top().first;
+        ll total_cost = pq.top().first.first;
+        int max_cost = pq.top().first.second;
+
+
         pq.pop();
 
-        if (dist[cur] < cost) continue;
+        if (cost[cur] < max_cost) return;
 
-        for (auto &i: map[cur]) {
+        cost[cur] = max_cost;
+
+        for (auto i: map[cur]) {
             int next = i.first;
             int next_cost = i.second;
-            if (next_cost == -1) continue; // 삭제 된 간선
+            ll next_total_cost = next_cost + total_cost;
 
-            if (dist[next] > next_cost + cost) {
-                dist[next] = next_cost + cost;
-                reversed_map[next].clear();
-                reversed_map[next].emplace_back(cur);
-                pq.push({next_cost, next});
-            } else if (dist[next] == next_cost + cost) {
-                reversed_map[next].emplace_back(cur);
+            if (next_total_cost <= C) {
+                pq.push({{next_total_cost, max(next_cost, max_cost)}, next});
             }
         }
     }
+
 }
 
-void bfs_remove_edges() {
-    queue<int> q;
-    q.push(D);
-
-    while (!q.empty()) {
-        int cur = q.front();
-        q.pop();
-        if (chk[cur]) continue;
-        chk[cur] = true;
-        for (auto &i: reversed_map[cur]) {
-            int next = i;
-            for (auto &j: map[i]) {
-                if (j.first == cur) j.second = -1;
-            }
-            q.push(next);
-        }
-    }
+void init() {
+    map.resize(N + 1);
+    for (int i = 1; i <= N; i++)
+        cost[i] = INT32_MAX;
 }
 
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 
-    while (true) {
-        cin >> N >> M;
-        if (N == 0 && M == 0) break;
-        init();
-        cin >> S >> D;
-        for (int i = 0; i < M; i++) {
-            cin >> U >> V >> P;
-            map[U].emplace_back(V, P);
-        }
+    cin >> N >> M >> A >> B >> C;
+    init();
 
-        find_dijkstra();
-        bfs_remove_edges();
-        for (int i = 0; i < N; i++) dist[i] = INT32_MAX;
-        find_dijkstra();
-
-        if (dist[D] == INT32_MAX) cout << "-1\n";
-        else cout << dist[D] << '\n';
+    for (int i = 0; i < M; i++) {
+        cin >> a >> b >> c;
+        map[a].emplace_back(b, c);
+        map[b].emplace_back(a, c);
     }
+
+    dijkstra();
+
+    if (cost[B] == INT32_MAX) cout << "-1\n";
+    else cout << cost[B] << "\n";
+
+
     return 0;
 }
