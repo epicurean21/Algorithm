@@ -1,3 +1,7 @@
+/**
+ * 1477 휴게소 세우기
+ * 이분 탐색
+ */
 #include <iostream>
 #include <algorithm>
 
@@ -21,7 +25,7 @@ int main() {
         int cnt = 0;
         for (int i = 1; i < N + 2; i++) {
             int dist = map[i] - map[i - 1]; // 휴게소 위치 별 거리
-            cnt += dist / m; //
+            cnt += dist / m;
             if (dist % m == 0)
                 cnt--;
         }
