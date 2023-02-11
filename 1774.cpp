@@ -1,3 +1,15 @@
+/**
+ * 1774 우주신과의 교감
+ * 최소 신장 트리 (Minimum Spanning Tree)
+ * 해결방안:
+ * 모든 점들의 거리를 계산해서 거리들에 대한 list를 갖고있고, 이를 정렬해서
+ * 짧은순으로 Kruskal Algorithm 을 통해 추가해나간다.
+ * N이 1000이기에 가능한 해법 (O(n^2))
+ * 중요한건, 거리 계산할 때 double 자료형을 넘어갈 수 있기에 long double을 사용해야한다.
+ * 이거때매 계속틀림... 자료형이 제일 빡샌 문제. 나머지는 평이하다
+ * Optimize 하는 방법은... union-find 에 대한 조건을 추가해서, m 개의 정보를 잘 활용하면 좀더 빠른 코드를 만들 수 있을것.
+ */
+
 #include <iostream>
 #include <vector>
 #include <cmath>
