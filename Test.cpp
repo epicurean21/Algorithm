@@ -67,7 +67,6 @@ vector<vector<int>> calculateR(vector<vector<int>> input) {
 
 vector<vector<int>> calculateC(vector<vector<int>> input) {
     vector<vector<int>> newArray;
-    //for(int i = 0; i < input[0].size(); i++) newArray.emplace_back();
 
     int size = 0;
     for (int i = 0; i < input[0].size(); i++) {
@@ -80,6 +79,9 @@ vector<vector<int>> calculateC(vector<vector<int>> input) {
             if (numberCount[j] != 0) orderingNumbers.emplace_back(j, numberCount[j]);
         sort(orderingNumbers.begin(), orderingNumbers.end(), sorting);
 
+        for(int j = 0; j < orderingNumbers.size(); j++ ){
+            newArray.emplace_back();
+        }
 
         size = max(size, newArray.size());
     }
