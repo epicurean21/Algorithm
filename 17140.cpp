@@ -1,3 +1,10 @@
+/**
+ * 17140 이차원 배열과 연산
+ * 구현, 시뮬레이션, 삼성기출
+ *
+ * 어렵진않음. 쉬움, 근데 Row/Col & 행/열 개념이 계속 헷갈림...
+ * 쉬움
+ */
 #include "iostream"
 #include "vector"
 #include "algorithm"
