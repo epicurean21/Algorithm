@@ -1,44 +1,35 @@
 /**
- * 2812 크게 만들기
- * 스택, 자료구조, 덱
+ * 10986 나머지 합
+ * 수학, 누적 합
+ * (a + b) % c 는 (a % c) + (b % c) % c 는 같다는 성질을 이용한다.
+ * 누적 합 구간에서 나누어 떨어지는 것
+ * 즉, (A[j] - A[i - 1]) % M = 0 인 개수를 찾는건, (A[j] % M) - (A[i - 1]) 의 개수와 같다.
+ * 근데 A[i] % M 이 0 이라면 그 자체를 더해준다.
  */
 #include "iostream"
-#include "deque"
 
 using namespace std;
+#define MAX 1000001
+#define ll long long
 
-int n, k, cnt;
-string input;
-deque<char> dq;
+int n, m;
+ll cnt, arr[MAX], arrSum[MAX], arrCal[MAX];
 
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 
-    cin >> n >> k;
-    cin >> input;
-
-    int i;
-    for (i = 0; i < input.length(); i++) {
-        if (cnt == k) break;
-        while (!dq.empty() && dq.back() - '0' < input[i] - '0' && cnt < k) {
-            dq.pop_back();
-            cnt++;
-        }
-        dq.push_back(input[i]);
+    cin >> n >> m;
+    for (int i = 1; i <= n; i++) {
+        cin >> arr[i];
+        arrSum[i] = (arrSum[i - 1] + arr[i]) % m;
+        if (arrSum[i] == 0) cnt++;
+        arrCal[(int) arrSum[i]]++;
     }
 
-    for (; i < input.length(); i++) dq.push_back(input[i]);
-    while (cnt < k) {
-        dq.pop_back();
-        cnt++;
+    for (int i = 0; i < m; i++) {
+        if (arrCal[i] > 1) cnt += (arrCal[i] * (arrCal[i] - 1l)) / 2l;
     }
 
-    while (!dq.empty()) {
-        cout << dq.front();
-        dq.pop_front();
-        cnt++;
-    }
-    cout << '\n';
-
+    cout << cnt << '\n';
     return 0;
 }
