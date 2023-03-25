@@ -1,6 +1,7 @@
 /**
  * leetcode #13
  * Roman to Integer
+ * Difficulty: EASY
  * -
  * translate roman numerals to an integer
  */
