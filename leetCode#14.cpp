@@ -1,6 +1,7 @@
 /**
  * leetcode #14
  * Longest Common Prefix
+ * Difficulty: EASY
  * -
  * get longest common prefix
  * if there is no common prefix, return ""
