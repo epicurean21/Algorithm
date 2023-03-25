@@ -1,35 +1,63 @@
 /**
- * 10986 나머지 합
- * 수학, 누적 합
- * (a + b) % c 는 (a % c) + (b % c) % c 는 같다는 성질을 이용한다.
- * 누적 합 구간에서 나누어 떨어지는 것
- * 즉, (A[j] - A[i - 1]) % M = 0 인 개수를 찾는건, (A[j] % M) - (A[i - 1]) 의 개수와 같다.
- * 근데 A[i] % M 이 0 이라면 그 자체를 더해준다.
+ * leetcode #13
+ * Roman to Integer
+ * -
+ * translate roman numerals to an integer
  */
 #include "iostream"
+#include "stack"
 
 using namespace std;
-#define MAX 1000001
-#define ll long long
+int romanNumerals[26];
 
-int n, m;
-ll cnt, arr[MAX], arrSum[MAX], arrCal[MAX];
+void init() {
+    romanNumerals['I' - 'A'] = 1;
+    romanNumerals['V' - 'A'] = 5;
+    romanNumerals['X' - 'A'] = 10;
+    romanNumerals['L' - 'A'] = 50;
+    romanNumerals['C' - 'A'] = 100;
+    romanNumerals['D' - 'A'] = 500;
+    romanNumerals['M' - 'A'] = 1000;
+}
+
+int getRomanCombinationNumber(string roman) {
+    if (roman == "IV") return 4;
+    else if (roman == "IX") return 9;
+    else if (roman == "XL") return 40;
+    else if (roman == "XC") return 90;
+    else if (roman == "CD") return 400;
+    else if (roman == "CM") return 900;
+    else return 0;
+}
+
+int romanToInt(string s) {
+    int calculatedNumber = 0;
+    for (int i = 0; i < s.length(); i++) {
+        if (s[i] == 'I' || s[i] == 'X' || s[i] == 'C') {
+            string combinationString;
+            combinationString += s[i];
+            if (i != s.length()) combinationString += s[i + 1];
+
+            int romanCombinationNumber = getRomanCombinationNumber(combinationString);
+            if (romanCombinationNumber) {
+                calculatedNumber += romanCombinationNumber;
+                i++;
+            } else calculatedNumber += romanNumerals[s[i] - 'A'];
+        } else calculatedNumber += romanNumerals[s[i] - 'A'];
+    }
+
+    return calculatedNumber;
+}
 
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 
-    cin >> n >> m;
-    for (int i = 1; i <= n; i++) {
-        cin >> arr[i];
-        arrSum[i] = (arrSum[i - 1] + arr[i]) % m;
-        if (arrSum[i] == 0) cnt++;
-        arrCal[(int) arrSum[i]]++;
+    init();
+    string s;
+    while (cin >> s) {
+        if (s == "0") exit(1);
+        cout << romanToInt(s) << '\n';
     }
 
-    for (int i = 0; i < m; i++) {
-        if (arrCal[i] > 1) cnt += (arrCal[i] * (arrCal[i] - 1l)) / 2l;
-    }
-
-    cout << cnt << '\n';
     return 0;
 }
