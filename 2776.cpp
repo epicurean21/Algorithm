@@ -1,3 +1,7 @@
+/**
+ * 2776 암기 왕
+ * set, map
+ */
 #include "iostream"
 #include "unordered_set"
 
