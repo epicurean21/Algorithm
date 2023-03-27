@@ -1,7 +1,12 @@
+cmake-build-debug
 /cmake-build-debug
+cmake-build-debug/*
+/cmake-build-debug/*
+cmake-build-debug/**
 /cmake-build-debug/**
 .idea/**
 CMakeLists.txt
 BaseCode
 Test.cpp
 README.md
+*.log
