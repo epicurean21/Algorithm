@@ -10,3 +10,13 @@ BaseCode
 Test.cpp
 README.md
 *.log
+/cmake-build-debug/
+/cmake-build-debug/.cmake/
+/cmake-build-debug/CMakeFiles/
+/cmake-build-debug/Testing/
+/cmake-build-debug/cmake_install.cmake
+/cmake-build-debug/CMakeCache.txt
+/cmake-build-debug/Makefile
+/cmake-build-debug/untitled
+/cmake-build-debug/untitled.cbp
+/cmake-build-debug/untitled.ld_kgPYD0
