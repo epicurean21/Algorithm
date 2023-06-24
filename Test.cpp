@@ -40,7 +40,7 @@ ll get_value(int node, int start, int end, int left, int right) {
 void update_tree(int node, int start, int end, int idx, int new_value) {
     if (idx < start || end < idx) return;
     if (start == end) {
-        segment_tree[node] = new_value;
+        segment_tree[node] = input_array[start];
         return;
     }
 
