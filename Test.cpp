@@ -12,39 +12,47 @@
 
 using namespace std;
 #define ll long long
-#define MAX 10001
+#define N_MAX 101
+#define M_MAX 10001
 int t, n, m, k, u, v, c, d;
 string impossible = "Poor KCM\n";
-vector<vector<pair<int, pair<int, int>>>> map; // from -> {to, {cost, dist}}
-priority_queue<pair<pair<ll, ll>, int>, vector<pair<pair<ll, ll>, int>>, greater<>> pq; // total_dist, total_cost, next
-ll dist[MAX];
+vector<vector<pair<int, pair<int, int>>>> map; // {to, dist, cost}
+priority_queue<pair<pair<int, int>, int>, vector<pair<pair<int, int>, int>>, greater<>> pq; // dist, cost, next
+int dist[N_MAX][M_MAX];
 
 void init() {
     map.clear();
     map.resize(n + 1);
-    dist[1] = 0;
-    for (int i = 2; i <= n; i++) dist[i] = INT64_MAX;
+    for (int i = 1; i <= n; i++)
+        for (int j = 0; j <= m; j++)
+            dist[i][j] = INT32_MAX;
+
     while (!pq.empty()) pq.pop();
 }
 
 void dijkstra() {
     pq.push({{0, 0}, 1});
+    dist[1][0] = 0;
     while (!pq.empty()) {
         int cur = pq.top().second;
-        ll cur_dist = pq.top().first.first;
-        ll cur_cost = pq.top().first.second;
+        int cur_dist = pq.top().first.first;
+        int cur_cost = pq.top().first.second;
         pq.pop();
 
-        if (dist[cur] < cur_dist) continue;
-        if (cur_cost >= m) continue;
+        if (dist[cur][cur_cost] < cur_dist) continue;
 
-        for (int i = 0; i < map[cur].size(); i++) {
-            int next = map[cur][i].first;
-            ll next_dist = map[cur][i].second.second + cur_dist;
-            ll next_cost = map[cur][i].second.first + cur_cost;
+        for (auto &i: map[cur]) {
+            int next = i.first;
+            int next_dist = i.second.first + cur_dist;
+            int next_cost = i.second.second + cur_cost;
 
-            if (dist[next] > next_dist || next_cost <= m) {
-                dist[next] = next_dist;
+            if (next_cost > m) continue;
+
+            if (next_dist < dist[next][next_cost]) {
+                for (int j = next_cost; j <= m; j++) {
+                    if (dist[next][j] <= next_dist) break;
+                    dist[next][j] = next_dist;
+                }
                 pq.push({{next_dist, next_cost}, next});
             }
         }
@@ -61,12 +69,16 @@ int main() {
         init();
         while (k--) {
             cin >> u >> v >> c >> d;
-            map[u].push_back({v, {c, d}});
+            map[u].push_back({v, {d, c}});
         }
 
         dijkstra();
-        if (dist[n] != INT64_MAX) cout << dist[n] << "\n";
-        else cout << impossible;
+
+        int ans = INT32_MAX;
+        for (int i = 0; i <= m; i++) if (dist[n][i] < INT32_MAX) ans = dist[n][i];
+
+        if (ans == INT32_MAX) cout << impossible;
+        else cout << ans << "\n";
     }
 
     return 0;
