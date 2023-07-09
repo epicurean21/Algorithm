@@ -1,87 +1,72 @@
 /**
- * 5676 음주 코딩
- * 세그먼트 트리
+ * 10217 KCM Travel
+ * 다익스트라, 그래프 이론, 다이나믹 프로그레밍
+ *
+ * 인천: 1번, LA: N번
+ * 1 -> N 까지 M 원 이하이면서 최단경로
+ * 각 지역별로 얼마남았는지를 계산하면서 최단경로를 찾으면 될듯?
  */
-
 #include "iostream"
-#include "cmath"
 #include "vector"
+#include "queue"
 
 using namespace std;
-int n, k, h, x, idx_i, idx_j, v;
-char command;
-vector<int> segment_tree, input_array;
+#define ll long long
+#define MAX 10001
+int t, n, m, k, u, v, c, d;
+string impossible = "Poor KCM\n";
+vector<vector<pair<int, pair<int, int>>>> map; // from -> {to, {cost, dist}}
+priority_queue<pair<pair<ll, ll>, int>, vector<pair<pair<ll, ll>, int>>, greater<>> pq; // total_dist, total_cost, next
+ll dist[MAX];
 
-void print() {
-    cout << "\n-----tree print-----\n";
-    for (int i = 1; i < segment_tree.size(); i++) {
-        cout << segment_tree[i] << " ";
+void init() {
+    map.clear();
+    map.resize(n + 1);
+    dist[1] = 0;
+    for (int i = 2; i <= n; i++) dist[i] = INT64_MAX;
+    while (!pq.empty()) pq.pop();
+}
+
+void dijkstra() {
+    pq.push({{0, 0}, 1});
+    while (!pq.empty()) {
+        int cur = pq.top().second;
+        ll cur_dist = pq.top().first.first;
+        ll cur_cost = pq.top().first.second;
+        pq.pop();
+
+        if (dist[cur] < cur_dist) continue;
+        if (cur_cost >= m) continue;
+
+        for (int i = 0; i < map[cur].size(); i++) {
+            int next = map[cur][i].first;
+            ll next_dist = map[cur][i].second.second + cur_dist;
+            ll next_cost = map[cur][i].second.first + cur_cost;
+
+            if (dist[next] > next_dist || next_cost <= m) {
+                dist[next] = next_dist;
+                pq.push({{next_dist, next_cost}, next});
+            }
+        }
     }
-    cout << '\n';
-}
-
-int build_segment_tree(int node, int start, int end) {
-    if (start == end) return segment_tree[node] = input_array[start];
-
-    int m = (start + end) / 2;
-    return segment_tree[node] = build_segment_tree(node * 2, start, m) * build_segment_tree(node * 2 + 1, m + 1, end);
-}
-
-int get_value(int node, int start, int end, int left, int right) {
-    if (start > right || end < left) return 1;
-
-    if (start >= left && end <= right) return segment_tree[node];
-    int m = (start + end) / 2;
-    return get_value(node * 2, start, m, left, right) * get_value(node * 2 + 1, m + 1, end, left, right);
-}
-
-void update_tree(int node, int start, int end, int idx, int new_value) {
-    if (idx < start || end < idx) return;
-    if (start == end) {
-        segment_tree[node] = input_array[start];
-        return;
-    }
-
-    int m = (start + end) / 2;
-    update_tree(node * 2, start, m, idx, new_value);
-    update_tree(node * 2 + 1, m + 1, end, idx, new_value);
-    segment_tree[node] = segment_tree[node * 2] * segment_tree[node * 2 + 1];
 }
 
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 
-    while (cin >> n >> k) {
-        string answer;
-        input_array.clear();
-        input_array.emplace_back(0);
+    cin >> t;
+    while (t--) {
+        cin >> n >> m >> k;
 
-        for (int i = 1; i <= n; i++) {
-            cin >> x;
-            x == 0 ? input_array.emplace_back(0) : x < 0 ? input_array.emplace_back(-1) : input_array.emplace_back(1);
+        init();
+        while (k--) {
+            cin >> u >> v >> c >> d;
+            map[u].push_back({v, {c, d}});
         }
 
-        h = (int) ceil(log2(n + 1));
-        segment_tree.resize(1 << (h + 1));
-        build_segment_tree(1, 1, n);
-
-        for (int i = 0; i < k; i++) {
-            cin >> command;
-            if (command == 'C') { // 변경
-                cin >> idx_i >> v;
-                v = v < 0 ? -1 : v == 0 ? 0 : 1;
-                input_array[idx_i] = v;
-                update_tree(1, 1, n, idx_i, v);
-            } else if (command == 'P') { // 곱셈
-                cin >> idx_i >> idx_j;
-                int calculation = get_value(1, 1, n, idx_i, idx_j);
-
-                if (calculation > 0) answer += '+';
-                else if (calculation < 0) answer += '-';
-                else answer += '0';
-            }
-        }
-        cout << answer << "\n";
+        dijkstra();
+        if (dist[n] != INT64_MAX) cout << dist[n] << "\n";
+        else cout << impossible;
     }
 
     return 0;
