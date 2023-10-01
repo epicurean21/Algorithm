@@ -11,7 +11,6 @@
 #include "queue"
 
 using namespace std;
-#define ll long long
 #define N_MAX 101
 #define M_MAX 10001
 int t, n, m, k, u, v, c, d;
@@ -63,23 +62,21 @@ int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
 
     cin >> t;
-    while (t--) {
-        cin >> n >> m >> k;
+    cin >> n >> m >> k;
 
-        init();
-        while (k--) {
-            cin >> u >> v >> c >> d;
-            map[u].push_back({v, {d, c}});
-        }
-
-        dijkstra();
-
-        int ans = INT32_MAX;
-        for (int i = 0; i <= m; i++) if (dist[n][i] < INT32_MAX) ans = dist[n][i];
-
-        if (ans == INT32_MAX) cout << impossible;
-        else cout << ans << "\n";
+    init();
+    while (k--) {
+        cin >> u >> v >> c >> d;
+        map[u].push_back({v, {d, c}});
     }
+
+    dijkstra();
+
+    int ans = INT32_MAX;
+    for (int i = 0; i <= m; i++) if (dist[n][i] < INT32_MAX) ans = dist[n][i];
+
+    if (ans == INT32_MAX) cout << impossible;
+    else cout << ans << "\n";
 
     return 0;
 }
