@@ -1,3 +1,7 @@
+/**
+ * 24479 알고리즘 수업 - 깊이 우선 탐색 2
+ * 그래프 이론, DFS, Sorting
+ */
 #include "iostream"
 #include "vector"
 #include "algorithm"
