@@ -1,3 +1,7 @@
+/**
+ * 14940 쉬운 최단거리
+ * 그래프 이론, BFS
+ */
 #include "iostream"
 #include "queue"
 
