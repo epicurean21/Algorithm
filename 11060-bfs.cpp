@@ -1,3 +1,7 @@
+/**
+ * 11060 점프점프
+ * 그래프 이론, BFS
+ */
 #include "iostream"
 #include "queue"
 
