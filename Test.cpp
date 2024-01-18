@@ -1,33 +1,25 @@
-#include "iostream"
-#include "math.h"
+#include <iostream>
 
 using namespace std;
-int t, x_1, y_1, r_1, x_2, y_2, r_2;
+
+int T;
+int x1, y1, r1, x2, y2, r2;
 
 int main() {
-    cin.tie(nullptr)->sync_with_stdio(false);
-    cin >> t;
-    while (t--) {
-        cin >> x_1 >> y_1 >> r_1 >> x_2 >> y_2 >> r_2;
+    int d, radius_diff, radius_sum;
+    cin >> T;
 
-        double distance = sqrt(pow(x_1 - x_2, 2) + pow(y_1 - y_2, 2));
-        int radius_sum = r_1 + r_2;
-        int radius_diff = abs(r_1 - r_2);
+    while (T--) {
+        cin >> x1 >> y1 >> r1 >> x2 >> y2 >> r2;
+        d = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
+        radius_diff = (r1 - r2) * (r1 - r2);
+        radius_sum = (r1 + r2) * (r1 + r2);
 
-        if (distance == radius_sum || distance == radius_diff) { // 외접 or 내접
-            cout << "1\n";
-        } else if (distance == 0) { // 같은 원
-            if (radius_diff == 0) {
-                cout << "-1\n";
-            } else {
-                cout << "0\n";
-            }
-        } else if (distance < radius_sum && distance > radius_diff) { // 두 점서 만남
-            cout << "2\n";
-        } else { // 그 외 안만남
-            cout << "0\n";
-        }
+        if (d == 0) {
+            if (radius_diff == 0) cout << "-1\n";
+            else cout << "0\n";
+        } else if (d == radius_diff || d == radius_sum) cout << "1\n";
+        else if (radius_diff < d && d < radius_sum) cout << "2\n";
+        else cout << "0\n";
     }
-
-    return 0;
 }
