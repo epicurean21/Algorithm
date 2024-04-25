@@ -1,47 +1,82 @@
 /**
- * 14550 마리오 파티
- * 다이나믹 프로그래밍
- *
+ * 1600 말이 되고픈 원숭이
+ * 구현, 그래프이론, 너비우선탐색
  */
 #include "iostream"
-#include "algorithm"
+#include "queue"
+#include "vector"
 
 using namespace std;
-#define MAX 205
-int N, S, T;
+#define MAX 201
+int K, W, H, map[MAX][MAX], ans[MAX][MAX];
+int horse_move_x[] = {2, 1, -1, -2, -2, -1, 1, 2}, horse_move_y[] = {-1, -2, -2, -1, 1, 2, 2, 1};
+int dx[] = {1, 0, -1, 0}, dy[] = {0, 1, 0, -1};
 
-int main() {
-    cin.tie(nullptr)->sync_with_stdio(false);
+bool is_possible(int x, int y) {
+    if (x < 0 || x >= W || y < 0 || y >= H) return false;
+    if (map[y][x] == 1) return false;
+    return true;
+}
 
-    while (1) {
-        cin >> N;
-        if (N == 0) break;
-        cin >> S >> T;
+void solve() {
+    queue<pair<pair<int, int>, pair<int, int>>> q; // {move, k remain}, {x, y}
+    bool visited[K + 1][MAX][MAX]; // using horse, or not
+    q.push({{0, K},
+            {0, 0}});
 
-        int arr[MAX] = {0,}, dp[MAX][MAX]; // dp[x][y] = x 번째 시도해서 y 위치에서의 최댓값
+    while (!q.empty()) {
+        int cnt = q.front().first.first;
+        int remaining_k = q.front().first.second;
+        int cur_x = q.front().second.first;
+        int cur_y = q.front().second.second;
+        q.pop();
 
-        for (int i = 1; i <= N; i++) cin >> arr[i]; // 배열 입력
+        if (ans[cur_y][cur_x] > cnt) ans[cur_y][cur_x] = cnt;
 
-        for (int i = 0; i < T; i++) { // T 번 던지는데, dp 배열 초기화
-            dp[i][0] = 0; // i번 던져서 시작점이면 최댓값 0
-            for (int j = 1; j < N + 2; j++) dp[i][j] = INT32_MIN; // i번 던져서 j 위치까지 모두 -INF
-        }
+        if (remaining_k) {
+            for (int i = 0; i < 8; i++) {
+                int nx = cur_x + horse_move_x[i];
+                int ny = cur_y + horse_move_y[i];
 
-        for (int i = 1; i <= S; i++) dp[0][i] = arr[i]; // 0번 던졌을 때 주사위 가능성 (위치)는 입력배열과 같음
-
-
-        for (int i = 1; i < T; i++) { // T 번 던짐
-            for (int j = 1; j <= N + 1; j++) { // 각 위치
-                for (int k = 1; k <= S; k++) { // 주사위 던졌을 때 나올값
-                    if (j - k < 0 || dp[i - 1][j - k] == INT32_MIN) continue; // 이전 위치가 음수거나 이전 값이 -INF면 스킵
-                    dp[i][j] = max(dp[i][j], dp[i - 1][j - k] + arr[j]);
-                    // Max ( i번 던져서 j 위치의 값과 이전 위치에서 현재 값을 더한것중 큰 값)
+                if (is_possible(nx, ny)) {
+                    if (!visited[remaining_k - 1][ny][nx]) {
+                        visited[remaining_k - 1][ny][nx] = true;
+                        q.push({{cnt + 1, remaining_k - 1},
+                                {nx,      ny}});
+                    }
                 }
             }
         }
 
-        cout << dp[T - 1][N + 1] << '\n';
+        for (int i = 0; i < 4; i++) {
+            int nx = cur_x + dx[i];
+            int ny = cur_y + dy[i];
+            if (is_possible(nx, ny)) {
+                if (!visited[remaining_k][ny][nx]) {
+                    visited[remaining_k][ny][nx] = true;
+                    q.push({{cnt + 1, remaining_k},
+                            {nx,      ny}});
+                }
+            }
+        }
     }
+}
+
+int main() {
+    cin.tie(nullptr)->sync_with_stdio(false);
+
+    cin >> K >> W >> H;
+    for (int i = 0; i < H; i++) {
+        for (int j = 0; j < W; j++) {
+            cin >> map[i][j];
+            ans[i][j] = INT32_MAX;
+        }
+    }
+
+    solve();
+
+    if (ans[H - 1][W - 1] == INT32_MAX) cout << "-1\n";
+    else cout << ans[H - 1][W - 1] << '\n';
 
     return 0;
 }
