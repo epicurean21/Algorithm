@@ -1,3 +1,7 @@
+/**
+ * 3085 사탕 게임
+ * 구현, 브루트포스
+ */
 #include "iostream"
 
 using namespace std;
