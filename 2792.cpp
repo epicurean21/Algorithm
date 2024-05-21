@@ -1,3 +1,7 @@
+/**
+ * 2792 보석상자
+ * 이분탐색
+ */
 #include "bits/stdc++.h"
 
 using namespace std;
