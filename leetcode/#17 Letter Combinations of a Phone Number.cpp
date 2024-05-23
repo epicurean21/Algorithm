@@ -1,4 +1,4 @@
-#include "bits/stdc++.h"
+#include "../bits/stdc++.h"
 
 using namespace std;
 
@@ -41,6 +41,7 @@ public:
         return answers;
     }
 };
+
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
     Solution s = *new Solution();
