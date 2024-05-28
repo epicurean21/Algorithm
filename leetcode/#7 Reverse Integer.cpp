@@ -5,6 +5,7 @@
 #include "../bits/stdc++.h"
 
 using namespace std;
+
 class Solution {
 public:
     int reverse(int x) {
@@ -18,6 +19,7 @@ public:
         return ans;
     }
 };
+
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
     Solution s = *new Solution();
