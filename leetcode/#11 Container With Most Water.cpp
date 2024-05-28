@@ -29,6 +29,7 @@ public:
     */
 
     /* solution 2 -> Two pointer
+     * time complexity = O(n)
     */
     int maxArea(vector<int> &height) {
         int left = 0, right = height.size() - 1, ans = 0;
