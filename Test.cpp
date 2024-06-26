@@ -1,66 +1,72 @@
-/**
- * Leetcode #695 Max Area of Island
- * Breadth First Search (BFS) / DFS
- */
-#include "../bits/stdc++.h"
+#include "bits/stdc++.h"
 
 using namespace std;
 
-class Solution {
-public:
-    bool visited[51][51]{};
-    int dx[4] = {0, 1, 0, -1}, dy[4] = {1, 0, -1, 0};
+#define ERROR "Error!\n"
+#define UNDER_SCORE '_'
+string input, result;
+stack<char> st;
 
-    int solve(vector<vector<int>> &grid, int x, int y) {
-        queue<pair<int, int>> q;
-        q.push({x, y});
-        int cnt = 0;
-        while (!q.empty()) {
-            pair<int, int> cur = q.front();
-            q.pop();
-            if (visited[cur.second][cur.first]) continue;
-            visited[cur.second][cur.first] = true;
-            cnt++;
+bool isCapitalLetter(char c) {
+    return 'A' <= c && c <= 'Z';
+}
 
-            for (int i = 0; i < 4; i++) {
-                int nx = cur.first + dx[i];
-                int ny = cur.second + dy[i];
-
-                if (nx < 0 || nx >= grid[0].size() || ny < 0 ||
-                    ny >= grid.size())
-                    continue;
-                if (grid[ny][nx] != 1)
-                    continue;
-                if (visited[ny][nx])
-                    continue;
-
-                q.push({nx, ny});
-            }
-        }
-        return cnt;
-    }
-
-    int maxAreaOfIsland(vector<vector<int>> &grid) {
-        int ans = 0;
-        for (int i = 0; i < grid.size(); i++) {
-            for (int j = 0; j < grid[i].size(); j++) {
-                if (grid[i][j] != 1 || visited[i][j]) continue;
-
-                ans = max(ans, solve(grid, j, i));
-            }
-        }
-        return ans;
-    }
-};
+char convertCharacter(bool is_capital, char c) {
+    if (is_capital) return (c - 'A' + 'a');
+    else return (c - 'a' + 'A');
+}
 
 int main() {
     cin.tie(nullptr)->sync_with_stdio(false);
-    Solution s = *new Solution();
-    vector<vector<int>> grid = {{1, 1, 0, 0, 0},
-                                {1, 1, 0, 0, 0},
-                                {0, 0, 0, 1, 1},
-                                {0, 0, 0, 1, 1}};
 
-    cout << s.maxAreaOfIsland(grid) << '\n';
+    cin >> input;
+    if (input[0] == UNDER_SCORE || input[input.length() - 1] == UNDER_SCORE) {
+        cout << ERROR;
+        return 0;
+    }
+
+    if (input.find(UNDER_SCORE) == string::npos && isCapitalLetter(input[0])) {
+        cout << ERROR;
+        return 0;
+    }
+
+    bool is_java = false, is_c = false;
+    for (char c: input) {
+        if (!st.empty() && st.top() == UNDER_SCORE && c == UNDER_SCORE) {
+            cout << ERROR;
+            return 0;
+        }
+        if (c == UNDER_SCORE) {
+            if (is_java) {
+                cout << ERROR;
+                return 0;
+            }
+            is_c = true;
+            st.push(c);
+            continue;
+        }
+
+        if (isCapitalLetter(c)) {
+            if (is_c) {
+                cout << ERROR;
+                return 0;
+            }
+            is_java = true;
+            st.push(c);
+            result += UNDER_SCORE;
+            result += convertCharacter(true, c);
+            continue;
+        }
+
+        if (!st.empty() && st.top() == UNDER_SCORE) {
+            result += convertCharacter(false, c);
+            st.push(c);
+            continue;
+        }
+
+        result += c;
+    }
+    cout << result << '\n';
+
     return 0;
 }
